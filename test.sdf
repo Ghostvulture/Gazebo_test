@@ -1,6 +1,8 @@
 <?xml version="1.0" ?>
 <sdf version="1.8">
     <world name="car_world">
+
+
         <physics name="1ms" type="ignored">
             <max_step_size>0.001</max_step_size>
             <real_time_factor>1.0</real_time_factor>
@@ -17,6 +19,8 @@
             filename="libignition-gazebo-scene-broadcaster-system.so"
             name="ignition::gazebo::systems::SceneBroadcaster">
         </plugin>
+
+
 
         <light type="directional" name="sun">
             <cast_shadows>true</cast_shadows>
@@ -301,6 +305,12 @@
             </output>
         </plugin>
 
+
+        <!-- <gui fullscreen='0'>
+            <plugin filename="KeyPublisher"
+                    name="KeyPublisher">
+            </plugin>
+        </gui> -->
 
     </world>
 </sdf>
