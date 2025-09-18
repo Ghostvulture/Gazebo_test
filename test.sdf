@@ -19,7 +19,16 @@
             filename="libignition-gazebo-scene-broadcaster-system.so"
             name="ignition::gazebo::systems::SceneBroadcaster">
         </plugin>
-
+        <plugin filename="ignition-gazebo-imu-system"
+                name="ignition::gazebo::systems::Imu">
+        </plugin>
+        <plugin filename="ignition-gazebo-sensors-system"
+                name="ignition::gazebo::systems::Sensors">
+            <render_engine>ogre2</render_engine>
+        </plugin>
+        <plugin filename="ignition-gazebo-contact-system"
+                name="ignition::gazebo::systems::Contact">
+        </plugin>
 
 
         <light type="directional" name="sun">
@@ -306,11 +315,7 @@
         </plugin>
 
 
-        <!-- <gui fullscreen='0'>
-            <plugin filename="KeyPublisher"
-                    name="KeyPublisher">
-            </plugin>
-        </gui> -->
+
 
     </world>
 </sdf>

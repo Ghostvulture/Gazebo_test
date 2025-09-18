@@ -1,0 +1,6 @@
+/home/xyz/Desktop/xluo/Gazebo_test/build/CMakeFiles/uninstall.dir
+/home/xyz/Desktop/xluo/Gazebo_test/build/CMakeFiles/urdf_test_uninstall.dir
+/home/xyz/Desktop/xluo/Gazebo_test/build/CMakeFiles/urdf_test.dir
+/home/xyz/Desktop/xluo/Gazebo_test/build/CMakeFiles/test.dir
+/home/xyz/Desktop/xluo/Gazebo_test/build/CMakeFiles/edit_cache.dir
+/home/xyz/Desktop/xluo/Gazebo_test/build/CMakeFiles/rebuild_cache.dir

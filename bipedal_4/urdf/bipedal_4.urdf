@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
-     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter  0.150719705348735 -->
 <robot
   name="bipedal_4">
   <link
     name="base_link">
     <inertial>
       <origin
-        xyz="-0.0139738203986803 0.00113987976531827 0.150719705348735"
+             xyz="-0.0139738203986803 0.00113987976531827 0.150719705348735"     
         rpy="0 0 0" />
       <mass
         value="19.0171452759762" />
