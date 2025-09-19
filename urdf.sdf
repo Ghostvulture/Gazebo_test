@@ -454,15 +454,9 @@
     </link>
 
     <!-- Add joint controller plugin-->
-    <plugin
-        filename="libignition-gazebo6-joint-controller-system.so"
-        name="ignition::gazebo::systems::JointController">
-        <topic>/cmd_vel</topic>
-        <joint_name>Rwheel_joint</joint_name>
-        <initial_velocity>-5.0</initial_velocity> 
-    </plugin>
 
-    <plugin
+
+    <!-- <plugin
         filename="libignition-gazebo6-joint-controller-system.so"
         name="ignition::gazebo::systems::JointController">
         <topic>/cmd_vel</topic>
@@ -500,12 +494,21 @@
         <topic>/cmd_vel</topic>
         <joint_name>Rsmall_joint</joint_name>
         <initial_velocity>5.0</initial_velocity>
-    </plugin>
+    </plugin> -->
 
 
   </model>
 
-
+    <plugin
+        filename="libignition-gazebo6-apply-link-wrench-system.so"
+        name="ignition::gazebo::systems::ApplyLinkWrench">
+        <persistent>
+            <entity_name>Rwheel_Link</entity_name>
+            <entity_type>link</entity_type>
+            <force>0 0 0</force>
+            <torque>0 1 0</torque>
+        </persistent>
+    </plugin>
 
 
 
