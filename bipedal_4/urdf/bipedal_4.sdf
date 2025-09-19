@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<sdf version='1.7'>
+<sdf version='1.8'>
   <model name='bipedal_4'>
     <link name='base_link'>
       <inertial>
@@ -47,8 +47,8 @@
         <limit>
           <lower>-60</lower>
           <upper>20</upper>
-          <effort>0</effort>
-          <velocity>0</velocity>
+          <effort>10</effort>
+          <velocity>10</velocity>
         </limit>
         <dynamics>
           <spring_reference>0</spring_reference>
@@ -103,8 +103,8 @@
         <limit>
           <lower>-2.1</lower>
           <upper>60.0</upper>
-          <effort>0</effort>
-          <velocity>0</velocity>
+          <effort>10</effort>
+          <velocity>10</velocity>
         </limit>
         <dynamics>
           <spring_reference>0</spring_reference>
@@ -157,10 +157,10 @@
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
-          <lower>0</lower>
-          <upper>0</upper>
-          <effort>0</effort>
-          <velocity>0</velocity>
+          <lower>-1.79769e+308</lower>
+          <upper>1.79769e+308</upper>
+          <effort>10</effort>
+          <velocity>10</velocity>
         </limit>
         <dynamics>
           <spring_reference>0</spring_reference>
@@ -215,8 +215,8 @@
         <limit>
           <lower>-20</lower>
           <upper>60</upper>
-          <effort>0</effort>
-          <velocity>0</velocity>
+          <effort>10</effort>
+          <velocity>10</velocity>
         </limit>
         <dynamics>
           <spring_reference>0</spring_reference>
@@ -271,8 +271,8 @@
         <limit>
           <lower>-60</lower>
           <upper>2.1</upper>
-          <effort>0</effort>
-          <velocity>0</velocity>
+          <effort>10</effort>
+          <velocity>10</velocity>
         </limit>
         <dynamics>
           <spring_reference>0</spring_reference>
@@ -318,17 +318,19 @@
         </material>
       </visual>
     </link>
+
+
     <joint name='Rwheel_joint' type='revolute'>
       <pose relative_to='Rsmall_Link'>0.214846 -0.02955 -0.135489 0 -0 0</pose>
       <parent>Rsmall_Link</parent>
       <child>Rwheel_Link</child>
       <axis>
-        <xyz>0 -1 0</xyz>
+        <xyz expressed_in='__model__'>0 -1 0</xyz>
         <limit>
-          <lower>0</lower>
-          <upper>0</upper>
-          <effort>0</effort>
-          <velocity>0</velocity>
+          <lower>-1.79769e+308</lower>
+          <upper>1.79769e+308</upper>
+          <effort>10</effort>
+          <velocity>10</velocity>
         </limit>
         <dynamics>
           <spring_reference>0</spring_reference>
@@ -336,6 +338,7 @@
         </dynamics>
       </axis>
     </joint>
+
     <link name='Rwheel_Link'>
       <pose relative_to='Rwheel_joint'>0 0 0 0 -0 0</pose>
       <inertial>
@@ -375,16 +378,13 @@
       </visual>
     </link>
 
-    <plugin name="ignition::gazebo::systems::JointController" filename="libignition-gazebo6-joint-controller-system.so">
-      <!-- 控制器支持多个关节 -->
-      <joint_name>Lbig_joint</joint_name>
-      <joint_name>Rbig_joint</joint_name>
-      <joint_name>Lsmall_joint</joint_name>
-      <joint_name>Rsmall_joint</joint_name>
-      <joint_name>Lwheel_joint</joint_name>
-      <joint_name>Rwheel_joint</joint_name>
-    </plugin>
-
+  <plugin
+    filename="libignition-gazebo6-joint-controller-system.so"
+    name="ignition::gazebo::systems::JointController">
+    <topic>/cmd_vel</topic>
+    <joint_name>Rwheel_joint</joint_name>
+    <initial_velocity>5.0</initial_velocity>
+  </plugin>
 
 
   </model>
