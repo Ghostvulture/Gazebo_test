@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Launch Gazebo with the bipedal robot -->
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="gui" default="true"/>
+  <arg name="headless" default="false"/>
+  <arg name="debug" default="false"/>
+  <arg name="verbose" default="false"/>
+
+  <!-- Load robot parameters -->
+  <rosparam file="$(find bipedal_balance_control)/config/control_params.yaml" command="load" />
+
+  <!-- Start Gazebo -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="headless" value="$(arg headless)"/>
+    <arg name="debug" value="$(arg debug)"/>
+    <arg name="verbose" value="$(arg verbose)"/>
+  </include>
+
+  <!-- Spawn the robot model in Gazebo -->
+  <node name="spawn_robot" pkg="gazebo_ros" type="spawn_model" 
+        args="-file $(find bipedal_balance_control)/../urdf.sdf -sdf -model bipedal_4 -x 0 -y 0 -z 0.3"
+        respawn="false" output="screen" />
+
+  <!-- Start the balance controller (Python version) -->
+  <node name="balance_controller" pkg="bipedal_balance_control" type="balance_controller.py" 
+        output="screen" respawn="true">
+    <rosparam file="$(find bipedal_balance_control)/config/control_params.yaml" command="load" ns="balance_controller"/>
+  </node>
+
+  <!-- Optional: Start RViz for visualization -->
+  <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find bipedal_balance_control)/config/balance_control.rviz" /> -->
+
+  <!-- Optional: Teleop for manual control -->
+  <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop" output="screen"/>
+
+</launch>

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xyz/Desktop/xluo/Gazebo_test
+CMAKE_SOURCE_DIR = /home/xyz/Desktop/xluo/Gazebo_test/sensor_test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xyz/Desktop/xluo/Gazebo_test/build
+CMAKE_BINARY_DIR = /home/xyz/Desktop/xluo/Gazebo_test/sensor_test/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xyz/Desktop/xluo/Gazebo_test/build/CMakeFiles /home/xyz/Desktop/xluo/Gazebo_test/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xyz/Desktop/xluo/Gazebo_test/sensor_test/build/CMakeFiles /home/xyz/Desktop/xluo/Gazebo_test/sensor_test/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xyz/Desktop/xluo/Gazebo_test/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xyz/Desktop/xluo/Gazebo_test/sensor_test/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,6 +129,56 @@ lidar_node/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar_node.dir/build.make CMakeFiles/lidar_node.dir/build
 .PHONY : lidar_node/fast
 
+#=============================================================================
+# Target rules for targets named joint_torque_controller
+
+# Build rule for target.
+joint_torque_controller: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 joint_torque_controller
+.PHONY : joint_torque_controller
+
+# fast build rule for target.
+joint_torque_controller/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joint_torque_controller.dir/build.make CMakeFiles/joint_torque_controller.dir/build
+.PHONY : joint_torque_controller/fast
+
+#=============================================================================
+# Target rules for targets named link_wrench_controller
+
+# Build rule for target.
+link_wrench_controller: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 link_wrench_controller
+.PHONY : link_wrench_controller
+
+# fast build rule for target.
+link_wrench_controller/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/link_wrench_controller.dir/build.make CMakeFiles/link_wrench_controller.dir/build
+.PHONY : link_wrench_controller/fast
+
+joint_torque_controller.o: joint_torque_controller.cpp.o
+.PHONY : joint_torque_controller.o
+
+# target to build an object file
+joint_torque_controller.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joint_torque_controller.dir/build.make CMakeFiles/joint_torque_controller.dir/joint_torque_controller.cpp.o
+.PHONY : joint_torque_controller.cpp.o
+
+joint_torque_controller.i: joint_torque_controller.cpp.i
+.PHONY : joint_torque_controller.i
+
+# target to preprocess a source file
+joint_torque_controller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joint_torque_controller.dir/build.make CMakeFiles/joint_torque_controller.dir/joint_torque_controller.cpp.i
+.PHONY : joint_torque_controller.cpp.i
+
+joint_torque_controller.s: joint_torque_controller.cpp.s
+.PHONY : joint_torque_controller.s
+
+# target to generate assembly for a file
+joint_torque_controller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joint_torque_controller.dir/build.make CMakeFiles/joint_torque_controller.dir/joint_torque_controller.cpp.s
+.PHONY : joint_torque_controller.cpp.s
+
 lidar_node.o: lidar_node.cpp.o
 .PHONY : lidar_node.o
 
@@ -153,6 +203,30 @@ lidar_node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar_node.dir/build.make CMakeFiles/lidar_node.dir/lidar_node.cpp.s
 .PHONY : lidar_node.cpp.s
 
+link_wrench_controller.o: link_wrench_controller.cpp.o
+.PHONY : link_wrench_controller.o
+
+# target to build an object file
+link_wrench_controller.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/link_wrench_controller.dir/build.make CMakeFiles/link_wrench_controller.dir/link_wrench_controller.cpp.o
+.PHONY : link_wrench_controller.cpp.o
+
+link_wrench_controller.i: link_wrench_controller.cpp.i
+.PHONY : link_wrench_controller.i
+
+# target to preprocess a source file
+link_wrench_controller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/link_wrench_controller.dir/build.make CMakeFiles/link_wrench_controller.dir/link_wrench_controller.cpp.i
+.PHONY : link_wrench_controller.cpp.i
+
+link_wrench_controller.s: link_wrench_controller.cpp.s
+.PHONY : link_wrench_controller.s
+
+# target to generate assembly for a file
+link_wrench_controller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/link_wrench_controller.dir/build.make CMakeFiles/link_wrench_controller.dir/link_wrench_controller.cpp.s
+.PHONY : link_wrench_controller.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -161,10 +235,18 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... joint_torque_controller"
 	@echo "... lidar_node"
+	@echo "... link_wrench_controller"
+	@echo "... joint_torque_controller.o"
+	@echo "... joint_torque_controller.i"
+	@echo "... joint_torque_controller.s"
 	@echo "... lidar_node.o"
 	@echo "... lidar_node.i"
 	@echo "... lidar_node.s"
+	@echo "... link_wrench_controller.o"
+	@echo "... link_wrench_controller.i"
+	@echo "... link_wrench_controller.s"
 .PHONY : help
 
 

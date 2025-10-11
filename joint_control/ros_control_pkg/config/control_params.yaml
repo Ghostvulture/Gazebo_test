@@ -1,0 +1,42 @@
+# Balance Controller Parameters
+balance_controller:
+  # Balance PID parameters
+  balance_kp: 25.0      # Proportional gain for balance control
+  balance_ki: 1.0       # Integral gain for balance control  
+  balance_kd: 4.0       # Derivative gain for balance control
+  
+  # Target angle (0 = upright, positive = lean forward)
+  target_angle: 0.0     # radians
+  
+  # Physical parameters
+  wheel_base: 0.33      # Distance between left and right wheels (meters)
+  wheel_radius: 0.05    # Wheel radius (meters)
+  max_torque: 12.0      # Maximum wheel torque (N⋅m)
+  
+  # Velocity control parameters
+  velocity_kp: 1.2      # Proportional gain for velocity control
+  velocity_ki: 0.2      # Integral gain for velocity control
+  velocity_kd: 0.05     # Derivative gain for velocity control
+  
+  # Control loop parameters
+  control_frequency: 100.0  # Hz
+  
+  # Safety parameters
+  max_pitch_angle: 0.5      # Maximum allowed pitch angle (radians) before emergency stop
+  max_pitch_rate: 5.0       # Maximum allowed pitch rate (rad/s) before emergency stop
+
+# Wheel PID Controller Parameters (C++ version)
+wheel_pid_controller:
+  balance_kp: 30.0
+  balance_ki: 1.5  
+  balance_kd: 5.0
+  balance_target_angle: 0.0
+  
+  velocity_kp: 0.8
+  velocity_ki: 0.15
+  velocity_kd: 0.05
+  
+  wheel_radius: 0.05
+  wheel_base: 0.33
+  max_torque: 15.0
+  control_enabled: true

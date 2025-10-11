@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/xyz/Desktop/xluo/Gazebo_test/sensor_test/lidar_node.cpp" "CMakeFiles/lidar_node.dir/lidar_node.cpp.o" "gcc" "CMakeFiles/lidar_node.dir/lidar_node.cpp.o.d"
+  "/home/xyz/Desktop/xluo/Gazebo_test/sensor_test/joint_torque_controller.cpp" "CMakeFiles/joint_torque_controller.dir/joint_torque_controller.cpp.o" "gcc" "CMakeFiles/joint_torque_controller.dir/joint_torque_controller.cpp.o.d"
   )
 
 # Targets to which this target links.

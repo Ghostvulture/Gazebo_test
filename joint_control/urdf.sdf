@@ -112,6 +112,56 @@
           <specular>0.2 0.2 0.2 1</specular> 
         </material>
       </visual>
+      
+      <!-- IMU sensor for balance control -->
+      <sensor name="imu_sensor" type="imu">
+        <pose>0 0 0.1 0 0 0</pose>
+        <always_on>1</always_on>
+        <update_rate>100</update_rate>
+        <visualize>true</visualize>
+        <imu>
+          <angular_velocity>
+            <x>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>2e-4</stddev>
+              </noise>
+            </x>
+            <y>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>2e-4</stddev>
+              </noise>
+            </y>
+            <z>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>2e-4</stddev>
+              </noise>
+            </z>
+          </angular_velocity>
+          <linear_acceleration>
+            <x>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>1.7e-2</stddev>
+              </noise>
+            </x>
+            <y>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>1.7e-2</stddev>
+              </noise>
+            </y>
+            <z>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>1.7e-2</stddev>
+              </noise>
+            </z>
+          </linear_acceleration>
+        </imu>
+      </sensor>
     </link>
     <joint name='Lbig_joint' type='revolute'>
       <pose relative_to='base_link'>-0.000178 0.167799 0.141513 0 -0 0</pose>
@@ -453,32 +503,51 @@
       </visual>
     </link>
 
-    <!-- Add joint controller plugin-->
-
-
-    <!-- <plugin
-        filename="libignition-gazebo6-joint-controller-system.so"
-        name="ignition::gazebo::systems::JointController">
-        <topic>/cmd_vel</topic>
-        <joint_name>Lwheel_joint</joint_name>
-        <initial_velocity>5.0</initial_velocity>
-    </plugin> -->
-
+    <!-- Add joint controller plugins for ROS control -->
+    <plugin filename="libignition-gazebo-joint-controller-system.so"
+            name="ignition::gazebo::systems::JointController">
+      <joint_name>Lwheel_joint</joint_name>
+    </plugin>
+    
+    <plugin filename="libignition-gazebo-joint-controller-system.so"
+            name="ignition::gazebo::systems::JointController">
+      <joint_name>Rwheel_joint</joint_name>
+    </plugin>
+    
+    <plugin filename="libignition-gazebo-joint-controller-system.so"
+            name="ignition::gazebo::systems::JointController">
+      <joint_name>Lbig_joint</joint_name>
+    </plugin>
+    
+    <plugin filename="libignition-gazebo-joint-controller-system.so"
+            name="ignition::gazebo::systems::JointController">
+      <joint_name>Lsmall_joint</joint_name>
+    </plugin>
+    
+    <plugin filename="libignition-gazebo-joint-controller-system.so"
+            name="ignition::gazebo::systems::JointController">
+      <joint_name>Rbig_joint</joint_name>
+    </plugin>
+    
+    <plugin filename="libignition-gazebo-joint-controller-system.so"
+            name="ignition::gazebo::systems::JointController">
+      <joint_name>Rsmall_joint</joint_name>
+    </plugin>
 
   </model>
 
-    <!-- Commented out to prevent joint limit violations
+    <!-- ROS-Gazebo Bridge for communication -->
+    <plugin filename="libignition-gazebo-pose-publisher-system.so"
+            name="ignition::gazebo::systems::PosePublisher">
+      <publish_link_pose>true</publish_link_pose>
+      <publish_collision_pose>false</publish_collision_pose>
+      <publish_visual_pose>false</publish_visual_pose>
+      <publish_nested_model_pose>false</publish_nested_model_pose>
+    </plugin>
 
-    -->
-    <plugin
-        filename="libignition-gazebo6-apply-link-wrench-system.so"
-        name="ignition::gazebo::systems::ApplyLinkWrench">
-        <persistent>
-            <entity_name>Rbig_Link</entity_name>
-            <entity_type>link</entity_type>
-            <force>0 0 0</force>
-            <torque>0 1 0</torque>
-        </persistent>
+    <!-- Apply Link Wrench System for external force control -->
+    <plugin filename="libignition-gazebo-apply-link-wrench-system.so"
+            name="ignition::gazebo::systems::ApplyLinkWrench">
     </plugin>
 
 

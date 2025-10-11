@@ -1,3 +1,5 @@
-/home/xyz/Desktop/xluo/Gazebo_test/build/CMakeFiles/lidar_node.dir
-/home/xyz/Desktop/xluo/Gazebo_test/build/CMakeFiles/edit_cache.dir
-/home/xyz/Desktop/xluo/Gazebo_test/build/CMakeFiles/rebuild_cache.dir
+/home/xyz/Desktop/xluo/Gazebo_test/sensor_test/build/CMakeFiles/lidar_node.dir
+/home/xyz/Desktop/xluo/Gazebo_test/sensor_test/build/CMakeFiles/joint_torque_controller.dir
+/home/xyz/Desktop/xluo/Gazebo_test/sensor_test/build/CMakeFiles/link_wrench_controller.dir
+/home/xyz/Desktop/xluo/Gazebo_test/sensor_test/build/CMakeFiles/edit_cache.dir
+/home/xyz/Desktop/xluo/Gazebo_test/sensor_test/build/CMakeFiles/rebuild_cache.dir

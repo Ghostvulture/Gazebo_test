@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Simple launch file for testing the balance controller -->
+  
+  <!-- Load control parameters -->
+  <rosparam file="$(find bipedal_balance_control)/config/control_params.yaml" command="load" />
+
+  <!-- Start the balance controller (Python version) -->
+  <node name="balance_controller" pkg="bipedal_balance_control" type="balance_controller.py" 
+        output="screen" respawn="true">
+    <rosparam file="$(find bipedal_balance_control)/config/control_params.yaml" command="load" ns="balance_controller"/>
+  </node>
+
+  <!-- Manual velocity command publisher for testing -->
+  <node name="cmd_vel_publisher" pkg="rostopic" type="rostopic" 
+        args="pub /cmd_vel geometry_msgs/Twist -r 10 -- '[0.0,0.0,0.0]' '[0.0,0.0,0.0]'"
+        output="screen" />
+
+  <!-- Print some helpful information -->
+  <node name="info_printer" pkg="rostopic" type="rostopic" 
+        args="echo /model/bipedal_4/joint/Lwheel_joint/cmd_force" 
+        output="screen" />
+
+</launch>
