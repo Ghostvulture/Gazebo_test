@@ -1,0 +1,38 @@
+[35m[1mConsolidate compiler generated dependencies of target keyboard_wheel_controller[0m
+[35m[1mConsolidate compiler generated dependencies of target wheel_torque_driver[0m
+[35m[1mConsolidate compiler generated dependencies of target simple_joint_controller[0m
+[ 10%] [32mBuilding CXX object CMakeFiles/keyboard_wheel_controller.dir/src/keyboard_wheel_controller.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/wheel_torque_driver.dir/src/wheel_torque_driver.cpp.o[0m
+[35m[1mConsolidate compiler generated dependencies of target gazebo_service_checker[0m
+[ 40%] Built target simple_joint_controller
+[ 60%] Built target simple_vel_publisher
+[ 80%] Built target gazebo_service_checker
+[ 90%] [32m[1mLinking CXX executable keyboard_wheel_controller[0m
+[ 90%] Built target keyboard_wheel_controller
+[100%] [32m[1mLinking CXX executable wheel_torque_driver[0m
+[100%] Built target wheel_torque_driver
+-- Install configuration: ""
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/keyboard_wheel_controller
+-- Set runtime path of "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/keyboard_wheel_controller" to ""
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/wheel_torque_driver
+-- Set runtime path of "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/wheel_torque_driver" to ""
+-- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/simple_vel_publisher
+-- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/gazebo_service_checker
+-- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/simple_joint_controller
+-- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/launch/
+-- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/launch//robot_control.launch.py
+-- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/ament_index/resource_index/package_run_dependencies/my_robot_pkg
+-- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/ament_index/resource_index/parent_prefix_path/my_robot_pkg
+-- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/environment/ament_prefix_path.sh
+-- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/environment/path.sh
+-- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/environment/path.dsv
+-- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/local_setup.bash
+-- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/local_setup.sh
+-- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/local_setup.zsh
+-- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/local_setup.dsv
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/package.dsv
+-- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/ament_index/resource_index/packages/my_robot_pkg
+-- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/cmake/my_robot_pkgConfig.cmake
+-- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/cmake/my_robot_pkgConfig-version.cmake
+-- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/package.xml

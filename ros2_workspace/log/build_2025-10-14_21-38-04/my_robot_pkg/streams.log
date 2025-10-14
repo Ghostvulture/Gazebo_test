@@ -1,0 +1,79 @@
+[0.005s] Invoking command in '/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg -- -j20 -l20
+[0.024s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.085s] -- Found rclcpp: 16.0.14 (/opt/ros/humble/share/rclcpp/cmake)
+[0.098s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.099s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.101s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.108s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.112s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.126s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.127s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.181s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.201s] -- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.205s] -- Found gazebo_msgs: 3.9.0 (/opt/ros/humble/share/gazebo_msgs/cmake)
+[0.220s] -- Found tf2: 0.25.16 (/opt/ros/humble/share/tf2/cmake)
+[0.221s] -- Found tf2_ros: 0.25.16 (/opt/ros/humble/share/tf2_ros/cmake)
+[0.253s] -- Found tf2_geometry_msgs: 0.25.16 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[0.253s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.254s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.256s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.287s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.287s] -- Configured cppcheck include dirs: 
+[0.287s] -- Configured cppcheck exclude dirs and/or files: 
+[0.288s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.288s] -- Added test 'lint_cmake' to check CMake code style
+[0.288s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.288s] -- Added test 'uncrustify' to check C / C++ code style
+[0.288s] -- Configured uncrustify additional arguments: 
+[0.288s] -- Added test 'xmllint' to check XML markup files
+[0.289s] -- Configuring done
+[0.298s] -- Generating done
+[0.299s] -- Build files have been written to: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg
+[0.318s] [35m[1mConsolidate compiler generated dependencies of target keyboard_wheel_controller[0m
+[0.324s] [35m[1mConsolidate compiler generated dependencies of target wheel_torque_driver[0m
+[0.324s] [35m[1mConsolidate compiler generated dependencies of target simple_vel_publisher[0m
+[0.331s] [ 12%] [32mBuilding CXX object CMakeFiles/keyboard_wheel_controller.dir/src/keyboard_wheel_controller.cpp.o[0m
+[0.332s] [ 25%] [32mBuilding CXX object CMakeFiles/simple_vel_publisher.dir/src/simple_vel_publisher.cpp.o[0m
+[0.332s] [ 37%] [32mBuilding CXX object CMakeFiles/wheel_torque_driver.dir/src/wheel_torque_driver.cpp.o[0m
+[0.333s] [ 50%] [32mBuilding CXX object CMakeFiles/gazebo_service_checker.dir/src/gazebo_service_checker.cpp.o[0m
+[1.487s] [01m[K/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/src/my_robot_pkg/src/wheel_torque_driver.cpp:[m[K In member function ‘[01m[Kvoid WheelTorqueDriver::updateSimulatedWheelVelocities()[m[K’:
+[1.487s] [01m[K/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/src/my_robot_pkg/src/wheel_torque_driver.cpp:277:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktorque_to_velocity_gain[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[1.487s]   277 |         double [01;35m[Ktorque_to_velocity_gain[m[K = 0.1;  // Simplified conversion
+[1.487s]       |                [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.045s] [ 62%] [32m[1mLinking CXX executable keyboard_wheel_controller[0m
+[2.130s] [ 62%] Built target keyboard_wheel_controller
+[2.346s] [ 75%] [32m[1mLinking CXX executable simple_vel_publisher[0m
+[2.441s] [ 75%] Built target simple_vel_publisher
+[2.527s] [ 87%] [32m[1mLinking CXX executable gazebo_service_checker[0m
+[2.639s] [ 87%] Built target gazebo_service_checker
+[4.532s] [100%] [32m[1mLinking CXX executable wheel_torque_driver[0m
+[4.746s] [100%] Built target wheel_torque_driver
+[4.753s] Invoked command in '/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg -- -j20 -l20
+[4.759s] Invoking command in '/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg
+[4.763s] -- Install configuration: ""
+[4.763s] -- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/keyboard_wheel_controller
+[4.764s] -- Set runtime path of "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/keyboard_wheel_controller" to ""
+[4.764s] -- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/wheel_torque_driver
+[4.765s] -- Set runtime path of "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/wheel_torque_driver" to ""
+[4.765s] -- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/simple_vel_publisher
+[4.766s] -- Set runtime path of "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/simple_vel_publisher" to ""
+[4.766s] -- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/gazebo_service_checker
+[4.766s] -- Set runtime path of "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/gazebo_service_checker" to ""
+[4.767s] -- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/launch/
+[4.767s] -- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/launch//robot_control.launch.py
+[4.768s] -- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/ament_index/resource_index/package_run_dependencies/my_robot_pkg
+[4.768s] -- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/ament_index/resource_index/parent_prefix_path/my_robot_pkg
+[4.768s] -- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/environment/ament_prefix_path.sh
+[4.768s] -- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/environment/ament_prefix_path.dsv
+[4.768s] -- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/environment/path.sh
+[4.768s] -- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/environment/path.dsv
+[4.768s] -- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/local_setup.bash
+[4.768s] -- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/local_setup.sh
+[4.768s] -- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/local_setup.zsh
+[4.768s] -- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/local_setup.dsv
+[4.768s] -- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/package.dsv
+[4.768s] -- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/ament_index/resource_index/packages/my_robot_pkg
+[4.768s] -- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/cmake/my_robot_pkgConfig.cmake
+[4.768s] -- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/cmake/my_robot_pkgConfig-version.cmake
+[4.768s] -- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/package.xml
+[4.770s] Invoked command in '/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg

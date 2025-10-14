@@ -1,0 +1,47 @@
+-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found rclcpp: 16.0.14 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: 
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg
+[ 25%] [32mBuilding CXX object CMakeFiles/listener.dir/src/listener.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/talker.dir/src/talker.cpp.o[0m
+[ 75%] [32m[1mLinking CXX executable talker[0m
+[ 75%] Built target talker
+[100%] [32m[1mLinking CXX executable listener[0m
+[100%] Built target listener
+-- Install configuration: ""
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/talker
+-- Set runtime path of "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/talker" to ""
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/listener
+-- Set runtime path of "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/listener" to ""
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/ament_index/resource_index/package_run_dependencies/my_robot_pkg
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/ament_index/resource_index/parent_prefix_path/my_robot_pkg
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/environment/ament_prefix_path.sh
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/environment/ament_prefix_path.dsv
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/environment/path.sh
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/environment/path.dsv
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/local_setup.bash
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/local_setup.sh
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/local_setup.zsh
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/local_setup.dsv
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/package.dsv
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/ament_index/resource_index/packages/my_robot_pkg
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/cmake/my_robot_pkgConfig.cmake
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/cmake/my_robot_pkgConfig-version.cmake
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/package.xml

@@ -1,0 +1,2 @@
+Invoking command in '/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg -- -j20 -l20
+Invoked command in '/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg -- -j20 -l20

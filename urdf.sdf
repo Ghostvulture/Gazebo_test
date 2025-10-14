@@ -94,7 +94,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://bipedal_4/meshes/base_link.STL</uri>
+            <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/base_link.STL</uri>
           </mesh>
         </geometry>
       </collision>
@@ -103,7 +103,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://bipedal_4/meshes/base_link.STL</uri>
+            <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/base_link.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -150,7 +150,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://bipedal_4/meshes/Lbig_Link.STL</uri>
+            <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Lbig_Link.STL</uri>
           </mesh>
         </geometry>
       </collision>
@@ -159,7 +159,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://bipedal_4/meshes/Lbig_Link.STL</uri>
+            <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Lbig_Link.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -206,7 +206,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://bipedal_4/meshes/Lsmall_Link.STL</uri>
+            <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Lsmall_Link.STL</uri>
           </mesh>
         </geometry>
       </collision>
@@ -215,7 +215,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://bipedal_4/meshes/Lsmall_Link.STL</uri>
+            <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Lsmall_Link.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -262,7 +262,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://bipedal_4/meshes/Lwheel_Link.STL</uri>
+            <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Lwheel_Link.STL</uri>
           </mesh>
         </geometry>
       </collision>
@@ -271,7 +271,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://bipedal_4/meshes/Lwheel_Link.STL</uri>
+            <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Lwheel_Link.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -318,7 +318,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://bipedal_4/meshes/Rbig_Link.STL</uri>
+            <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Rbig_Link.STL</uri>
           </mesh>
         </geometry>
       </collision>
@@ -327,7 +327,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://bipedal_4/meshes/Rbig_Link.STL</uri>
+            <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Rbig_Link.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -374,7 +374,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://bipedal_4/meshes/Rsmall_Link.STL</uri>
+            <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Rsmall_Link.STL</uri>
           </mesh>
         </geometry>
       </collision>
@@ -383,7 +383,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://bipedal_4/meshes/Rsmall_Link.STL</uri>
+            <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Rsmall_Link.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -433,7 +433,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://bipedal_4/meshes/Rwheel_Link.STL</uri>
+            <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Rwheel_Link.STL</uri>
           </mesh>
         </geometry>
       </collision>
@@ -442,7 +442,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://bipedal_4/meshes/Rwheel_Link.STL</uri>
+            <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Rwheel_Link.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -467,18 +467,10 @@
 
   </model>
 
-    <!-- Commented out to prevent joint limit violations
-
-    -->
+    <!-- ApplyLinkWrench system for wheel torque control -->
     <plugin
-        filename="libignition-gazebo6-apply-link-wrench-system.so"
+        filename="libignition-gazebo-apply-link-wrench-system.so"
         name="ignition::gazebo::systems::ApplyLinkWrench">
-        <persistent>
-            <entity_name>Rbig_Link</entity_name>
-            <entity_type>link</entity_type>
-            <force>0 0 0</force>
-            <torque>0 1 0</torque>
-        </persistent>
     </plugin>
 
 

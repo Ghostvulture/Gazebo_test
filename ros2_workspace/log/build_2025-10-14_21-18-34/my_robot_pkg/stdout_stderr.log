@@ -1,0 +1,34 @@
+[35m[1mConsolidate compiler generated dependencies of target simple_vel_publisher[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/wheel_torque_driver.dir/src/wheel_torque_driver.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/keyboard_wheel_controller.dir/src/keyboard_wheel_controller.cpp.o[0m
+[ 66%] Built target simple_vel_publisher
+[01m[K/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/src/my_robot_pkg/src/wheel_torque_driver.cpp:[m[K In member function ‘[01m[Kvoid WheelTorqueDriver::updateSimulatedWheelVelocities()[m[K’:
+[01m[K/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/src/my_robot_pkg/src/wheel_torque_driver.cpp:259:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktorque_to_velocity_gain[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  259 |         double [01;35m[Ktorque_to_velocity_gain[m[K = 0.1;  // Simplified conversion
+      |                [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[ 83%] [32m[1mLinking CXX executable keyboard_wheel_controller[0m
+[ 83%] Built target keyboard_wheel_controller
+[100%] [32m[1mLinking CXX executable wheel_torque_driver[0m
+[100%] Built target wheel_torque_driver
+-- Install configuration: ""
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/keyboard_wheel_controller
+-- Set runtime path of "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/keyboard_wheel_controller" to ""
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/wheel_torque_driver
+-- Set runtime path of "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/wheel_torque_driver" to ""
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/simple_vel_publisher
+-- Set runtime path of "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/simple_vel_publisher" to ""
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/ament_index/resource_index/package_run_dependencies/my_robot_pkg
+-- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/ament_index/resource_index/parent_prefix_path/my_robot_pkg
+-- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/environment/ament_prefix_path.sh
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/environment/path.sh
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/environment/path.dsv
+-- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/local_setup.bash
+-- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/local_setup.sh
+-- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/local_setup.zsh
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/local_setup.dsv
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/package.dsv
+-- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/ament_index/resource_index/packages/my_robot_pkg
+-- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/cmake/my_robot_pkgConfig.cmake
+-- Up-to-date: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/cmake/my_robot_pkgConfig-version.cmake
+-- Installing: /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/package.xml
