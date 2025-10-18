@@ -1,0 +1,9 @@
+/home/xyz/Desktop/xluo/Gazebo_test/gz_ros2_control_ws/build/ign_ros2_control/CMakeFiles/uninstall.dir
+/home/xyz/Desktop/xluo/Gazebo_test/gz_ros2_control_ws/build/ign_ros2_control/CMakeFiles/ign_ros2_control_uninstall.dir
+/home/xyz/Desktop/xluo/Gazebo_test/gz_ros2_control_ws/build/ign_ros2_control/CMakeFiles/test.dir
+/home/xyz/Desktop/xluo/Gazebo_test/gz_ros2_control_ws/build/ign_ros2_control/CMakeFiles/edit_cache.dir
+/home/xyz/Desktop/xluo/Gazebo_test/gz_ros2_control_ws/build/ign_ros2_control/CMakeFiles/rebuild_cache.dir
+/home/xyz/Desktop/xluo/Gazebo_test/gz_ros2_control_ws/build/ign_ros2_control/CMakeFiles/list_install_components.dir
+/home/xyz/Desktop/xluo/Gazebo_test/gz_ros2_control_ws/build/ign_ros2_control/CMakeFiles/install.dir
+/home/xyz/Desktop/xluo/Gazebo_test/gz_ros2_control_ws/build/ign_ros2_control/CMakeFiles/install/local.dir
+/home/xyz/Desktop/xluo/Gazebo_test/gz_ros2_control_ws/build/ign_ros2_control/CMakeFiles/install/strip.dir

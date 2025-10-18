@@ -1,10 +1,10 @@
 /build/
 install/
-/log/
+log/
 
 
 
 *.swp
 *.bak
-
+*.log
 
