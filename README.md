@@ -3,36 +3,70 @@
 ### Pipeline
 
 ``` 
-   [SDF World + URDF Robot]
+      [SDF world+Robot]
               │
               ▼
-       Ignition Gazebo
-   (物理引擎 + 插件运行)
-              │
-   ┌──────────┴───────────┐
-   │                      │
-  传感器数据             控制输入
-   │                      │
-   ▼                      ▼
-ROS <──ros_gz_bridge──> C++ 控制节点
+       Ignition Gazebo <──ros_gz_bridge──> ROS
+   (物理引擎 + 插件运行)                     │
+            │                              │
+            │                              │
+         传感器数据                       控制输入
+            │                              │
+            ▼                              ▼
+          ROS2                           Gazebo
 ```
 
-## structure
-### sensor_test
+## respository structure
 
 ```
-.
-├── build
-│   ├──...
-|
-├── CMakeLists.txt
-├── lidar_node.cpp
-├── save.config
-├── sensor_launch.ign
-└── sensor.sdf
+├─basic_test
+├─bipedal_4
+│  ├─config
+│  ├─launch
+│  ├─meshes
+│  ├─textures
+│  └─urdf
+├─ros2_workspace
+│  ├─build
+│  ├─log
+│  └─src
+│      └─my_robot_pkg
+│          ├─include
+│          │  └─my_robot_pkg
+│          ├─launch
+│          └─src
+│              └─model
+└─sensor_test
+    └─build
+        └─CMakeFiles
+            ├......
+```
+
+
+# 运行现有程序
+
+in shell A, start gazebo simulation
 
 ```
-运行文件：
-```terminal
-ign launch sensor_launch.ign
+ign gazebo urdf.sdf
+```
+
+in shell B, bridge them with yaml
+```
+ros2 run ros_gz_bridge parameter_bridge --ros-args -p config_file:=src/my_robot_pkg/src/init_bridge.yaml
+```
+
+now we have a code to only let wheel run, run this code in shell C:
+
+```
+ros2 run my_robot_pkg gazebo_keyboard_controller --ros-args -p max_force:=10.0
+```
+# 修改后
+first build the package
+```
+colcon build
+```
+then source the overlay 
+```
+source install/setup.bash
 ```
