@@ -10,10 +10,7 @@
 **控制键：**
 - `W/S`: 前进/后退
 - `A/D`: 左转/右转  
-- `Q/E`: 减小/增大转矩
 - `SPACE`: 紧急停止
-- `X/C`: 停止运动
-- `ESC`: 退出程序
 
 ### 2. `wheel_torque_driver` - 高级轮子驱动器
 订阅`/cmd_vel`话题，使用PID控制算法控制轮子转矩。
@@ -63,9 +60,9 @@ ros2 launch my_robot_pkg robot_control.launch.py use_keyboard:=false use_test_ve
 
 #### 2. 单独运行
 
-**只启动Gazebo：**
+**启动Gazebo：**
 ```bash
-ign gazebo -r /home/xyz/Desktop/xluo/Gazebo_test/urdf.sdf
+ign gazebo -r /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/src/my_robot_pkg/src/model/urdf.sdf
 ```
 
 **键盘控制器：**

@@ -1,0 +1,30 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from my_robot_pkg/msg/RobotFeedback.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Vector3.idl"
+#include "my_robot_pkg/msg/MotorFeedback.idl"
+#include "std_msgs/msg/Header.idl"
+
+module my_robot_pkg {
+  module msg {
+    @verbatim (language="comment", text=
+      "完整的反馈包")
+    struct RobotFeedback {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "六个电机的反馈 [Lwheel, Rwheel, Lbig, Lsmall, Rbig, Rsmall]")
+      sequence<my_robot_pkg::msg::MotorFeedback> motors;
+
+      @verbatim (language="comment", text=
+        "IMU数据" "\n"
+        "角速度 (rad/s)")
+      geometry_msgs::msg::Vector3 angular_velocity;
+
+      @verbatim (language="comment", text=
+        "线性加速度 (m/s²)")
+      geometry_msgs::msg::Vector3 linear_acceleration;
+    };
+  };
+};

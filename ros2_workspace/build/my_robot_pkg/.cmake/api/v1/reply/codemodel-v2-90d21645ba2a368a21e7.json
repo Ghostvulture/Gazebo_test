@@ -1,0 +1,278 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-7c56093237332dfe3fba.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22
+					]
+				},
+				{
+					"build" : "my_robot_pkg__py",
+					"jsonFile" : "directory-my_robot_pkg__py-Release-de734717dae0e833539e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/my_robot_pkg__py",
+					"targetIndexes" : 
+					[
+						6
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "my_robot_pkg",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_my_robot_pkg_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_my_robot_pkg_egg-Release-b905d81f7a3eb9dc047e.json",
+					"name" : "ament_cmake_python_build_my_robot_pkg_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_my_robot_pkg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_my_robot_pkg-Release-4eebc27d4e70ae48dda9.json",
+					"name" : "ament_cmake_python_copy_my_robot_pkg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gazebo_keyboard_controller::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gazebo_keyboard_controller-Release-a916ffd115be6ef200d3.json",
+					"name" : "gazebo_keyboard_controller",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "listener::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-listener-Release-f7c6283e685497cd17eb.json",
+					"name" : "listener",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "my_robot_pkg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-my_robot_pkg-Release-3d65c9afea53ba20f61b.json",
+					"name" : "my_robot_pkg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "my_robot_pkg__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-my_robot_pkg__cpp-Release-da37cb409c453649e037.json",
+					"name" : "my_robot_pkg__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "my_robot_pkg__py::@33c5fc5b0c9dcec3a9dd",
+					"jsonFile" : "target-my_robot_pkg__py-Release-5948be6c895549239304.json",
+					"name" : "my_robot_pkg__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "my_robot_pkg__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-my_robot_pkg__rosidl_generator_c-Release-eec97fe8aa012056c4ef.json",
+					"name" : "my_robot_pkg__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "my_robot_pkg__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-my_robot_pkg__rosidl_generator_py-Release-785caba32ba5aaa049e5.json",
+					"name" : "my_robot_pkg__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "my_robot_pkg__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-my_robot_pkg__rosidl_typesupport_c-Release-3be7b90464ba8d779c79.json",
+					"name" : "my_robot_pkg__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "my_robot_pkg__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-my_robot_pkg__rosidl_typesupport_c__pyext-Release-595b41ec45a97465359e.json",
+					"name" : "my_robot_pkg__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "my_robot_pkg__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-my_robot_pkg__rosidl_typesupport_cpp-Release-7b81dd767e40371fca9d.json",
+					"name" : "my_robot_pkg__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "my_robot_pkg__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-my_robot_pkg__rosidl_typesupport_fastrtps_c-Release-60a4e97499bf42c8210c.json",
+					"name" : "my_robot_pkg__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "my_robot_pkg__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-my_robot_pkg__rosidl_typesupport_fastrtps_c__pyext-Release-007f070cae1f19c5a142.json",
+					"name" : "my_robot_pkg__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "my_robot_pkg__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-my_robot_pkg__rosidl_typesupport_fastrtps_cpp-Release-5648b17397dc2c035eb2.json",
+					"name" : "my_robot_pkg__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "my_robot_pkg__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-my_robot_pkg__rosidl_typesupport_introspection_c-Release-83d578a1c75fb860125d.json",
+					"name" : "my_robot_pkg__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "my_robot_pkg__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-my_robot_pkg__rosidl_typesupport_introspection_c__pyext-Release-fb16805b359f2c3262ff.json",
+					"name" : "my_robot_pkg__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "my_robot_pkg__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-my_robot_pkg__rosidl_typesupport_introspection_cpp-Release-767c75d184457adddfc8.json",
+					"name" : "my_robot_pkg__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "my_robot_pkg_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-my_robot_pkg_uninstall-Release-eab5cd9665b154af7dbc.json",
+					"name" : "my_robot_pkg_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "simple_feedback_main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-simple_feedback_main-Release-b285a815bffbc882d8e1.json",
+					"name" : "simple_feedback_main",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "simple_torque_main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-simple_torque_main-Release-0957382892c3a18101ef.json",
+					"name" : "simple_torque_main",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "talker::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-talker-Release-2de9f8306797b5cdd496.json",
+					"name" : "talker",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Release-a9b2ddd6b7f6a98c0be2.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg",
+		"source" : "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/src/my_robot_pkg"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

@@ -4,7 +4,7 @@
 
 
 
-        <physics name="1ms" type="ignored">
+        <physics name="1ms" type="dart">
             <max_step_size>0.001</max_step_size>
             <real_time_factor>1.0</real_time_factor>
         </physics>
@@ -20,17 +20,19 @@
             filename="libignition-gazebo-scene-broadcaster-system.so"
             name="ignition::gazebo::systems::SceneBroadcaster">
         </plugin>
-        <plugin filename="ignition-gazebo-imu-system"
-                name="ignition::gazebo::systems::Imu">
+        <plugin 
+            filename="libignition-gazebo-imu-system.so"
+            name="ignition::gazebo::systems::Imu">
         </plugin>
-        <plugin filename="ignition-gazebo-sensors-system"
-                name="ignition::gazebo::systems::Sensors">
+        <plugin 
+            filename="libignition-gazebo-sensors-system.so"
+            name="ignition::gazebo::systems::Sensors">
             <render_engine>ogre2</render_engine>
         </plugin>
-        <plugin filename="ignition-gazebo-contact-system"
-                name="ignition::gazebo::systems::Contact">
+        <plugin 
+            filename="libignition-gazebo-contact-system.so"
+            name="ignition::gazebo::systems::Contact">
         </plugin>
-
 
         <light type="directional" name="sun">
             <cast_shadows>true</cast_shadows>
@@ -74,431 +76,480 @@
 
         <!-- 加载 SDF 模型 -->
 
-  <model name='bipedal_4'>
-  <pose>0 0 0.3 0 0 0</pose>
-    <link name='base_link'>
-      <inertial>
-        <pose>-0.013974 0.00114 0.15072 0 -0 0</pose>
-        <mass>19.0171</mass>
-        <inertia>
-          <ixx>0.0677121</ixx>
-          <ixy>-2.15982e-06</ixy>
-          <ixz>0.00156576</ixz>
-          <iyy>0.0792221</iyy>
-          <iyz>1.06848e-05</iyz>
-          <izz>0.0827647</izz>
-        </inertia>
-      </inertial>
-      <collision name='base_link_collision'>
-        <pose>0 0 -0.01 0 0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/base_link.STL</uri>
-          </mesh>
-        </geometry>
-      </collision>
-      <visual name='base_link_visual'>
-        <pose>0 0 0 0 -0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/base_link.STL</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.3 0.3 0.3 1</ambient> 
-          <diffuse>0.6 0.6 0.6 1</diffuse>  
-          <specular>0.2 0.2 0.2 1</specular> 
-        </material>
-      </visual>
-    </link>
-    <joint name='Lbig_joint' type='revolute'>
-      <pose relative_to='base_link'>-0.000178 0.167799 0.141513 0 -0 0</pose>
-      <parent>base_link</parent>
-      <child>Lbig_Link</child>
-      <axis>
-        <xyz>0 1 0</xyz>
-        <limit>
-          <lower>-1.047</lower>
-          <upper>0.349</upper>
-          <effort>10</effort>
-          <velocity>10</velocity>
-        </limit>
-        <dynamics>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-      </axis>
-    </joint>
-    <link name='Lbig_Link'>
-      <pose relative_to='Lbig_joint'>0 0 0 0 -0 0</pose>
-      <inertial>
-        <pose>-0.09915 0.010957 -0.007039 0 -0 0</pose>
-        <mass>0.279663</mass>
-        <inertia>
-          <ixx>9.5839e-05</ixx>
-          <ixy>1.88655e-06</ixy>
-          <ixz>-6.77181e-05</ixz>
-          <iyy>0.00152349</iyy>
-          <iyz>-5.34323e-07</iyz>
-          <izz>0.00143434</izz>
-        </inertia>
-      </inertial>
-      <collision name='Lbig_Link_collision'>
-        <pose>0 0 0 0 -0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Lbig_Link.STL</uri>
-          </mesh>
-        </geometry>
-      </collision>
-      <visual name='Lbig_Link_visual'>
-        <pose>0 0 0 0 -0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Lbig_Link.STL</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.3 0.3 0.3 1</ambient> 
-          <diffuse>0.6 0.6 0.6 1</diffuse>  
-          <specular>0.2 0.2 0.2 1</specular> 
-        </material>
-      </visual>
-    </link>
-    <joint name='Lsmall_joint' type='revolute'>
-      <pose relative_to='Lbig_Link'>-0.214311 0.021 -0.017197 0 -0 0</pose>
-      <parent>Lbig_Link</parent>
-      <child>Lsmall_Link</child>
-      <axis>
-        <xyz>0 1 0</xyz>
-        <limit>
-          <lower>-0.037</lower>
-          <upper>1.047</upper>
-          <effort>10</effort>
-          <velocity>10</velocity>
-        </limit>
-        <dynamics>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-      </axis>
-    </joint>
-    <link name='Lsmall_Link'>
-      <pose relative_to='Lsmall_joint'>0 0 0 0 -0 0</pose>
-      <inertial>
-        <pose>0.079592 0.007638 -0.04948 0 -0 0</pose>
-        <mass>0.280241</mass>
-        <inertia>
-          <ixx>0.000573834</ixx>
-          <ixy>-1.08614e-06</ixy>
-          <ixz>0.000768878</ixz>
-          <iyy>0.00188519</iyy>
-          <iyz>1.54955e-06</iyz>
-          <izz>0.00132472</izz>
-        </inertia>
-      </inertial>
-      <collision name='Lsmall_Link_collision'>
-        <pose>0 0 0 0 -0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Lsmall_Link.STL</uri>
-          </mesh>
-        </geometry>
-      </collision>
-      <visual name='Lsmall_Link_visual'>
-        <pose>0 0 0 0 -0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Lsmall_Link.STL</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.3 0.3 0.3 1</ambient> 
-          <diffuse>0.6 0.6 0.6 1</diffuse>  
-          <specular>0.2 0.2 0.2 1</specular> 
-        </material>
-      </visual>
-    </link>
-    <joint name='Lwheel_joint' type='revolute'>
-      <pose relative_to='Lsmall_Link'>0.216526 0.02955 -0.132787 0 -0 0</pose>
-      <parent>Lsmall_Link</parent>
-      <child>Lwheel_Link</child>
-      <axis>
-        <xyz>0 1 0</xyz>
-        <limit>
-          <lower>-1.79769e+308</lower>
-          <upper>1.79769e+308</upper>
-          <effort>10</effort>
-          <velocity>10</velocity>
-        </limit>
-        <dynamics>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-      </axis>
-    </joint>
-    <link name='Lwheel_Link'>
-      <pose relative_to='Lwheel_joint'>0 0 0 0 -0 0</pose>
-      <inertial>
-        <pose>5.1e-05 -0.003049 -9.3e-05 0 -0 0</pose>
-        <mass>0.304045</mass>
-        <inertia>
-          <ixx>0.000308809</ixx>
-          <ixy>1.34202e-07</ixy>
-          <ixz>-3.59301e-07</ixz>
-          <iyy>0.000569585</iyy>
-          <iyz>-2.0098e-07</iyz>
-          <izz>0.000309114</izz>
-        </inertia>
-      </inertial>
-      <collision name='Lwheel_Link_collision'>
-        <pose>0 0 0 0 -0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Lwheel_Link.STL</uri>
-          </mesh>
-        </geometry>
-      </collision>
-      <visual name='Lwheel_Link_visual'>
-        <pose>0 0 0 0 -0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Lwheel_Link.STL</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.2 0.2 0.2 1</ambient>
-          <diffuse>0.2 0.2 0.2 1</diffuse>
-          <specular>0.5 0.5 0.5 1</specular>
-        </material>
-      </visual>
-    </link>
-    <joint name='Rbig_joint' type='revolute'>
-      <pose relative_to='base_link'>-0.000178 -0.163201 0.141513 0 -0 0</pose>
-      <parent>base_link</parent>
-      <child>Rbig_Link</child>
-      <axis>
-        <xyz>0 -1 0</xyz>
-        <limit>
-          <lower>-0.349</lower>
-          <upper>1.047</upper>
-          <effort>10</effort>
-          <velocity>10</velocity>
-        </limit>
-        <dynamics>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-      </axis>
-    </joint>
-    <link name='Rbig_Link'>
-      <pose relative_to='Rbig_joint'>0 0 0 0 -0 0</pose>
-      <inertial>
-        <pose>-0.098958 -0.010875 0.001169 0 -0 0</pose>
-        <mass>0.273515</mass>
-        <inertia>
-          <ixx>9.28253e-05</ixx>
-          <ixy>-1.82687e-06</ixy>
-          <ixz>4.2679e-05</ixz>
-          <iyy>0.00151102</iyy>
-          <iyz>6.82543e-07</iyz>
-          <izz>0.00142474</izz>
-        </inertia>
-      </inertial>
-      <collision name='Rbig_Link_collision'>
-        <pose>0 0 0 0 -0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Rbig_Link.STL</uri>
-          </mesh>
-        </geometry>
-      </collision>
-      <visual name='Rbig_Link_visual'>
-        <pose>0 0 0 0 -0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Rbig_Link.STL</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.3 0.3 0.3 1</ambient> 
-          <diffuse>0.6 0.6 0.6 1</diffuse>  
-          <specular>0.2 0.2 0.2 1</specular> 
-        </material>
-      </visual>
-    </link>
-    <joint name='Rsmall_joint' type='revolute'>
-      <pose relative_to='Rbig_Link'>-0.214999 -0.021 0.000489 0 -0 0</pose>
-      <parent>Rbig_Link</parent>
-      <child>Rsmall_Link</child>
-      <axis>
-        <xyz>0 -1 0</xyz>
-        <limit>
-          <lower>-1.047</lower>
-          <upper>0.037</upper>
-          <effort>10</effort>
-          <velocity>10</velocity>
-        </limit>
-        <dynamics>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-      </axis>
-    </joint>
-    <link name='Rsmall_Link'>
-      <pose relative_to='Rsmall_joint'>0 0 0 0 -0 0</pose>
-      <inertial>
-        <pose>0.088576 -0.007215 -0.055792 0 -0 0</pose>
-        <mass>0.251916</mass>
-        <inertia>
-          <ixx>0.000569012</ixx>
-          <ixy>1.18974e-06</ixy>
-          <ixz>0.000768613</ixz>
-          <iyy>0.00187798</iyy>
-          <iyz>-1.26065e-06</iyz>
-          <izz>0.00132225</izz>
-        </inertia>
-      </inertial>
-      <collision name='Rsmall_Link_collision'>
-        <pose>0 0 0 0 -0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Rsmall_Link.STL</uri>
-          </mesh>
-        </geometry>
-      </collision>
-      <visual name='Rsmall_Link_visual'>
-        <pose>0 0 0 0 -0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Rsmall_Link.STL</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.3 0.3 0.3 1</ambient> 
-          <diffuse>0.6 0.6 0.6 1</diffuse>  
-          <specular>0.2 0.2 0.2 1</specular> 
-        </material>
-      </visual>
-    </link>
+        <model name='bipedal_4'>
+        <pose>0 0 0.3 0 0 0</pose>
+          <link name='base_link'>
+            <inertial>
+              <pose>-0.013974 0.00114 0.15072 0 -0 0</pose>
+              <mass>19.0171</mass>
+              <inertia>
+                <ixx>0.0677121</ixx>
+                <ixy>-2.15982e-06</ixy>
+                <ixz>0.00156576</ixz>
+                <iyy>0.0792221</iyy>
+                <iyz>1.06848e-05</iyz>
+                <izz>0.0827647</izz>
+              </inertia>
+            </inertial>
+            <collision name='base_link_collision'>
+              <pose>0 0 -0.01 0 0 0</pose>
+              <geometry>
+                <mesh>
+                  <scale>1 1 1</scale>
+                  <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/base_link.STL</uri>
+                </mesh>
+              </geometry>
+            </collision>
+            <visual name='base_link_visual'>
+              <pose>0 0 0 0 -0 0</pose>
+              <geometry>
+                <mesh>
+                  <scale>1 1 1</scale>
+                  <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/base_link.STL</uri>
+                </mesh>
+              </geometry>
+              <material>
+                <ambient>0.3 0.3 0.3 1</ambient> 
+                <diffuse>0.6 0.6 0.6 1</diffuse>  
+                <specular>0.2 0.2 0.2 1</specular> 
+              </material>
+            </visual>
+
+            <!-- IMU传感器 -->
+            <sensor name="imu_sensor" type="imu">
+              <pose>0 0 0.1 0 0 0</pose>
+              <always_on>1</always_on>
+              <update_rate>100</update_rate>
+              <visualize>true</visualize>
+              <topic>/model/bipedal_4/imu</topic>
+              <imu>
+                <angular_velocity>
+                  <x>
+                    <noise type="gaussian">
+                      <mean>0.0</mean>
+                      <stddev>2e-4</stddev>
+                    </noise>
+                  </x>
+                  <y>
+                    <noise type="gaussian">
+                      <mean>0.0</mean>
+                      <stddev>2e-4</stddev>
+                    </noise>
+                  </y>
+                  <z>
+                    <noise type="gaussian">
+                      <mean>0.0</mean>
+                      <stddev>2e-4</stddev>
+                    </noise>
+                  </z>
+                </angular_velocity>
+                <linear_acceleration>
+                  <x>
+                    <noise type="gaussian">
+                      <mean>0.0</mean>
+                      <stddev>1.7e-2</stddev>
+                    </noise>
+                  </x>
+                  <y>
+                    <noise type="gaussian">
+                      <mean>0.0</mean>
+                      <stddev>1.7e-2</stddev>
+                    </noise>
+                  </y>
+                  <z>
+                    <noise type="gaussian">
+                      <mean>0.0</mean>
+                      <stddev>1.7e-2</stddev>
+                    </noise>
+                  </z>
+                </linear_acceleration>
+              </imu>
+            </sensor>
+          </link>
+          <joint name='Lbig_joint' type='revolute'>
+            <pose relative_to='base_link'>-0.000178 0.167799 0.141513 0 -0 0</pose>
+            <parent>base_link</parent>
+            <child>Lbig_Link</child>
+            <axis>
+              <xyz>0 1 0</xyz>
+              <limit>
+                <lower>-1.047</lower>
+                <upper>0.349</upper>
+                <effort>10</effort>
+                <velocity>10</velocity>
+              </limit>
+              <dynamics>
+                <spring_reference>0</spring_reference>
+                <spring_stiffness>0</spring_stiffness>
+              </dynamics>
+            </axis>
+          </joint>
+          <link name='Lbig_Link'>
+            <pose relative_to='Lbig_joint'>0 0 0 0 -0 0</pose>
+            <inertial>
+              <pose>-0.09915 0.010957 -0.007039 0 -0 0</pose>
+              <mass>0.279663</mass>
+              <inertia>
+                <ixx>9.5839e-05</ixx>
+                <ixy>1.88655e-06</ixy>
+                <ixz>-6.77181e-05</ixz>
+                <iyy>0.00152349</iyy>
+                <iyz>-5.34323e-07</iyz>
+                <izz>0.00143434</izz>
+              </inertia>
+            </inertial>
+            <collision name='Lbig_Link_collision'>
+              <pose>0 0 0 0 -0 0</pose>
+              <geometry>
+                <mesh>
+                  <scale>1 1 1</scale>
+                  <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Lbig_Link.STL</uri>
+                </mesh>
+              </geometry>
+            </collision>
+            <visual name='Lbig_Link_visual'>
+              <pose>0 0 0 0 -0 0</pose>
+              <geometry>
+                <mesh>
+                  <scale>1 1 1</scale>
+                  <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Lbig_Link.STL</uri>
+                </mesh>
+              </geometry>
+              <material>
+                <ambient>0.3 0.3 0.3 1</ambient> 
+                <diffuse>0.6 0.6 0.6 1</diffuse>  
+                <specular>0.2 0.2 0.2 1</specular> 
+              </material>
+            </visual>
+          </link>
+          <joint name='Lsmall_joint' type='revolute'>
+            <pose relative_to='Lbig_Link'>-0.214311 0.021 -0.017197 0 -0 0</pose>
+            <parent>Lbig_Link</parent>
+            <child>Lsmall_Link</child>
+            <axis>
+              <xyz>0 1 0</xyz>
+              <limit>
+                <lower>-0.037</lower>
+                <upper>1.047</upper>
+                <effort>10</effort>
+                <velocity>10</velocity>
+              </limit>
+              <dynamics>
+                <spring_reference>0</spring_reference>
+                <spring_stiffness>0</spring_stiffness>
+              </dynamics>
+            </axis>
+          </joint>
+          <link name='Lsmall_Link'>
+            <pose relative_to='Lsmall_joint'>0 0 0 0 -0 0</pose>
+            <inertial>
+              <pose>0.079592 0.007638 -0.04948 0 -0 0</pose>
+              <mass>0.280241</mass>
+              <inertia>
+                <ixx>0.000573834</ixx>
+                <ixy>-1.08614e-06</ixy>
+                <ixz>0.000768878</ixz>
+                <iyy>0.00188519</iyy>
+                <iyz>1.54955e-06</iyz>
+                <izz>0.00132472</izz>
+              </inertia>
+            </inertial>
+            <collision name='Lsmall_Link_collision'>
+              <pose>0 0 0 0 -0 0</pose>
+              <geometry>
+                <mesh>
+                  <scale>1 1 1</scale>
+                  <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Lsmall_Link.STL</uri>
+                </mesh>
+              </geometry>
+            </collision>
+            <visual name='Lsmall_Link_visual'>
+              <pose>0 0 0 0 -0 0</pose>
+              <geometry>
+                <mesh>
+                  <scale>1 1 1</scale>
+                  <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Lsmall_Link.STL</uri>
+                </mesh>
+              </geometry>
+              <material>
+                <ambient>0.3 0.3 0.3 1</ambient> 
+                <diffuse>0.6 0.6 0.6 1</diffuse>  
+                <specular>0.2 0.2 0.2 1</specular> 
+              </material>
+            </visual>
+          </link>
+          <joint name='Lwheel_joint' type='revolute'>
+            <pose relative_to='Lsmall_Link'>0.216526 0.02955 -0.132787 0 -0 0</pose>
+            <parent>Lsmall_Link</parent>
+            <child>Lwheel_Link</child>
+            <axis>
+              <xyz>0 1 0</xyz>
+              <limit>
+                <lower>-1.79769e+308</lower>
+                <upper>1.79769e+308</upper>
+                <effort>10</effort>
+                <velocity>10</velocity>
+              </limit>
+              <dynamics>
+                <spring_reference>0</spring_reference>
+                <spring_stiffness>0</spring_stiffness>
+              </dynamics>
+            </axis>
+          </joint>
+          <link name='Lwheel_Link'>
+            <pose relative_to='Lwheel_joint'>0 0 0 0 -0 0</pose>
+            <inertial>
+              <pose>5.1e-05 -0.003049 -9.3e-05 0 -0 0</pose>
+              <mass>0.304045</mass>
+              <inertia>
+                <ixx>0.000308809</ixx>
+                <ixy>1.34202e-07</ixy>
+                <ixz>-3.59301e-07</ixz>
+                <iyy>0.000569585</iyy>
+                <iyz>-2.0098e-07</iyz>
+                <izz>0.000309114</izz>
+              </inertia>
+            </inertial>
+            <collision name='Lwheel_Link_collision'>
+              <pose>0 0 0 0 -0 0</pose>
+              <geometry>
+                <mesh>
+                  <scale>1 1 1</scale>
+                  <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Lwheel_Link.STL</uri>
+                </mesh>
+              </geometry>
+            </collision>
+            <visual name='Lwheel_Link_visual'>
+              <pose>0 0 0 0 -0 0</pose>
+              <geometry>
+                <mesh>
+                  <scale>1 1 1</scale>
+                  <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Lwheel_Link.STL</uri>
+                </mesh>
+              </geometry>
+              <material>
+                <ambient>0.2 0.2 0.2 1</ambient>
+                <diffuse>0.2 0.2 0.2 1</diffuse>
+                <specular>0.5 0.5 0.5 1</specular>
+              </material>
+            </visual>
+          </link>
+          <joint name='Rbig_joint' type='revolute'>
+            <pose relative_to='base_link'>-0.000178 -0.163201 0.141513 0 -0 0</pose>
+            <parent>base_link</parent>
+            <child>Rbig_Link</child>
+            <axis>
+              <xyz>0 -1 0</xyz>
+              <limit>
+                <lower>-0.349</lower>
+                <upper>1.047</upper>
+                <effort>10</effort>
+                <velocity>10</velocity>
+              </limit>
+              <dynamics>
+                <spring_reference>0</spring_reference>
+                <spring_stiffness>0</spring_stiffness>
+              </dynamics>
+            </axis>
+          </joint>
+          <link name='Rbig_Link'>
+            <pose relative_to='Rbig_joint'>0 0 0 0 -0 0</pose>
+            <inertial>
+              <pose>-0.098958 -0.010875 0.001169 0 -0 0</pose>
+              <mass>0.273515</mass>
+              <inertia>
+                <ixx>9.28253e-05</ixx>
+                <ixy>-1.82687e-06</ixy>
+                <ixz>4.2679e-05</ixz>
+                <iyy>0.00151102</iyy>
+                <iyz>6.82543e-07</iyz>
+                <izz>0.00142474</izz>
+              </inertia>
+            </inertial>
+            <collision name='Rbig_Link_collision'>
+              <pose>0 0 0 0 -0 0</pose>
+              <geometry>
+                <mesh>
+                  <scale>1 1 1</scale>
+                  <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Rbig_Link.STL</uri>
+                </mesh>
+              </geometry>
+            </collision>
+            <visual name='Rbig_Link_visual'>
+              <pose>0 0 0 0 -0 0</pose>
+              <geometry>
+                <mesh>
+                  <scale>1 1 1</scale>
+                  <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Rbig_Link.STL</uri>
+                </mesh>
+              </geometry>
+              <material>
+                <ambient>0.3 0.3 0.3 1</ambient> 
+                <diffuse>0.6 0.6 0.6 1</diffuse>  
+                <specular>0.2 0.2 0.2 1</specular> 
+              </material>
+            </visual>
+          </link>
+          <joint name='Rsmall_joint' type='revolute'>
+            <pose relative_to='Rbig_Link'>-0.214999 -0.021 0.000489 0 -0 0</pose>
+            <parent>Rbig_Link</parent>
+            <child>Rsmall_Link</child>
+            <axis>
+              <xyz>0 -1 0</xyz>
+              <limit>
+                <lower>-1.047</lower>
+                <upper>0.037</upper>
+                <effort>10</effort>
+                <velocity>10</velocity>
+              </limit>
+              <dynamics>
+                <spring_reference>0</spring_reference>
+                <spring_stiffness>0</spring_stiffness>
+              </dynamics>
+            </axis>
+          </joint>
+          <link name='Rsmall_Link'>
+            <pose relative_to='Rsmall_joint'>0 0 0 0 -0 0</pose>
+            <inertial>
+              <pose>0.088576 -0.007215 -0.055792 0 -0 0</pose>
+              <mass>0.251916</mass>
+              <inertia>
+                <ixx>0.000569012</ixx>
+                <ixy>1.18974e-06</ixy>
+                <ixz>0.000768613</ixz>
+                <iyy>0.00187798</iyy>
+                <iyz>-1.26065e-06</iyz>
+                <izz>0.00132225</izz>
+              </inertia>
+            </inertial>
+            <collision name='Rsmall_Link_collision'>
+              <pose>0 0 0 0 -0 0</pose>
+              <geometry>
+                <mesh>
+                  <scale>1 1 1</scale>
+                  <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Rsmall_Link.STL</uri>
+                </mesh>
+              </geometry>
+            </collision>
+            <visual name='Rsmall_Link_visual'>
+              <pose>0 0 0 0 -0 0</pose>
+              <geometry>
+                <mesh>
+                  <scale>1 1 1</scale>
+                  <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Rsmall_Link.STL</uri>
+                </mesh>
+              </geometry>
+              <material>
+                <ambient>0.3 0.3 0.3 1</ambient> 
+                <diffuse>0.6 0.6 0.6 1</diffuse>  
+                <specular>0.2 0.2 0.2 1</specular> 
+              </material>
+            </visual>
+          </link>
 
 
-    <joint name='Rwheel_joint' type='revolute'>
-      <pose relative_to='Rsmall_Link'>0.214846 -0.02955 -0.135489 0 -0 0</pose>
-      <parent>Rsmall_Link</parent>
-      <child>Rwheel_Link</child>
-      <axis>
-        <xyz expressed_in='__model__'>0 -1 0</xyz>
-        <limit>
-          <lower>-1.79769e+308</lower>
-          <upper>1.79769e+308</upper>
-          <effort>10</effort>
-          <velocity>10</velocity>
-        </limit>
-        <dynamics>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-      </axis>
-    </joint>
+          <joint name='Rwheel_joint' type='revolute'>
+            <pose relative_to='Rsmall_Link'>0.214846 -0.02955 -0.135489 0 -0 0</pose>
+            <parent>Rsmall_Link</parent>
+            <child>Rwheel_Link</child>
+            <axis>
+              <xyz expressed_in='__model__'>0 -1 0</xyz>
+              <limit>
+                <lower>-1.79769e+308</lower>
+                <upper>1.79769e+308</upper>
+                <effort>10</effort>
+                <velocity>10</velocity>
+              </limit>
+              <dynamics>
+                <spring_reference>0</spring_reference>
+                <spring_stiffness>0</spring_stiffness>
+              </dynamics>
+            </axis>
+          </joint>
 
-    <link name='Rwheel_Link'>
-      <pose relative_to='Rwheel_joint'>0 0 0 0 -0 0</pose>
-      <inertial>
-        <pose>0.000106 0.003049 -4e-06 0 -0 0</pose>
-        <mass>0.304045</mass>
-        <inertia>
-          <ixx>0.00030934</ixx>
-          <ixy>-2.39606e-07</ixy>
-          <ixz>-9.77394e-08</ixz>
-          <iyy>0.000569585</iyy>
-          <iyz>3.14965e-08</iyz>
-          <izz>0.000308584</izz>
-        </inertia>
-      </inertial>
-      <collision name='Rwheel_Link_collision'>
-        <pose>0 0 0 0 -0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Rwheel_Link.STL</uri>
-          </mesh>
-        </geometry>
-      </collision>
-      <visual name='Rwheel_Link_visual'>
-        <pose>0 0 0 0 -0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Rwheel_Link.STL</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.2 0.2 0.2 1</ambient>
-          <diffuse>0.2 0.2 0.2 1</diffuse>
-          <specular>0.5 0.5 0.5 1</specular>
-        </material>
-      </visual>
-    </link>
+          <link name='Rwheel_Link'>
+            <pose relative_to='Rwheel_joint'>0 0 0 0 -0 0</pose>
+            <inertial>
+              <pose>0.000106 0.003049 -4e-06 0 -0 0</pose>
+              <mass>0.304045</mass>
+              <inertia>
+                <ixx>0.00030934</ixx>
+                <ixy>-2.39606e-07</ixy>
+                <ixz>-9.77394e-08</ixz>
+                <iyy>0.000569585</iyy>
+                <iyz>3.14965e-08</iyz>
+                <izz>0.000308584</izz>
+              </inertia>
+            </inertial>
+            <collision name='Rwheel_Link_collision'>
+              <pose>0 0 0 0 -0 0</pose>
+              <geometry>
+                <mesh>
+                  <scale>1 1 1</scale>
+                  <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Rwheel_Link.STL</uri>
+                </mesh>
+              </geometry>
+            </collision>
+            <visual name='Rwheel_Link_visual'>
+              <pose>0 0 0 0 -0 0</pose>
+              <geometry>
+                <mesh>
+                  <scale>1 1 1</scale>
+                  <uri>file:///home/xyz/Desktop/xluo/Gazebo_test/bipedal_4/meshes/Rwheel_Link.STL</uri>
+                </mesh>
+              </geometry>
+              <material>
+                <ambient>0.2 0.2 0.2 1</ambient>
+                <diffuse>0.2 0.2 0.2 1</diffuse>
+                <specular>0.5 0.5 0.5 1</specular>
+              </material>
+            </visual>
+          </link>
 
-    <!-- Add joint controller plugin-->
+          <!-- Add joint controller plugin for all joint -->
+          <plugin
+            filename="ignition-gazebo-apply-joint-force-system"
+            name="gz::sim::systems::ApplyJointForce">
+            <joint_name>Rwheel_joint</joint_name>
+          </plugin>
 
-  <ros2_control name="GazeboSimSystem" type="system">
-      <hardware>
-          <plugin>gz_ros2_control/GazeboSimSystem</plugin>
-      </hardware>
+          <plugin
+            filename="ignition-gazebo-apply-joint-force-system"
+            name="gz::sim::systems::ApplyJointForce">
+            <joint_name>Lwheel_joint</joint_name>
+          </plugin>
 
-      <!-- 左轮控制 -->
-      <joint name="Lwheel_joint">
-          <command_interface name="effort">
-              <param name="min">-10.0</param>
-              <param name="max">10.0</param>
-          </command_interface>
-          <state_interface name="position"/>
-          <state_interface name="velocity"/>
-          <state_interface name="effort"/>
-      </joint>
+          <plugin
+            filename="ignition-gazebo-apply-joint-force-system"
+            name="gz::sim::systems::ApplyJointForce">
+            <joint_name>Rbig_joint</joint_name>
+          </plugin>
 
-      <!-- 右轮控制 -->
-      <joint name="Rwheel_joint">
-          <command_interface name="effort">
-              <param name="min">-10.0</param>
-              <param name="max">10.0</param>
-          </command_interface>
-          <state_interface name="position"/>
-          <state_interface name="velocity"/>
-          <state_interface name="effort"/>
-      </joint>
+          <plugin
+            filename="ignition-gazebo-apply-joint-force-system"
+            name="gz::sim::systems::ApplyJointForce">
+            <joint_name>Lbig_joint</joint_name>
+          </plugin>
 
-  </ros2_control>
+          <plugin
+            filename="ignition-gazebo-apply-joint-force-system"
+            name="gz::sim::systems::ApplyJointForce">
+            <joint_name>Rsmall_joint</joint_name>
+          </plugin>
 
+          <plugin
+            filename="ignition-gazebo-apply-joint-force-system"
+            name="gz::sim::systems::ApplyJointForce">
+            <joint_name>Rsmall_joint</joint_name>
+          </plugin>
 
-  <gazebo>
-      <plugin filename="libgz_ros2_control-system.so" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
-          <parameters>$(find my_pkg)/config/controllers.yaml</parameters> <!-- 控制器配置文件 -->
-      </plugin>
-  </gazebo>
+          <!-- motor feedback -->
+          <plugin
+            filename="ignition-gazebo-joint-state-publisher-system"
+            name="gz::sim::systems::JointStatePublisher">
+          </plugin>
 
-
-  </model>
-
-
-
-
-
-
+        </model>
     </world>
 </sdf>
 

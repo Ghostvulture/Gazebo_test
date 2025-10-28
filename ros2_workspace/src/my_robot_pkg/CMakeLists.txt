@@ -10,58 +10,77 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
 find_package(gazebo_msgs REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 
-# Create executable for keyboard wheel controller
-add_executable(keyboard_wheel_controller src/keyboard_wheel_controller.cpp)
-ament_target_dependencies(keyboard_wheel_controller
+# Find message generation dependencies
+find_package(rosidl_default_generators REQUIRED)
+
+# Include directories
+include_directories(include)
+
+# Message files
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "msg/MotorFeedback.msg"
+  "msg/JointTorques.msg"
+  "msg/RobotFeedback.msg"
+  DEPENDENCIES std_msgs geometry_msgs
+)
+
+# Create executable for gazebo keyboard controller
+add_executable(gazebo_keyboard_controller src/gazebo_keyboard_controller.cpp)
+ament_target_dependencies(gazebo_keyboard_controller
+  rclcpp
+  std_msgs
+)
+
+# Create executable for talker
+add_executable(talker src/talker.cpp)
+ament_target_dependencies(talker
+  rclcpp
+  std_msgs
+)
+
+# Create executable for listener
+add_executable(listener src/listener.cpp)
+ament_target_dependencies(listener
+  rclcpp
+  std_msgs
+)
+
+# ========== SIMPLE VERSIONS (WORKING IMPLEMENTATION) ==========
+
+# Create simple feedback collector and main in one
+add_executable(simple_feedback_main src/simple_feedback_main.cpp src/simple_feedback_collector.cpp)
+ament_target_dependencies(simple_feedback_main
   rclcpp
   std_msgs
   geometry_msgs
-  gazebo_msgs
+  sensor_msgs
 )
 
-# Create executable for wheel torque controller  
-add_executable(wheel_torque_driver src/wheel_torque_driver.cpp)
-ament_target_dependencies(wheel_torque_driver
+# Create simple torque commander and main in one
+add_executable(simple_torque_main src/simple_torque_main.cpp src/simple_torque_commander.cpp)
+ament_target_dependencies(simple_torque_main
   rclcpp
   std_msgs
-  geometry_msgs
-  gazebo_msgs
 )
 
-# Create executable for simple velocity publisher
-add_executable(simple_vel_publisher src/simple_vel_publisher.cpp)
-ament_target_dependencies(simple_vel_publisher
-  rclcpp
-  geometry_msgs
-)
-
-# Create executable for Gazebo service checker
-add_executable(gazebo_service_checker src/gazebo_service_checker.cpp)
-ament_target_dependencies(gazebo_service_checker
-  rclcpp
-  gazebo_msgs
-)
-
-# Create executable for simple joint controller
-add_executable(simple_joint_controller src/simple_joint_controller.cpp)
-ament_target_dependencies(simple_joint_controller
-  rclcpp
-  geometry_msgs
-  std_msgs
-)
+# Link custom messages to simple executables
+rosidl_get_typesupport_target(cpp_typesupport_target ${PROJECT_NAME} "rosidl_typesupport_cpp")
+target_link_libraries(simple_feedback_main "${cpp_typesupport_target}")
+target_link_libraries(simple_torque_main "${cpp_typesupport_target}")
 
 # Install executables
 install(TARGETS
-  keyboard_wheel_controller
-  wheel_torque_driver
-  simple_vel_publisher
-  gazebo_service_checker
-  simple_joint_controller
+  gazebo_keyboard_controller
+  talker
+  listener
+  simple_feedback_main
+  simple_torque_main
   DESTINATION lib/${PROJECT_NAME}
 )
 
@@ -76,5 +95,8 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
+
+# Export message dependencies
+ament_export_dependencies(rosidl_default_runtime)
 
 ament_package()

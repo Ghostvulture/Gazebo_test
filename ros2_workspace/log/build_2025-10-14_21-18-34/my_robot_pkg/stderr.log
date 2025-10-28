@@ -1,4 +1,0 @@
-[01m[K/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/src/my_robot_pkg/src/wheel_torque_driver.cpp:[m[K In member function ‘[01m[Kvoid WheelTorqueDriver::updateSimulatedWheelVelocities()[m[K’:
-[01m[K/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/src/my_robot_pkg/src/wheel_torque_driver.cpp:259:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktorque_to_velocity_gain[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
-  259 |         double [01;35m[Ktorque_to_velocity_gain[m[K = 0.1;  // Simplified conversion
-      |                [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K

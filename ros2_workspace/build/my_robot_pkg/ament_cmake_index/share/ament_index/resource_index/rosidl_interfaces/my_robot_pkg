@@ -1,0 +1,6 @@
+msg/JointTorques.idl
+msg/JointTorques.msg
+msg/MotorFeedback.idl
+msg/MotorFeedback.msg
+msg/RobotFeedback.idl
+msg/RobotFeedback.msg
