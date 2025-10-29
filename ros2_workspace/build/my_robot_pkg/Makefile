@@ -432,6 +432,19 @@ listener/fast:
 .PHONY : listener/fast
 
 #=============================================================================
+# Target rules for targets named user_implement_ex
+
+# Build rule for target.
+user_implement_ex: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 user_implement_ex
+.PHONY : user_implement_ex
+
+# fast build rule for target.
+user_implement_ex/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/user_implement_ex.dir/build.make CMakeFiles/user_implement_ex.dir/build
+.PHONY : user_implement_ex/fast
+
+#=============================================================================
 # Target rules for targets named simple_feedback_collector
 
 # Build rule for target.
@@ -1201,6 +1214,30 @@ src/talker.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/src/talker.cpp.s
 .PHONY : src/talker.cpp.s
 
+src/user_implement_ex.o: src/user_implement_ex.cpp.o
+.PHONY : src/user_implement_ex.o
+
+# target to build an object file
+src/user_implement_ex.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/user_implement_ex.dir/build.make CMakeFiles/user_implement_ex.dir/src/user_implement_ex.cpp.o
+.PHONY : src/user_implement_ex.cpp.o
+
+src/user_implement_ex.i: src/user_implement_ex.cpp.i
+.PHONY : src/user_implement_ex.i
+
+# target to preprocess a source file
+src/user_implement_ex.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/user_implement_ex.dir/build.make CMakeFiles/user_implement_ex.dir/src/user_implement_ex.cpp.i
+.PHONY : src/user_implement_ex.cpp.i
+
+src/user_implement_ex.s: src/user_implement_ex.cpp.s
+.PHONY : src/user_implement_ex.s
+
+# target to generate assembly for a file
+src/user_implement_ex.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/user_implement_ex.dir/build.make CMakeFiles/user_implement_ex.dir/src/user_implement_ex.cpp.s
+.PHONY : src/user_implement_ex.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1236,6 +1273,7 @@ help:
 	@echo "... my_robot_pkg__rosidl_typesupport_introspection_cpp"
 	@echo "... simple_feedback_collector"
 	@echo "... talker"
+	@echo "... user_implement_ex"
 	@echo "... rosidl_generator_c/my_robot_pkg/msg/detail/imu__functions.o"
 	@echo "... rosidl_generator_c/my_robot_pkg/msg/detail/imu__functions.i"
 	@echo "... rosidl_generator_c/my_robot_pkg/msg/detail/imu__functions.s"
@@ -1329,6 +1367,9 @@ help:
 	@echo "... src/talker.o"
 	@echo "... src/talker.i"
 	@echo "... src/talker.s"
+	@echo "... src/user_implement_ex.o"
+	@echo "... src/user_implement_ex.i"
+	@echo "... src/user_implement_ex.s"
 .PHONY : help
 
 

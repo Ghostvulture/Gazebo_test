@@ -4,10 +4,9 @@
 #include "std_msgs/msg/string.hpp"  // 用于发送日志或状态信息
 #include <sstream>  // 添加字符串流头文件
 #include "../include/my_robot_pkg/simple_feedback_collector.hpp"
-#include "my_robot_pkg/msg/imu.hpp"  // 正确的自定义消息包含
-#include "my_robot_pkg/msg/robot_feedback.hpp"  // 正确的自定义消息包含
-#include "my_robot_pkg/msg/motor_feedback.hpp"  // 正确的自定义消息包含
-
+#include "my_robot_pkg/msg/imu.hpp"  // 自定义消息包含
+#include "my_robot_pkg/msg/robot_feedback.hpp"  
+#include "my_robot_pkg/msg/motor_feedback.hpp"  
 
 class FeedbackReceiver : public rclcpp::Node
 {

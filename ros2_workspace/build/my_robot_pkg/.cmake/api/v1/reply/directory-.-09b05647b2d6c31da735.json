@@ -393,19 +393,19 @@
 			{
 				"command" : 0,
 				"file" : 2,
-				"line" : 73,
+				"line" : 79,
 				"parent" : 0
 			},
 			{
 				"command" : 0,
 				"file" : 2,
-				"line" : 82,
+				"line" : 89,
 				"parent" : 0
 			},
 			{
 				"command" : 12,
 				"file" : 2,
-				"line" : 96,
+				"line" : 103,
 				"parent" : 0
 			},
 			{
@@ -1089,6 +1089,18 @@
 			],
 			"targetId" : "simple_feedback_collector::@6890427a1f51a3e7e1df",
 			"targetIndex" : 19,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 60,
+			"component" : "Unspecified",
+			"destination" : "lib/my_robot_pkg",
+			"paths" : 
+			[
+				"user_implement_ex"
+			],
+			"targetId" : "user_implement_ex::@6890427a1f51a3e7e1df",
+			"targetIndex" : 22,
 			"type" : "target"
 		},
 		{

@@ -79,6 +79,7 @@ all: CMakeFiles/my_robot_pkg__rosidl_typesupport_c__pyext.dir/all
 all: CMakeFiles/gazebo_keyboard_controller.dir/all
 all: CMakeFiles/talker.dir/all
 all: CMakeFiles/listener.dir/all
+all: CMakeFiles/user_implement_ex.dir/all
 all: CMakeFiles/simple_feedback_collector.dir/all
 all: my_robot_pkg__py/all
 .PHONY : all
@@ -108,6 +109,7 @@ clean: CMakeFiles/my_robot_pkg__rosidl_typesupport_c__pyext.dir/clean
 clean: CMakeFiles/gazebo_keyboard_controller.dir/clean
 clean: CMakeFiles/talker.dir/clean
 clean: CMakeFiles/listener.dir/clean
+clean: CMakeFiles/user_implement_ex.dir/clean
 clean: CMakeFiles/simple_feedback_collector.dir/clean
 clean: my_robot_pkg__py/clean
 .PHONY : clean
@@ -666,6 +668,33 @@ listener: CMakeFiles/listener.dir/rule
 CMakeFiles/listener.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/listener.dir/build.make CMakeFiles/listener.dir/clean
 .PHONY : CMakeFiles/listener.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/user_implement_ex.dir
+
+# All Build rule for target.
+CMakeFiles/user_implement_ex.dir/all: CMakeFiles/my_robot_pkg__cpp.dir/all
+CMakeFiles/user_implement_ex.dir/all: CMakeFiles/my_robot_pkg__rosidl_typesupport_cpp.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/user_implement_ex.dir/build.make CMakeFiles/user_implement_ex.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/user_implement_ex.dir/build.make CMakeFiles/user_implement_ex.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles --progress-num=56,57 "Built target user_implement_ex"
+.PHONY : CMakeFiles/user_implement_ex.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/user_implement_ex.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/user_implement_ex.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles 0
+.PHONY : CMakeFiles/user_implement_ex.dir/rule
+
+# Convenience name for target.
+user_implement_ex: CMakeFiles/user_implement_ex.dir/rule
+.PHONY : user_implement_ex
+
+# clean rule for target.
+CMakeFiles/user_implement_ex.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/user_implement_ex.dir/build.make CMakeFiles/user_implement_ex.dir/clean
+.PHONY : CMakeFiles/user_implement_ex.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/simple_feedback_collector.dir

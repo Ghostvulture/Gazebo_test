@@ -96,6 +96,7 @@
 /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/talker
 /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/listener
 /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/simple_feedback_collector
+/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/lib/my_robot_pkg/user_implement_ex
 /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/launch//keyboard_control.launch.py
 /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/my_robot_pkg/launch//simple_control_final.launch.py
 /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/install/my_robot_pkg/share/ament_index/resource_index/package_run_dependencies/my_robot_pkg

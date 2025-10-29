@@ -49,7 +49,12 @@ add_executable(listener src/listener.cpp)
 ament_target_dependencies(listener
   rclcpp
   std_msgs
-  geometry_msgs
+)
+
+add_executable(user_implement_ex src/user_implement_ex.cpp)
+ament_target_dependencies(user_implement_ex
+  rclcpp
+  std_msgs
 )
 
 
@@ -65,9 +70,10 @@ ament_target_dependencies(simple_feedback_collector
 )
 
 
-# Link custom messages to simple executables
+# Link custom messages to executables
 rosidl_get_typesupport_target(cpp_typesupport_target ${PROJECT_NAME} "rosidl_typesupport_cpp")
 target_link_libraries(simple_feedback_collector "${cpp_typesupport_target}")
+target_link_libraries(user_implement_ex "${cpp_typesupport_target}")
 
 # Install executables
 install(TARGETS
@@ -75,6 +81,7 @@ install(TARGETS
   talker
   listener
   simple_feedback_collector
+  user_implement_ex
   DESTINATION lib/${PROJECT_NAME}
 )
 
