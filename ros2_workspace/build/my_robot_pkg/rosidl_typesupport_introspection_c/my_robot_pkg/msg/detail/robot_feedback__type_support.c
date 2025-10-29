@@ -13,20 +13,24 @@
 
 
 // Include directives for member types
-// Member `header`
-#include "std_msgs/msg/header.h"
-// Member `header`
-#include "std_msgs/msg/detail/header__rosidl_typesupport_introspection_c.h"
-// Member `motors`
+// Member `l_big`
+// Member `l_small`
+// Member `r_big`
+// Member `r_small`
+// Member `l_wheel`
+// Member `r_wheel`
 #include "my_robot_pkg/msg/motor_feedback.h"
-// Member `motors`
+// Member `l_big`
+// Member `l_small`
+// Member `r_big`
+// Member `r_small`
+// Member `l_wheel`
+// Member `r_wheel`
 #include "my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h"
-// Member `angular_velocity`
-// Member `linear_acceleration`
-#include "geometry_msgs/msg/vector3.h"
-// Member `angular_velocity`
-// Member `linear_acceleration`
-#include "geometry_msgs/msg/detail/vector3__rosidl_typesupport_introspection_c.h"
+// Member `imu`
+#include "my_robot_pkg/msg/imu.h"
+// Member `imu`
+#include "my_robot_pkg/msg/detail/imu__rosidl_typesupport_introspection_c.h"
 
 #ifdef __cplusplus
 extern "C"
@@ -47,71 +51,16 @@ void my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__Robot
   my_robot_pkg__msg__RobotFeedback__fini(message_memory);
 }
 
-size_t my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__size_function__RobotFeedback__motors(
-  const void * untyped_member)
-{
-  const my_robot_pkg__msg__MotorFeedback__Sequence * member =
-    (const my_robot_pkg__msg__MotorFeedback__Sequence *)(untyped_member);
-  return member->size;
-}
-
-const void * my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__get_const_function__RobotFeedback__motors(
-  const void * untyped_member, size_t index)
-{
-  const my_robot_pkg__msg__MotorFeedback__Sequence * member =
-    (const my_robot_pkg__msg__MotorFeedback__Sequence *)(untyped_member);
-  return &member->data[index];
-}
-
-void * my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__get_function__RobotFeedback__motors(
-  void * untyped_member, size_t index)
-{
-  my_robot_pkg__msg__MotorFeedback__Sequence * member =
-    (my_robot_pkg__msg__MotorFeedback__Sequence *)(untyped_member);
-  return &member->data[index];
-}
-
-void my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__fetch_function__RobotFeedback__motors(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const my_robot_pkg__msg__MotorFeedback * item =
-    ((const my_robot_pkg__msg__MotorFeedback *)
-    my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__get_const_function__RobotFeedback__motors(untyped_member, index));
-  my_robot_pkg__msg__MotorFeedback * value =
-    (my_robot_pkg__msg__MotorFeedback *)(untyped_value);
-  *value = *item;
-}
-
-void my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__assign_function__RobotFeedback__motors(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  my_robot_pkg__msg__MotorFeedback * item =
-    ((my_robot_pkg__msg__MotorFeedback *)
-    my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__get_function__RobotFeedback__motors(untyped_member, index));
-  const my_robot_pkg__msg__MotorFeedback * value =
-    (const my_robot_pkg__msg__MotorFeedback *)(untyped_value);
-  *item = *value;
-}
-
-bool my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__resize_function__RobotFeedback__motors(
-  void * untyped_member, size_t size)
-{
-  my_robot_pkg__msg__MotorFeedback__Sequence * member =
-    (my_robot_pkg__msg__MotorFeedback__Sequence *)(untyped_member);
-  my_robot_pkg__msg__MotorFeedback__Sequence__fini(member);
-  return my_robot_pkg__msg__MotorFeedback__Sequence__init(member, size);
-}
-
-static rosidl_typesupport_introspection_c__MessageMember my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__RobotFeedback_message_member_array[4] = {
+static rosidl_typesupport_introspection_c__MessageMember my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__RobotFeedback_message_member_array[7] = {
   {
-    "header",  // name
+    "l_big",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message (initialized later)
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(my_robot_pkg__msg__RobotFeedback, header),  // bytes offset in struct
+    offsetof(my_robot_pkg__msg__RobotFeedback, l_big),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -121,31 +70,14 @@ static rosidl_typesupport_introspection_c__MessageMember my_robot_pkg__msg__Robo
     NULL  // resize(index) function pointer
   },
   {
-    "motors",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message (initialized later)
-    true,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(my_robot_pkg__msg__RobotFeedback, motors),  // bytes offset in struct
-    NULL,  // default value
-    my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__size_function__RobotFeedback__motors,  // size() function pointer
-    my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__get_const_function__RobotFeedback__motors,  // get_const(index) function pointer
-    my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__get_function__RobotFeedback__motors,  // get(index) function pointer
-    my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__fetch_function__RobotFeedback__motors,  // fetch(index, &value) function pointer
-    my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__assign_function__RobotFeedback__motors,  // assign(index, value) function pointer
-    my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__resize_function__RobotFeedback__motors  // resize(index) function pointer
-  },
-  {
-    "angular_velocity",  // name
+    "l_small",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message (initialized later)
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(my_robot_pkg__msg__RobotFeedback, angular_velocity),  // bytes offset in struct
+    offsetof(my_robot_pkg__msg__RobotFeedback, l_small),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -155,14 +87,82 @@ static rosidl_typesupport_introspection_c__MessageMember my_robot_pkg__msg__Robo
     NULL  // resize(index) function pointer
   },
   {
-    "linear_acceleration",  // name
+    "r_big",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message (initialized later)
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(my_robot_pkg__msg__RobotFeedback, linear_acceleration),  // bytes offset in struct
+    offsetof(my_robot_pkg__msg__RobotFeedback, r_big),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "r_small",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message (initialized later)
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(my_robot_pkg__msg__RobotFeedback, r_small),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "l_wheel",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message (initialized later)
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(my_robot_pkg__msg__RobotFeedback, l_wheel),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "r_wheel",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message (initialized later)
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(my_robot_pkg__msg__RobotFeedback, r_wheel),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "imu",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message (initialized later)
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(my_robot_pkg__msg__RobotFeedback, imu),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -176,7 +176,7 @@ static rosidl_typesupport_introspection_c__MessageMember my_robot_pkg__msg__Robo
 static const rosidl_typesupport_introspection_c__MessageMembers my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__RobotFeedback_message_members = {
   "my_robot_pkg__msg",  // message namespace
   "RobotFeedback",  // message name
-  4,  // number of fields
+  7,  // number of fields
   sizeof(my_robot_pkg__msg__RobotFeedback),
   my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__RobotFeedback_message_member_array,  // message members
   my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__RobotFeedback_init_function,  // function to initialize message memory (memory has to be allocated)
@@ -195,13 +195,19 @@ ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_my_robot_pkg
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, my_robot_pkg, msg, RobotFeedback)() {
   my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__RobotFeedback_message_member_array[0].members_ =
-    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, std_msgs, msg, Header)();
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, my_robot_pkg, msg, MotorFeedback)();
   my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__RobotFeedback_message_member_array[1].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, my_robot_pkg, msg, MotorFeedback)();
   my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__RobotFeedback_message_member_array[2].members_ =
-    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, geometry_msgs, msg, Vector3)();
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, my_robot_pkg, msg, MotorFeedback)();
   my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__RobotFeedback_message_member_array[3].members_ =
-    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, geometry_msgs, msg, Vector3)();
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, my_robot_pkg, msg, MotorFeedback)();
+  my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__RobotFeedback_message_member_array[4].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, my_robot_pkg, msg, MotorFeedback)();
+  my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__RobotFeedback_message_member_array[5].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, my_robot_pkg, msg, MotorFeedback)();
+  my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__RobotFeedback_message_member_array[6].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, my_robot_pkg, msg, Imu)();
   if (!my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__RobotFeedback_message_type_support_handle.typesupport_identifier) {
     my_robot_pkg__msg__RobotFeedback__rosidl_typesupport_introspection_c__RobotFeedback_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;

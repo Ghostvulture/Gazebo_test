@@ -33,14 +33,14 @@ void my_robot_pkg__msg__MotorFeedback__rosidl_typesupport_introspection_c__Motor
 
 static rosidl_typesupport_introspection_c__MessageMember my_robot_pkg__msg__MotorFeedback__rosidl_typesupport_introspection_c__MotorFeedback_message_member_array[3] = {
   {
-    "position",  // name
+    "pos_fdb",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(my_robot_pkg__msg__MotorFeedback, position),  // bytes offset in struct
+    offsetof(my_robot_pkg__msg__MotorFeedback, pos_fdb),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -50,14 +50,14 @@ static rosidl_typesupport_introspection_c__MessageMember my_robot_pkg__msg__Moto
     NULL  // resize(index) function pointer
   },
   {
-    "velocity",  // name
+    "sbd_fdb",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(my_robot_pkg__msg__MotorFeedback, velocity),  // bytes offset in struct
+    offsetof(my_robot_pkg__msg__MotorFeedback, sbd_fdb),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -67,14 +67,14 @@ static rosidl_typesupport_introspection_c__MessageMember my_robot_pkg__msg__Moto
     NULL  // resize(index) function pointer
   },
   {
-    "torque",  // name
+    "tor_fdb",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(my_robot_pkg__msg__MotorFeedback, torque),  // bytes offset in struct
+    offsetof(my_robot_pkg__msg__MotorFeedback, tor_fdb),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer

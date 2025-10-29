@@ -50,31 +50,31 @@ bool my_robot_pkg__msg__motor_feedback__convert_from_py(PyObject * _pymsg, void 
     assert(strncmp("my_robot_pkg.msg._motor_feedback.MotorFeedback", full_classname_dest, 46) == 0);
   }
   my_robot_pkg__msg__MotorFeedback * ros_message = _ros_message;
-  {  // position
-    PyObject * field = PyObject_GetAttrString(_pymsg, "position");
+  {  // pos_fdb
+    PyObject * field = PyObject_GetAttrString(_pymsg, "pos_fdb");
     if (!field) {
       return false;
     }
     assert(PyFloat_Check(field));
-    ros_message->position = PyFloat_AS_DOUBLE(field);
+    ros_message->pos_fdb = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // velocity
-    PyObject * field = PyObject_GetAttrString(_pymsg, "velocity");
+  {  // sbd_fdb
+    PyObject * field = PyObject_GetAttrString(_pymsg, "sbd_fdb");
     if (!field) {
       return false;
     }
     assert(PyFloat_Check(field));
-    ros_message->velocity = PyFloat_AS_DOUBLE(field);
+    ros_message->sbd_fdb = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // torque
-    PyObject * field = PyObject_GetAttrString(_pymsg, "torque");
+  {  // tor_fdb
+    PyObject * field = PyObject_GetAttrString(_pymsg, "tor_fdb");
     if (!field) {
       return false;
     }
     assert(PyFloat_Check(field));
-    ros_message->torque = PyFloat_AS_DOUBLE(field);
+    ros_message->tor_fdb = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
 
@@ -99,33 +99,33 @@ PyObject * my_robot_pkg__msg__motor_feedback__convert_to_py(void * raw_ros_messa
     }
   }
   my_robot_pkg__msg__MotorFeedback * ros_message = (my_robot_pkg__msg__MotorFeedback *)raw_ros_message;
-  {  // position
+  {  // pos_fdb
     PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->position);
+    field = PyFloat_FromDouble(ros_message->pos_fdb);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "position", field);
+      int rc = PyObject_SetAttrString(_pymessage, "pos_fdb", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
       }
     }
   }
-  {  // velocity
+  {  // sbd_fdb
     PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->velocity);
+    field = PyFloat_FromDouble(ros_message->sbd_fdb);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "velocity", field);
+      int rc = PyObject_SetAttrString(_pymessage, "sbd_fdb", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
       }
     }
   }
-  {  // torque
+  {  // tor_fdb
     PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->torque);
+    field = PyFloat_FromDouble(ros_message->tor_fdb);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "torque", field);
+      int rc = PyObject_SetAttrString(_pymessage, "tor_fdb", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

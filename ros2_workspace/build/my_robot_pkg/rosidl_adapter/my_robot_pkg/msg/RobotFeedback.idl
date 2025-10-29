@@ -2,29 +2,41 @@
 // with input from my_robot_pkg/msg/RobotFeedback.msg
 // generated code does not contain a copyright notice
 
-#include "geometry_msgs/msg/Vector3.idl"
+#include "my_robot_pkg/msg/Imu.idl"
 #include "my_robot_pkg/msg/MotorFeedback.idl"
-#include "std_msgs/msg/Header.idl"
 
 module my_robot_pkg {
   module msg {
     @verbatim (language="comment", text=
-      "完整的反馈包")
+      "机器人反馈消息")
     struct RobotFeedback {
-      std_msgs::msg::Header header;
+      @verbatim (language="comment", text=
+        "左大腿电机")
+      my_robot_pkg::msg::MotorFeedback l_big;
 
       @verbatim (language="comment", text=
-        "六个电机的反馈 [Lwheel, Rwheel, Lbig, Lsmall, Rbig, Rsmall]")
-      sequence<my_robot_pkg::msg::MotorFeedback> motors;
+        "左小腿电机")
+      my_robot_pkg::msg::MotorFeedback l_small;
 
       @verbatim (language="comment", text=
-        "IMU数据" "\n"
-        "角速度 (rad/s)")
-      geometry_msgs::msg::Vector3 angular_velocity;
+        "右大腿电机")
+      my_robot_pkg::msg::MotorFeedback r_big;
 
       @verbatim (language="comment", text=
-        "线性加速度 (m/s²)")
-      geometry_msgs::msg::Vector3 linear_acceleration;
+        "右小腿电机")
+      my_robot_pkg::msg::MotorFeedback r_small;
+
+      @verbatim (language="comment", text=
+        "左轮子电机")
+      my_robot_pkg::msg::MotorFeedback l_wheel;
+
+      @verbatim (language="comment", text=
+        "右轮子电机")
+      my_robot_pkg::msg::MotorFeedback r_wheel;
+
+      @verbatim (language="comment", text=
+        "IMU 传感器数据")
+      my_robot_pkg::msg::Imu imu;
     };
   };
 };

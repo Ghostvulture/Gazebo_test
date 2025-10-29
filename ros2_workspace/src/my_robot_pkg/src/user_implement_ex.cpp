@@ -4,17 +4,18 @@
 #include <chrono>
 #include <memory>
 
-class GazeboKeyboardController : public rclcpp::Node
+class UserFunction : public rclcpp::Node
 {
 public:
-    GazeboKeyboardController() : Node("gazebo_keyboard_controller")
+    UserFunction() : Node("user_function")
     {
-        // 创建力矩发布器
-        right_wheel_pub_ = this->create_publisher<std_msgs::msg::Float64>(
-            "/model/bipedal_4/joint/Rwheel_joint/cmd_force", 10);
-        left_wheel_pub_ = this->create_publisher<std_msgs::msg::Float64>(
-            "/model/bipedal_4/joint/Lwheel_joint/cmd_force", 10);
-        
+        // 订阅传感器信息
+        sensor_sub_ = this->create_subscription<std_msgs::msg::Float64>(
+            "sensor_data", 10,
+            std::bind(&UserFunction::sensor_callback, this, std::placeholders::_1));
+
+
+
         // 订阅Gazebo键盘输入
         keyboard_sub_ = this->create_subscription<std_msgs::msg::Int32>(
             "/keyboard/keypress", 10,

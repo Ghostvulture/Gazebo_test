@@ -16,26 +16,20 @@
 #include "my_robot_pkg/msg/detail/robot_feedback__struct.h"
 #include "my_robot_pkg/msg/detail/robot_feedback__functions.h"
 
-#include "rosidl_runtime_c/primitives_sequence.h"
-#include "rosidl_runtime_c/primitives_sequence_functions.h"
-
-// Nested array functions includes
-#include "my_robot_pkg/msg/detail/motor_feedback__functions.h"
-// end nested array functions include
-ROSIDL_GENERATOR_C_IMPORT
-bool std_msgs__msg__header__convert_from_py(PyObject * _pymsg, void * _ros_message);
-ROSIDL_GENERATOR_C_IMPORT
-PyObject * std_msgs__msg__header__convert_to_py(void * raw_ros_message);
 bool my_robot_pkg__msg__motor_feedback__convert_from_py(PyObject * _pymsg, void * _ros_message);
 PyObject * my_robot_pkg__msg__motor_feedback__convert_to_py(void * raw_ros_message);
-ROSIDL_GENERATOR_C_IMPORT
-bool geometry_msgs__msg__vector3__convert_from_py(PyObject * _pymsg, void * _ros_message);
-ROSIDL_GENERATOR_C_IMPORT
-PyObject * geometry_msgs__msg__vector3__convert_to_py(void * raw_ros_message);
-ROSIDL_GENERATOR_C_IMPORT
-bool geometry_msgs__msg__vector3__convert_from_py(PyObject * _pymsg, void * _ros_message);
-ROSIDL_GENERATOR_C_IMPORT
-PyObject * geometry_msgs__msg__vector3__convert_to_py(void * raw_ros_message);
+bool my_robot_pkg__msg__motor_feedback__convert_from_py(PyObject * _pymsg, void * _ros_message);
+PyObject * my_robot_pkg__msg__motor_feedback__convert_to_py(void * raw_ros_message);
+bool my_robot_pkg__msg__motor_feedback__convert_from_py(PyObject * _pymsg, void * _ros_message);
+PyObject * my_robot_pkg__msg__motor_feedback__convert_to_py(void * raw_ros_message);
+bool my_robot_pkg__msg__motor_feedback__convert_from_py(PyObject * _pymsg, void * _ros_message);
+PyObject * my_robot_pkg__msg__motor_feedback__convert_to_py(void * raw_ros_message);
+bool my_robot_pkg__msg__motor_feedback__convert_from_py(PyObject * _pymsg, void * _ros_message);
+PyObject * my_robot_pkg__msg__motor_feedback__convert_to_py(void * raw_ros_message);
+bool my_robot_pkg__msg__motor_feedback__convert_from_py(PyObject * _pymsg, void * _ros_message);
+PyObject * my_robot_pkg__msg__motor_feedback__convert_to_py(void * raw_ros_message);
+bool my_robot_pkg__msg__imu__convert_from_py(PyObject * _pymsg, void * _ros_message);
+PyObject * my_robot_pkg__msg__imu__convert_to_py(void * raw_ros_message);
 
 ROSIDL_GENERATOR_C_EXPORT
 bool my_robot_pkg__msg__robot_feedback__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -70,67 +64,78 @@ bool my_robot_pkg__msg__robot_feedback__convert_from_py(PyObject * _pymsg, void 
     assert(strncmp("my_robot_pkg.msg._robot_feedback.RobotFeedback", full_classname_dest, 46) == 0);
   }
   my_robot_pkg__msg__RobotFeedback * ros_message = _ros_message;
-  {  // header
-    PyObject * field = PyObject_GetAttrString(_pymsg, "header");
+  {  // l_big
+    PyObject * field = PyObject_GetAttrString(_pymsg, "l_big");
     if (!field) {
       return false;
     }
-    if (!std_msgs__msg__header__convert_from_py(field, &ros_message->header)) {
+    if (!my_robot_pkg__msg__motor_feedback__convert_from_py(field, &ros_message->l_big)) {
       Py_DECREF(field);
       return false;
     }
     Py_DECREF(field);
   }
-  {  // motors
-    PyObject * field = PyObject_GetAttrString(_pymsg, "motors");
+  {  // l_small
+    PyObject * field = PyObject_GetAttrString(_pymsg, "l_small");
     if (!field) {
       return false;
     }
-    PyObject * seq_field = PySequence_Fast(field, "expected a sequence in 'motors'");
-    if (!seq_field) {
-      Py_DECREF(field);
-      return false;
-    }
-    Py_ssize_t size = PySequence_Size(field);
-    if (-1 == size) {
-      Py_DECREF(seq_field);
-      Py_DECREF(field);
-      return false;
-    }
-    if (!my_robot_pkg__msg__MotorFeedback__Sequence__init(&(ros_message->motors), size)) {
-      PyErr_SetString(PyExc_RuntimeError, "unable to create my_robot_pkg__msg__MotorFeedback__Sequence ros_message");
-      Py_DECREF(seq_field);
-      Py_DECREF(field);
-      return false;
-    }
-    my_robot_pkg__msg__MotorFeedback * dest = ros_message->motors.data;
-    for (Py_ssize_t i = 0; i < size; ++i) {
-      if (!my_robot_pkg__msg__motor_feedback__convert_from_py(PySequence_Fast_GET_ITEM(seq_field, i), &dest[i])) {
-        Py_DECREF(seq_field);
-        Py_DECREF(field);
-        return false;
-      }
-    }
-    Py_DECREF(seq_field);
-    Py_DECREF(field);
-  }
-  {  // angular_velocity
-    PyObject * field = PyObject_GetAttrString(_pymsg, "angular_velocity");
-    if (!field) {
-      return false;
-    }
-    if (!geometry_msgs__msg__vector3__convert_from_py(field, &ros_message->angular_velocity)) {
+    if (!my_robot_pkg__msg__motor_feedback__convert_from_py(field, &ros_message->l_small)) {
       Py_DECREF(field);
       return false;
     }
     Py_DECREF(field);
   }
-  {  // linear_acceleration
-    PyObject * field = PyObject_GetAttrString(_pymsg, "linear_acceleration");
+  {  // r_big
+    PyObject * field = PyObject_GetAttrString(_pymsg, "r_big");
     if (!field) {
       return false;
     }
-    if (!geometry_msgs__msg__vector3__convert_from_py(field, &ros_message->linear_acceleration)) {
+    if (!my_robot_pkg__msg__motor_feedback__convert_from_py(field, &ros_message->r_big)) {
+      Py_DECREF(field);
+      return false;
+    }
+    Py_DECREF(field);
+  }
+  {  // r_small
+    PyObject * field = PyObject_GetAttrString(_pymsg, "r_small");
+    if (!field) {
+      return false;
+    }
+    if (!my_robot_pkg__msg__motor_feedback__convert_from_py(field, &ros_message->r_small)) {
+      Py_DECREF(field);
+      return false;
+    }
+    Py_DECREF(field);
+  }
+  {  // l_wheel
+    PyObject * field = PyObject_GetAttrString(_pymsg, "l_wheel");
+    if (!field) {
+      return false;
+    }
+    if (!my_robot_pkg__msg__motor_feedback__convert_from_py(field, &ros_message->l_wheel)) {
+      Py_DECREF(field);
+      return false;
+    }
+    Py_DECREF(field);
+  }
+  {  // r_wheel
+    PyObject * field = PyObject_GetAttrString(_pymsg, "r_wheel");
+    if (!field) {
+      return false;
+    }
+    if (!my_robot_pkg__msg__motor_feedback__convert_from_py(field, &ros_message->r_wheel)) {
+      Py_DECREF(field);
+      return false;
+    }
+    Py_DECREF(field);
+  }
+  {  // imu
+    PyObject * field = PyObject_GetAttrString(_pymsg, "imu");
+    if (!field) {
+      return false;
+    }
+    if (!my_robot_pkg__msg__imu__convert_from_py(field, &ros_message->imu)) {
       Py_DECREF(field);
       return false;
     }
@@ -158,70 +163,98 @@ PyObject * my_robot_pkg__msg__robot_feedback__convert_to_py(void * raw_ros_messa
     }
   }
   my_robot_pkg__msg__RobotFeedback * ros_message = (my_robot_pkg__msg__RobotFeedback *)raw_ros_message;
-  {  // header
+  {  // l_big
     PyObject * field = NULL;
-    field = std_msgs__msg__header__convert_to_py(&ros_message->header);
+    field = my_robot_pkg__msg__motor_feedback__convert_to_py(&ros_message->l_big);
     if (!field) {
       return NULL;
     }
     {
-      int rc = PyObject_SetAttrString(_pymessage, "header", field);
+      int rc = PyObject_SetAttrString(_pymessage, "l_big", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
       }
     }
   }
-  {  // motors
+  {  // l_small
     PyObject * field = NULL;
-    size_t size = ros_message->motors.size;
-    field = PyList_New(size);
+    field = my_robot_pkg__msg__motor_feedback__convert_to_py(&ros_message->l_small);
     if (!field) {
       return NULL;
     }
-    my_robot_pkg__msg__MotorFeedback * item;
-    for (size_t i = 0; i < size; ++i) {
-      item = &(ros_message->motors.data[i]);
-      PyObject * pyitem = my_robot_pkg__msg__motor_feedback__convert_to_py(item);
-      if (!pyitem) {
-        Py_DECREF(field);
-        return NULL;
-      }
-      int rc = PyList_SetItem(field, i, pyitem);
-      (void)rc;
-      assert(rc == 0);
-    }
-    assert(PySequence_Check(field));
     {
-      int rc = PyObject_SetAttrString(_pymessage, "motors", field);
+      int rc = PyObject_SetAttrString(_pymessage, "l_small", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
       }
     }
   }
-  {  // angular_velocity
+  {  // r_big
     PyObject * field = NULL;
-    field = geometry_msgs__msg__vector3__convert_to_py(&ros_message->angular_velocity);
+    field = my_robot_pkg__msg__motor_feedback__convert_to_py(&ros_message->r_big);
     if (!field) {
       return NULL;
     }
     {
-      int rc = PyObject_SetAttrString(_pymessage, "angular_velocity", field);
+      int rc = PyObject_SetAttrString(_pymessage, "r_big", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
       }
     }
   }
-  {  // linear_acceleration
+  {  // r_small
     PyObject * field = NULL;
-    field = geometry_msgs__msg__vector3__convert_to_py(&ros_message->linear_acceleration);
+    field = my_robot_pkg__msg__motor_feedback__convert_to_py(&ros_message->r_small);
     if (!field) {
       return NULL;
     }
     {
-      int rc = PyObject_SetAttrString(_pymessage, "linear_acceleration", field);
+      int rc = PyObject_SetAttrString(_pymessage, "r_small", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // l_wheel
+    PyObject * field = NULL;
+    field = my_robot_pkg__msg__motor_feedback__convert_to_py(&ros_message->l_wheel);
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "l_wheel", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // r_wheel
+    PyObject * field = NULL;
+    field = my_robot_pkg__msg__motor_feedback__convert_to_py(&ros_message->r_wheel);
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "r_wheel", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // imu
+    PyObject * field = NULL;
+    field = my_robot_pkg__msg__imu__convert_to_py(&ros_message->imu);
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "imu", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

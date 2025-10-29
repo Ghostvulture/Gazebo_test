@@ -57,15 +57,15 @@ class MotorFeedback(metaclass=Metaclass_MotorFeedback):
     """Message class 'MotorFeedback'."""
 
     __slots__ = [
-        '_position',
-        '_velocity',
-        '_torque',
+        '_pos_fdb',
+        '_sbd_fdb',
+        '_tor_fdb',
     ]
 
     _fields_and_field_types = {
-        'position': 'double',
-        'velocity': 'double',
-        'torque': 'double',
+        'pos_fdb': 'double',
+        'sbd_fdb': 'double',
+        'tor_fdb': 'double',
     }
 
     SLOT_TYPES = (
@@ -78,9 +78,9 @@ class MotorFeedback(metaclass=Metaclass_MotorFeedback):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.position = kwargs.get('position', float())
-        self.velocity = kwargs.get('velocity', float())
-        self.torque = kwargs.get('torque', float())
+        self.pos_fdb = kwargs.get('pos_fdb', float())
+        self.sbd_fdb = kwargs.get('sbd_fdb', float())
+        self.tor_fdb = kwargs.get('tor_fdb', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -111,11 +111,11 @@ class MotorFeedback(metaclass=Metaclass_MotorFeedback):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.position != other.position:
+        if self.pos_fdb != other.pos_fdb:
             return False
-        if self.velocity != other.velocity:
+        if self.sbd_fdb != other.sbd_fdb:
             return False
-        if self.torque != other.torque:
+        if self.tor_fdb != other.tor_fdb:
             return False
         return True
 
@@ -125,46 +125,46 @@ class MotorFeedback(metaclass=Metaclass_MotorFeedback):
         return copy(cls._fields_and_field_types)
 
     @builtins.property
-    def position(self):
-        """Message field 'position'."""
-        return self._position
+    def pos_fdb(self):
+        """Message field 'pos_fdb'."""
+        return self._pos_fdb
 
-    @position.setter
-    def position(self, value):
+    @pos_fdb.setter
+    def pos_fdb(self, value):
         if __debug__:
             assert \
                 isinstance(value, float), \
-                "The 'position' field must be of type 'float'"
+                "The 'pos_fdb' field must be of type 'float'"
             assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
-                "The 'position' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
-        self._position = value
+                "The 'pos_fdb' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._pos_fdb = value
 
     @builtins.property
-    def velocity(self):
-        """Message field 'velocity'."""
-        return self._velocity
+    def sbd_fdb(self):
+        """Message field 'sbd_fdb'."""
+        return self._sbd_fdb
 
-    @velocity.setter
-    def velocity(self, value):
+    @sbd_fdb.setter
+    def sbd_fdb(self, value):
         if __debug__:
             assert \
                 isinstance(value, float), \
-                "The 'velocity' field must be of type 'float'"
+                "The 'sbd_fdb' field must be of type 'float'"
             assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
-                "The 'velocity' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
-        self._velocity = value
+                "The 'sbd_fdb' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._sbd_fdb = value
 
     @builtins.property
-    def torque(self):
-        """Message field 'torque'."""
-        return self._torque
+    def tor_fdb(self):
+        """Message field 'tor_fdb'."""
+        return self._tor_fdb
 
-    @torque.setter
-    def torque(self, value):
+    @tor_fdb.setter
+    def tor_fdb(self, value):
         if __debug__:
             assert \
                 isinstance(value, float), \
-                "The 'torque' field must be of type 'float'"
+                "The 'tor_fdb' field must be of type 'float'"
             assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
-                "The 'torque' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
-        self._torque = value
+                "The 'tor_fdb' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._tor_fdb = value

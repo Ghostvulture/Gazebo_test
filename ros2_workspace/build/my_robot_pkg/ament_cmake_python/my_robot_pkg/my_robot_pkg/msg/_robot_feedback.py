@@ -42,17 +42,13 @@ class Metaclass_RobotFeedback(type):
             cls._TYPE_SUPPORT = module.type_support_msg__msg__robot_feedback
             cls._DESTROY_ROS_MESSAGE = module.destroy_ros_message_msg__msg__robot_feedback
 
-            from geometry_msgs.msg import Vector3
-            if Vector3.__class__._TYPE_SUPPORT is None:
-                Vector3.__class__.__import_type_support__()
+            from my_robot_pkg.msg import Imu
+            if Imu.__class__._TYPE_SUPPORT is None:
+                Imu.__class__.__import_type_support__()
 
             from my_robot_pkg.msg import MotorFeedback
             if MotorFeedback.__class__._TYPE_SUPPORT is None:
                 MotorFeedback.__class__.__import_type_support__()
-
-            from std_msgs.msg import Header
-            if Header.__class__._TYPE_SUPPORT is None:
-                Header.__class__.__import_type_support__()
 
     @classmethod
     def __prepare__(cls, name, bases, **kwargs):
@@ -67,37 +63,53 @@ class RobotFeedback(metaclass=Metaclass_RobotFeedback):
     """Message class 'RobotFeedback'."""
 
     __slots__ = [
-        '_header',
-        '_motors',
-        '_angular_velocity',
-        '_linear_acceleration',
+        '_l_big',
+        '_l_small',
+        '_r_big',
+        '_r_small',
+        '_l_wheel',
+        '_r_wheel',
+        '_imu',
     ]
 
     _fields_and_field_types = {
-        'header': 'std_msgs/Header',
-        'motors': 'sequence<my_robot_pkg/MotorFeedback>',
-        'angular_velocity': 'geometry_msgs/Vector3',
-        'linear_acceleration': 'geometry_msgs/Vector3',
+        'l_big': 'my_robot_pkg/MotorFeedback',
+        'l_small': 'my_robot_pkg/MotorFeedback',
+        'r_big': 'my_robot_pkg/MotorFeedback',
+        'r_small': 'my_robot_pkg/MotorFeedback',
+        'l_wheel': 'my_robot_pkg/MotorFeedback',
+        'r_wheel': 'my_robot_pkg/MotorFeedback',
+        'imu': 'my_robot_pkg/Imu',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.NamespacedType(['std_msgs', 'msg'], 'Header'),  # noqa: E501
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.NamespacedType(['my_robot_pkg', 'msg'], 'MotorFeedback')),  # noqa: E501
-        rosidl_parser.definition.NamespacedType(['geometry_msgs', 'msg'], 'Vector3'),  # noqa: E501
-        rosidl_parser.definition.NamespacedType(['geometry_msgs', 'msg'], 'Vector3'),  # noqa: E501
+        rosidl_parser.definition.NamespacedType(['my_robot_pkg', 'msg'], 'MotorFeedback'),  # noqa: E501
+        rosidl_parser.definition.NamespacedType(['my_robot_pkg', 'msg'], 'MotorFeedback'),  # noqa: E501
+        rosidl_parser.definition.NamespacedType(['my_robot_pkg', 'msg'], 'MotorFeedback'),  # noqa: E501
+        rosidl_parser.definition.NamespacedType(['my_robot_pkg', 'msg'], 'MotorFeedback'),  # noqa: E501
+        rosidl_parser.definition.NamespacedType(['my_robot_pkg', 'msg'], 'MotorFeedback'),  # noqa: E501
+        rosidl_parser.definition.NamespacedType(['my_robot_pkg', 'msg'], 'MotorFeedback'),  # noqa: E501
+        rosidl_parser.definition.NamespacedType(['my_robot_pkg', 'msg'], 'Imu'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        from std_msgs.msg import Header
-        self.header = kwargs.get('header', Header())
-        self.motors = kwargs.get('motors', [])
-        from geometry_msgs.msg import Vector3
-        self.angular_velocity = kwargs.get('angular_velocity', Vector3())
-        from geometry_msgs.msg import Vector3
-        self.linear_acceleration = kwargs.get('linear_acceleration', Vector3())
+        from my_robot_pkg.msg import MotorFeedback
+        self.l_big = kwargs.get('l_big', MotorFeedback())
+        from my_robot_pkg.msg import MotorFeedback
+        self.l_small = kwargs.get('l_small', MotorFeedback())
+        from my_robot_pkg.msg import MotorFeedback
+        self.r_big = kwargs.get('r_big', MotorFeedback())
+        from my_robot_pkg.msg import MotorFeedback
+        self.r_small = kwargs.get('r_small', MotorFeedback())
+        from my_robot_pkg.msg import MotorFeedback
+        self.l_wheel = kwargs.get('l_wheel', MotorFeedback())
+        from my_robot_pkg.msg import MotorFeedback
+        self.r_wheel = kwargs.get('r_wheel', MotorFeedback())
+        from my_robot_pkg.msg import Imu
+        self.imu = kwargs.get('imu', Imu())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -128,13 +140,19 @@ class RobotFeedback(metaclass=Metaclass_RobotFeedback):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.header != other.header:
+        if self.l_big != other.l_big:
             return False
-        if self.motors != other.motors:
+        if self.l_small != other.l_small:
             return False
-        if self.angular_velocity != other.angular_velocity:
+        if self.r_big != other.r_big:
             return False
-        if self.linear_acceleration != other.linear_acceleration:
+        if self.r_small != other.r_small:
+            return False
+        if self.l_wheel != other.l_wheel:
+            return False
+        if self.r_wheel != other.r_wheel:
+            return False
+        if self.imu != other.imu:
             return False
         return True
 
@@ -144,67 +162,99 @@ class RobotFeedback(metaclass=Metaclass_RobotFeedback):
         return copy(cls._fields_and_field_types)
 
     @builtins.property
-    def header(self):
-        """Message field 'header'."""
-        return self._header
+    def l_big(self):
+        """Message field 'l_big'."""
+        return self._l_big
 
-    @header.setter
-    def header(self, value):
-        if __debug__:
-            from std_msgs.msg import Header
-            assert \
-                isinstance(value, Header), \
-                "The 'header' field must be a sub message of type 'Header'"
-        self._header = value
-
-    @builtins.property
-    def motors(self):
-        """Message field 'motors'."""
-        return self._motors
-
-    @motors.setter
-    def motors(self, value):
+    @l_big.setter
+    def l_big(self, value):
         if __debug__:
             from my_robot_pkg.msg import MotorFeedback
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
             assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 all(isinstance(v, MotorFeedback) for v in value) and
-                 True), \
-                "The 'motors' field must be a set or sequence and each value of type 'MotorFeedback'"
-        self._motors = value
+                isinstance(value, MotorFeedback), \
+                "The 'l_big' field must be a sub message of type 'MotorFeedback'"
+        self._l_big = value
 
     @builtins.property
-    def angular_velocity(self):
-        """Message field 'angular_velocity'."""
-        return self._angular_velocity
+    def l_small(self):
+        """Message field 'l_small'."""
+        return self._l_small
 
-    @angular_velocity.setter
-    def angular_velocity(self, value):
+    @l_small.setter
+    def l_small(self, value):
         if __debug__:
-            from geometry_msgs.msg import Vector3
+            from my_robot_pkg.msg import MotorFeedback
             assert \
-                isinstance(value, Vector3), \
-                "The 'angular_velocity' field must be a sub message of type 'Vector3'"
-        self._angular_velocity = value
+                isinstance(value, MotorFeedback), \
+                "The 'l_small' field must be a sub message of type 'MotorFeedback'"
+        self._l_small = value
 
     @builtins.property
-    def linear_acceleration(self):
-        """Message field 'linear_acceleration'."""
-        return self._linear_acceleration
+    def r_big(self):
+        """Message field 'r_big'."""
+        return self._r_big
 
-    @linear_acceleration.setter
-    def linear_acceleration(self, value):
+    @r_big.setter
+    def r_big(self, value):
         if __debug__:
-            from geometry_msgs.msg import Vector3
+            from my_robot_pkg.msg import MotorFeedback
             assert \
-                isinstance(value, Vector3), \
-                "The 'linear_acceleration' field must be a sub message of type 'Vector3'"
-        self._linear_acceleration = value
+                isinstance(value, MotorFeedback), \
+                "The 'r_big' field must be a sub message of type 'MotorFeedback'"
+        self._r_big = value
+
+    @builtins.property
+    def r_small(self):
+        """Message field 'r_small'."""
+        return self._r_small
+
+    @r_small.setter
+    def r_small(self, value):
+        if __debug__:
+            from my_robot_pkg.msg import MotorFeedback
+            assert \
+                isinstance(value, MotorFeedback), \
+                "The 'r_small' field must be a sub message of type 'MotorFeedback'"
+        self._r_small = value
+
+    @builtins.property
+    def l_wheel(self):
+        """Message field 'l_wheel'."""
+        return self._l_wheel
+
+    @l_wheel.setter
+    def l_wheel(self, value):
+        if __debug__:
+            from my_robot_pkg.msg import MotorFeedback
+            assert \
+                isinstance(value, MotorFeedback), \
+                "The 'l_wheel' field must be a sub message of type 'MotorFeedback'"
+        self._l_wheel = value
+
+    @builtins.property
+    def r_wheel(self):
+        """Message field 'r_wheel'."""
+        return self._r_wheel
+
+    @r_wheel.setter
+    def r_wheel(self, value):
+        if __debug__:
+            from my_robot_pkg.msg import MotorFeedback
+            assert \
+                isinstance(value, MotorFeedback), \
+                "The 'r_wheel' field must be a sub message of type 'MotorFeedback'"
+        self._r_wheel = value
+
+    @builtins.property
+    def imu(self):
+        """Message field 'imu'."""
+        return self._imu
+
+    @imu.setter
+    def imu(self, value):
+        if __debug__:
+            from my_robot_pkg.msg import Imu
+            assert \
+                isinstance(value, Imu), \
+                "The 'imu' field must be a sub message of type 'Imu'"
+        self._imu = value

@@ -21,15 +21,15 @@ namespace msg
 namespace builder
 {
 
-class Init_RobotFeedback_linear_acceleration
+class Init_RobotFeedback_imu
 {
 public:
-  explicit Init_RobotFeedback_linear_acceleration(::my_robot_pkg::msg::RobotFeedback & msg)
+  explicit Init_RobotFeedback_imu(::my_robot_pkg::msg::RobotFeedback & msg)
   : msg_(msg)
   {}
-  ::my_robot_pkg::msg::RobotFeedback linear_acceleration(::my_robot_pkg::msg::RobotFeedback::_linear_acceleration_type arg)
+  ::my_robot_pkg::msg::RobotFeedback imu(::my_robot_pkg::msg::RobotFeedback::_imu_type arg)
   {
-    msg_.linear_acceleration = std::move(arg);
+    msg_.imu = std::move(arg);
     return std::move(msg_);
   }
 
@@ -37,48 +37,96 @@ private:
   ::my_robot_pkg::msg::RobotFeedback msg_;
 };
 
-class Init_RobotFeedback_angular_velocity
+class Init_RobotFeedback_r_wheel
 {
 public:
-  explicit Init_RobotFeedback_angular_velocity(::my_robot_pkg::msg::RobotFeedback & msg)
+  explicit Init_RobotFeedback_r_wheel(::my_robot_pkg::msg::RobotFeedback & msg)
   : msg_(msg)
   {}
-  Init_RobotFeedback_linear_acceleration angular_velocity(::my_robot_pkg::msg::RobotFeedback::_angular_velocity_type arg)
+  Init_RobotFeedback_imu r_wheel(::my_robot_pkg::msg::RobotFeedback::_r_wheel_type arg)
   {
-    msg_.angular_velocity = std::move(arg);
-    return Init_RobotFeedback_linear_acceleration(msg_);
+    msg_.r_wheel = std::move(arg);
+    return Init_RobotFeedback_imu(msg_);
   }
 
 private:
   ::my_robot_pkg::msg::RobotFeedback msg_;
 };
 
-class Init_RobotFeedback_motors
+class Init_RobotFeedback_l_wheel
 {
 public:
-  explicit Init_RobotFeedback_motors(::my_robot_pkg::msg::RobotFeedback & msg)
+  explicit Init_RobotFeedback_l_wheel(::my_robot_pkg::msg::RobotFeedback & msg)
   : msg_(msg)
   {}
-  Init_RobotFeedback_angular_velocity motors(::my_robot_pkg::msg::RobotFeedback::_motors_type arg)
+  Init_RobotFeedback_r_wheel l_wheel(::my_robot_pkg::msg::RobotFeedback::_l_wheel_type arg)
   {
-    msg_.motors = std::move(arg);
-    return Init_RobotFeedback_angular_velocity(msg_);
+    msg_.l_wheel = std::move(arg);
+    return Init_RobotFeedback_r_wheel(msg_);
   }
 
 private:
   ::my_robot_pkg::msg::RobotFeedback msg_;
 };
 
-class Init_RobotFeedback_header
+class Init_RobotFeedback_r_small
 {
 public:
-  Init_RobotFeedback_header()
+  explicit Init_RobotFeedback_r_small(::my_robot_pkg::msg::RobotFeedback & msg)
+  : msg_(msg)
+  {}
+  Init_RobotFeedback_l_wheel r_small(::my_robot_pkg::msg::RobotFeedback::_r_small_type arg)
+  {
+    msg_.r_small = std::move(arg);
+    return Init_RobotFeedback_l_wheel(msg_);
+  }
+
+private:
+  ::my_robot_pkg::msg::RobotFeedback msg_;
+};
+
+class Init_RobotFeedback_r_big
+{
+public:
+  explicit Init_RobotFeedback_r_big(::my_robot_pkg::msg::RobotFeedback & msg)
+  : msg_(msg)
+  {}
+  Init_RobotFeedback_r_small r_big(::my_robot_pkg::msg::RobotFeedback::_r_big_type arg)
+  {
+    msg_.r_big = std::move(arg);
+    return Init_RobotFeedback_r_small(msg_);
+  }
+
+private:
+  ::my_robot_pkg::msg::RobotFeedback msg_;
+};
+
+class Init_RobotFeedback_l_small
+{
+public:
+  explicit Init_RobotFeedback_l_small(::my_robot_pkg::msg::RobotFeedback & msg)
+  : msg_(msg)
+  {}
+  Init_RobotFeedback_r_big l_small(::my_robot_pkg::msg::RobotFeedback::_l_small_type arg)
+  {
+    msg_.l_small = std::move(arg);
+    return Init_RobotFeedback_r_big(msg_);
+  }
+
+private:
+  ::my_robot_pkg::msg::RobotFeedback msg_;
+};
+
+class Init_RobotFeedback_l_big
+{
+public:
+  Init_RobotFeedback_l_big()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_RobotFeedback_motors header(::my_robot_pkg::msg::RobotFeedback::_header_type arg)
+  Init_RobotFeedback_l_small l_big(::my_robot_pkg::msg::RobotFeedback::_l_big_type arg)
   {
-    msg_.header = std::move(arg);
-    return Init_RobotFeedback_motors(msg_);
+    msg_.l_big = std::move(arg);
+    return Init_RobotFeedback_l_small(msg_);
   }
 
 private:
@@ -96,7 +144,7 @@ template<>
 inline
 auto build<::my_robot_pkg::msg::RobotFeedback>()
 {
-  return my_robot_pkg::msg::builder::Init_RobotFeedback_header();
+  return my_robot_pkg::msg::builder::Init_RobotFeedback_l_big();
 }
 
 }  // namespace my_robot_pkg

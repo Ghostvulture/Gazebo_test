@@ -78,8 +78,8 @@ rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosid
 rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/rosidl_typesupport_introspection_c/resource/srv__rosidl_typesupport_introspection_c.h.em
 rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/rosidl_typesupport_introspection_c/resource/srv__type_support.c.em
 rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: rosidl_adapter/my_robot_pkg/msg/MotorFeedback.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: rosidl_adapter/my_robot_pkg/msg/JointTorques.idl
 rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: rosidl_adapter/my_robot_pkg/msg/RobotFeedback.idl
+rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: rosidl_adapter/my_robot_pkg/msg/Imu.idl
 rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
@@ -112,55 +112,23 @@ rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosid
 rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
 rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovarianceStamped.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/Inertia.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/InertiaStamped.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/Point.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/Point32.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/PointStamped.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/Polygon.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/PolygonInstance.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/PolygonInstanceStamped.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/PolygonStamped.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/Pose.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/Pose2D.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/PoseArray.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/PoseStamped.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/PoseWithCovariance.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/PoseWithCovarianceStamped.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/Quaternion.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/QuaternionStamped.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/Transform.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/TransformStamped.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/Twist.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/TwistStamped.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/TwistWithCovariance.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/TwistWithCovarianceStamped.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/Vector3.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/Vector3Stamped.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/VelocityStamped.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/Wrench.idl
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/WrenchStamped.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C introspection for ROS interfaces"
 	/usr/bin/python3 /opt/ros/humble/lib/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c --generator-arguments-file /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_typesupport_introspection_c__arguments.json
-
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__rosidl_typesupport_introspection_c.h
 
 rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/robot_feedback__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/robot_feedback__rosidl_typesupport_introspection_c.h
 
+rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__rosidl_typesupport_introspection_c.h
+
 rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__type_support.c: rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__type_support.c
 
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c: rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c
-
 rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/robot_feedback__type_support.c: rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/robot_feedback__type_support.c
+
+rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c: rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c
 
 CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__type_support.c.o: CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/flags.make
 CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__type_support.c.o: rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__type_support.c
@@ -176,24 +144,10 @@ CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesuppo
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__type_support.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__type_support.c -o CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__type_support.c.s
 
-CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c.o: CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/flags.make
-CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c.o: rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c
-CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c.o: CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c.o -MF CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c.o.d -o CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c.o -c /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c
-
-CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c > CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c.i
-
-CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c -o CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c.s
-
 CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/robot_feedback__type_support.c.o: CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/flags.make
 CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/robot_feedback__type_support.c.o: rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/robot_feedback__type_support.c
 CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/robot_feedback__type_support.c.o: CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/robot_feedback__type_support.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/robot_feedback__type_support.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/robot_feedback__type_support.c.o -MF CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/robot_feedback__type_support.c.o.d -o CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/robot_feedback__type_support.c.o -c /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/robot_feedback__type_support.c
 
 CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/robot_feedback__type_support.c.i: cmake_force
@@ -204,25 +158,37 @@ CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesuppo
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/robot_feedback__type_support.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/robot_feedback__type_support.c -o CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/robot_feedback__type_support.c.s
 
+CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c.o: CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c.o: rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c
+CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c.o: CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c.o -MF CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c.o.d -o CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c.o -c /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c
+
+CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c > CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c.i
+
+CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c -o CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c.s
+
 # Object files for target my_robot_pkg__rosidl_typesupport_introspection_c
 my_robot_pkg__rosidl_typesupport_introspection_c_OBJECTS = \
 "CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__type_support.c.o" \
-"CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c.o" \
-"CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/robot_feedback__type_support.c.o"
+"CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/robot_feedback__type_support.c.o" \
+"CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c.o"
 
 # External object files for target my_robot_pkg__rosidl_typesupport_introspection_c
 my_robot_pkg__rosidl_typesupport_introspection_c_EXTERNAL_OBJECTS =
 
 libmy_robot_pkg__rosidl_typesupport_introspection_c.so: CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__type_support.c.o
-libmy_robot_pkg__rosidl_typesupport_introspection_c.so: CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c.o
 libmy_robot_pkg__rosidl_typesupport_introspection_c.so: CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/robot_feedback__type_support.c.o
+libmy_robot_pkg__rosidl_typesupport_introspection_c.so: CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c.o
 libmy_robot_pkg__rosidl_typesupport_introspection_c.so: CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/build.make
 libmy_robot_pkg__rosidl_typesupport_introspection_c.so: libmy_robot_pkg__rosidl_generator_c.so
-libmy_robot_pkg__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so
 libmy_robot_pkg__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
 libmy_robot_pkg__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
 libmy_robot_pkg__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so
-libmy_robot_pkg__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_c.so
 libmy_robot_pkg__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_c.so
 libmy_robot_pkg__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_c.so
 libmy_robot_pkg__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
@@ -239,8 +205,8 @@ CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/clean
 
-CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__rosidl_typesupport_introspection_c.h
-CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c
+CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__rosidl_typesupport_introspection_c.h
+CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c
 CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h
 CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__type_support.c
 CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/robot_feedback__rosidl_typesupport_introspection_c.h

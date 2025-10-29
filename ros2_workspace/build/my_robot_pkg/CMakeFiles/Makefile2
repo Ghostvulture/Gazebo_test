@@ -79,8 +79,7 @@ all: CMakeFiles/my_robot_pkg__rosidl_typesupport_c__pyext.dir/all
 all: CMakeFiles/gazebo_keyboard_controller.dir/all
 all: CMakeFiles/talker.dir/all
 all: CMakeFiles/listener.dir/all
-all: CMakeFiles/simple_feedback_main.dir/all
-all: CMakeFiles/simple_torque_main.dir/all
+all: CMakeFiles/simple_feedback_collector.dir/all
 all: my_robot_pkg__py/all
 .PHONY : all
 
@@ -109,8 +108,7 @@ clean: CMakeFiles/my_robot_pkg__rosidl_typesupport_c__pyext.dir/clean
 clean: CMakeFiles/gazebo_keyboard_controller.dir/clean
 clean: CMakeFiles/talker.dir/clean
 clean: CMakeFiles/listener.dir/clean
-clean: CMakeFiles/simple_feedback_main.dir/clean
-clean: CMakeFiles/simple_torque_main.dir/clean
+clean: CMakeFiles/simple_feedback_collector.dir/clean
 clean: my_robot_pkg__py/clean
 .PHONY : clean
 
@@ -624,7 +622,7 @@ CMakeFiles/gazebo_keyboard_controller.dir/clean:
 CMakeFiles/talker.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles --progress-num=58,59 "Built target talker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles --progress-num=54,55 "Built target talker"
 .PHONY : CMakeFiles/talker.dir/all
 
 # Build rule for subdir invocation for target.
@@ -670,58 +668,31 @@ CMakeFiles/listener.dir/clean:
 .PHONY : CMakeFiles/listener.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/simple_feedback_main.dir
+# Target rules for target CMakeFiles/simple_feedback_collector.dir
 
 # All Build rule for target.
-CMakeFiles/simple_feedback_main.dir/all: CMakeFiles/my_robot_pkg__cpp.dir/all
-CMakeFiles/simple_feedback_main.dir/all: CMakeFiles/my_robot_pkg__rosidl_typesupport_cpp.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_feedback_main.dir/build.make CMakeFiles/simple_feedback_main.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_feedback_main.dir/build.make CMakeFiles/simple_feedback_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles --progress-num=52,53,54 "Built target simple_feedback_main"
-.PHONY : CMakeFiles/simple_feedback_main.dir/all
+CMakeFiles/simple_feedback_collector.dir/all: CMakeFiles/my_robot_pkg__cpp.dir/all
+CMakeFiles/simple_feedback_collector.dir/all: CMakeFiles/my_robot_pkg__rosidl_typesupport_cpp.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_feedback_collector.dir/build.make CMakeFiles/simple_feedback_collector.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_feedback_collector.dir/build.make CMakeFiles/simple_feedback_collector.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles --progress-num=52,53 "Built target simple_feedback_collector"
+.PHONY : CMakeFiles/simple_feedback_collector.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/simple_feedback_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles 9
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/simple_feedback_main.dir/all
+CMakeFiles/simple_feedback_collector.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/simple_feedback_collector.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles 0
-.PHONY : CMakeFiles/simple_feedback_main.dir/rule
+.PHONY : CMakeFiles/simple_feedback_collector.dir/rule
 
 # Convenience name for target.
-simple_feedback_main: CMakeFiles/simple_feedback_main.dir/rule
-.PHONY : simple_feedback_main
+simple_feedback_collector: CMakeFiles/simple_feedback_collector.dir/rule
+.PHONY : simple_feedback_collector
 
 # clean rule for target.
-CMakeFiles/simple_feedback_main.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_feedback_main.dir/build.make CMakeFiles/simple_feedback_main.dir/clean
-.PHONY : CMakeFiles/simple_feedback_main.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/simple_torque_main.dir
-
-# All Build rule for target.
-CMakeFiles/simple_torque_main.dir/all: CMakeFiles/my_robot_pkg__cpp.dir/all
-CMakeFiles/simple_torque_main.dir/all: CMakeFiles/my_robot_pkg__rosidl_typesupport_cpp.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_torque_main.dir/build.make CMakeFiles/simple_torque_main.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_torque_main.dir/build.make CMakeFiles/simple_torque_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles --progress-num=55,56,57 "Built target simple_torque_main"
-.PHONY : CMakeFiles/simple_torque_main.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/simple_torque_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles 9
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/simple_torque_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles 0
-.PHONY : CMakeFiles/simple_torque_main.dir/rule
-
-# Convenience name for target.
-simple_torque_main: CMakeFiles/simple_torque_main.dir/rule
-.PHONY : simple_torque_main
-
-# clean rule for target.
-CMakeFiles/simple_torque_main.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_torque_main.dir/build.make CMakeFiles/simple_torque_main.dir/clean
-.PHONY : CMakeFiles/simple_torque_main.dir/clean
+CMakeFiles/simple_feedback_collector.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_feedback_collector.dir/build.make CMakeFiles/simple_feedback_collector.dir/clean
+.PHONY : CMakeFiles/simple_feedback_collector.dir/clean
 
 #=============================================================================
 # Target rules for target my_robot_pkg__py/CMakeFiles/my_robot_pkg__py.dir

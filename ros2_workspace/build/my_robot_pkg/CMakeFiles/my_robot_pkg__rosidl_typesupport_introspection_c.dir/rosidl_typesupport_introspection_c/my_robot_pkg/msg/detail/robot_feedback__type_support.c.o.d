@@ -48,37 +48,22 @@ CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesuppo
  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
- /usr/include/x86_64-linux-gnu/bits/select2.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib.h \
  /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_c/my_robot_pkg/msg/rosidl_generator_c__visibility_control.h \
  /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_c/my_robot_pkg/msg/detail/robot_feedback__struct.h \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.h \
- /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
  /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_c/my_robot_pkg/msg/detail/motor_feedback__struct.h \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.h \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/header.h \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__functions.h \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_c__visibility_control.h \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__type_support.h \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__rosidl_typesupport_introspection_c.h \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h \
+ /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_c/my_robot_pkg/msg/detail/imu__struct.h \
  /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_c/my_robot_pkg/msg/motor_feedback.h \
  /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_c/my_robot_pkg/msg/detail/motor_feedback__functions.h \
  /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_c/my_robot_pkg/msg/detail/motor_feedback__type_support.h \
  /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__rosidl_typesupport_introspection_c.h \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/vector3.h \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__functions.h \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_c__visibility_control.h \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__type_support.h \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__rosidl_typesupport_introspection_c.h \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+ /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_c/my_robot_pkg/msg/imu.h \
+ /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_c/my_robot_pkg/msg/detail/imu__functions.h \
+ /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_c/my_robot_pkg/msg/detail/imu__type_support.h \
+ /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__rosidl_typesupport_introspection_c.h

@@ -432,30 +432,17 @@ listener/fast:
 .PHONY : listener/fast
 
 #=============================================================================
-# Target rules for targets named simple_feedback_main
+# Target rules for targets named simple_feedback_collector
 
 # Build rule for target.
-simple_feedback_main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 simple_feedback_main
-.PHONY : simple_feedback_main
+simple_feedback_collector: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 simple_feedback_collector
+.PHONY : simple_feedback_collector
 
 # fast build rule for target.
-simple_feedback_main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_feedback_main.dir/build.make CMakeFiles/simple_feedback_main.dir/build
-.PHONY : simple_feedback_main/fast
-
-#=============================================================================
-# Target rules for targets named simple_torque_main
-
-# Build rule for target.
-simple_torque_main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 simple_torque_main
-.PHONY : simple_torque_main
-
-# fast build rule for target.
-simple_torque_main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_torque_main.dir/build.make CMakeFiles/simple_torque_main.dir/build
-.PHONY : simple_torque_main/fast
+simple_feedback_collector/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_feedback_collector.dir/build.make CMakeFiles/simple_feedback_collector.dir/build
+.PHONY : simple_feedback_collector/fast
 
 #=============================================================================
 # Target rules for targets named my_robot_pkg__py
@@ -470,29 +457,29 @@ my_robot_pkg__py/fast:
 	$(MAKE) $(MAKESILENT) -f my_robot_pkg__py/CMakeFiles/my_robot_pkg__py.dir/build.make my_robot_pkg__py/CMakeFiles/my_robot_pkg__py.dir/build
 .PHONY : my_robot_pkg__py/fast
 
-rosidl_generator_c/my_robot_pkg/msg/detail/joint_torques__functions.o: rosidl_generator_c/my_robot_pkg/msg/detail/joint_torques__functions.c.o
-.PHONY : rosidl_generator_c/my_robot_pkg/msg/detail/joint_torques__functions.o
+rosidl_generator_c/my_robot_pkg/msg/detail/imu__functions.o: rosidl_generator_c/my_robot_pkg/msg/detail/imu__functions.c.o
+.PHONY : rosidl_generator_c/my_robot_pkg/msg/detail/imu__functions.o
 
 # target to build an object file
-rosidl_generator_c/my_robot_pkg/msg/detail/joint_torques__functions.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_generator_c.dir/build.make CMakeFiles/my_robot_pkg__rosidl_generator_c.dir/rosidl_generator_c/my_robot_pkg/msg/detail/joint_torques__functions.c.o
-.PHONY : rosidl_generator_c/my_robot_pkg/msg/detail/joint_torques__functions.c.o
+rosidl_generator_c/my_robot_pkg/msg/detail/imu__functions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_generator_c.dir/build.make CMakeFiles/my_robot_pkg__rosidl_generator_c.dir/rosidl_generator_c/my_robot_pkg/msg/detail/imu__functions.c.o
+.PHONY : rosidl_generator_c/my_robot_pkg/msg/detail/imu__functions.c.o
 
-rosidl_generator_c/my_robot_pkg/msg/detail/joint_torques__functions.i: rosidl_generator_c/my_robot_pkg/msg/detail/joint_torques__functions.c.i
-.PHONY : rosidl_generator_c/my_robot_pkg/msg/detail/joint_torques__functions.i
+rosidl_generator_c/my_robot_pkg/msg/detail/imu__functions.i: rosidl_generator_c/my_robot_pkg/msg/detail/imu__functions.c.i
+.PHONY : rosidl_generator_c/my_robot_pkg/msg/detail/imu__functions.i
 
 # target to preprocess a source file
-rosidl_generator_c/my_robot_pkg/msg/detail/joint_torques__functions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_generator_c.dir/build.make CMakeFiles/my_robot_pkg__rosidl_generator_c.dir/rosidl_generator_c/my_robot_pkg/msg/detail/joint_torques__functions.c.i
-.PHONY : rosidl_generator_c/my_robot_pkg/msg/detail/joint_torques__functions.c.i
+rosidl_generator_c/my_robot_pkg/msg/detail/imu__functions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_generator_c.dir/build.make CMakeFiles/my_robot_pkg__rosidl_generator_c.dir/rosidl_generator_c/my_robot_pkg/msg/detail/imu__functions.c.i
+.PHONY : rosidl_generator_c/my_robot_pkg/msg/detail/imu__functions.c.i
 
-rosidl_generator_c/my_robot_pkg/msg/detail/joint_torques__functions.s: rosidl_generator_c/my_robot_pkg/msg/detail/joint_torques__functions.c.s
-.PHONY : rosidl_generator_c/my_robot_pkg/msg/detail/joint_torques__functions.s
+rosidl_generator_c/my_robot_pkg/msg/detail/imu__functions.s: rosidl_generator_c/my_robot_pkg/msg/detail/imu__functions.c.s
+.PHONY : rosidl_generator_c/my_robot_pkg/msg/detail/imu__functions.s
 
 # target to generate assembly for a file
-rosidl_generator_c/my_robot_pkg/msg/detail/joint_torques__functions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_generator_c.dir/build.make CMakeFiles/my_robot_pkg__rosidl_generator_c.dir/rosidl_generator_c/my_robot_pkg/msg/detail/joint_torques__functions.c.s
-.PHONY : rosidl_generator_c/my_robot_pkg/msg/detail/joint_torques__functions.c.s
+rosidl_generator_c/my_robot_pkg/msg/detail/imu__functions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_generator_c.dir/build.make CMakeFiles/my_robot_pkg__rosidl_generator_c.dir/rosidl_generator_c/my_robot_pkg/msg/detail/imu__functions.c.s
+.PHONY : rosidl_generator_c/my_robot_pkg/msg/detail/imu__functions.c.s
 
 rosidl_generator_c/my_robot_pkg/msg/detail/motor_feedback__functions.o: rosidl_generator_c/my_robot_pkg/msg/detail/motor_feedback__functions.c.o
 .PHONY : rosidl_generator_c/my_robot_pkg/msg/detail/motor_feedback__functions.o
@@ -614,29 +601,29 @@ rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_introspec
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c__pyext.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_introspection_c.c.s
 .PHONY : rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_introspection_c.c.s
 
-rosidl_generator_py/my_robot_pkg/msg/_joint_torques_s.o: rosidl_generator_py/my_robot_pkg/msg/_joint_torques_s.c.o
-.PHONY : rosidl_generator_py/my_robot_pkg/msg/_joint_torques_s.o
+rosidl_generator_py/my_robot_pkg/msg/_imu_s.o: rosidl_generator_py/my_robot_pkg/msg/_imu_s.c.o
+.PHONY : rosidl_generator_py/my_robot_pkg/msg/_imu_s.o
 
 # target to build an object file
-rosidl_generator_py/my_robot_pkg/msg/_joint_torques_s.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_generator_py.dir/build.make CMakeFiles/my_robot_pkg__rosidl_generator_py.dir/rosidl_generator_py/my_robot_pkg/msg/_joint_torques_s.c.o
-.PHONY : rosidl_generator_py/my_robot_pkg/msg/_joint_torques_s.c.o
+rosidl_generator_py/my_robot_pkg/msg/_imu_s.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_generator_py.dir/build.make CMakeFiles/my_robot_pkg__rosidl_generator_py.dir/rosidl_generator_py/my_robot_pkg/msg/_imu_s.c.o
+.PHONY : rosidl_generator_py/my_robot_pkg/msg/_imu_s.c.o
 
-rosidl_generator_py/my_robot_pkg/msg/_joint_torques_s.i: rosidl_generator_py/my_robot_pkg/msg/_joint_torques_s.c.i
-.PHONY : rosidl_generator_py/my_robot_pkg/msg/_joint_torques_s.i
+rosidl_generator_py/my_robot_pkg/msg/_imu_s.i: rosidl_generator_py/my_robot_pkg/msg/_imu_s.c.i
+.PHONY : rosidl_generator_py/my_robot_pkg/msg/_imu_s.i
 
 # target to preprocess a source file
-rosidl_generator_py/my_robot_pkg/msg/_joint_torques_s.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_generator_py.dir/build.make CMakeFiles/my_robot_pkg__rosidl_generator_py.dir/rosidl_generator_py/my_robot_pkg/msg/_joint_torques_s.c.i
-.PHONY : rosidl_generator_py/my_robot_pkg/msg/_joint_torques_s.c.i
+rosidl_generator_py/my_robot_pkg/msg/_imu_s.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_generator_py.dir/build.make CMakeFiles/my_robot_pkg__rosidl_generator_py.dir/rosidl_generator_py/my_robot_pkg/msg/_imu_s.c.i
+.PHONY : rosidl_generator_py/my_robot_pkg/msg/_imu_s.c.i
 
-rosidl_generator_py/my_robot_pkg/msg/_joint_torques_s.s: rosidl_generator_py/my_robot_pkg/msg/_joint_torques_s.c.s
-.PHONY : rosidl_generator_py/my_robot_pkg/msg/_joint_torques_s.s
+rosidl_generator_py/my_robot_pkg/msg/_imu_s.s: rosidl_generator_py/my_robot_pkg/msg/_imu_s.c.s
+.PHONY : rosidl_generator_py/my_robot_pkg/msg/_imu_s.s
 
 # target to generate assembly for a file
-rosidl_generator_py/my_robot_pkg/msg/_joint_torques_s.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_generator_py.dir/build.make CMakeFiles/my_robot_pkg__rosidl_generator_py.dir/rosidl_generator_py/my_robot_pkg/msg/_joint_torques_s.c.s
-.PHONY : rosidl_generator_py/my_robot_pkg/msg/_joint_torques_s.c.s
+rosidl_generator_py/my_robot_pkg/msg/_imu_s.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_generator_py.dir/build.make CMakeFiles/my_robot_pkg__rosidl_generator_py.dir/rosidl_generator_py/my_robot_pkg/msg/_imu_s.c.s
+.PHONY : rosidl_generator_py/my_robot_pkg/msg/_imu_s.c.s
 
 rosidl_generator_py/my_robot_pkg/msg/_motor_feedback_s.o: rosidl_generator_py/my_robot_pkg/msg/_motor_feedback_s.c.o
 .PHONY : rosidl_generator_py/my_robot_pkg/msg/_motor_feedback_s.o
@@ -686,29 +673,29 @@ rosidl_generator_py/my_robot_pkg/msg/_robot_feedback_s.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_generator_py.dir/build.make CMakeFiles/my_robot_pkg__rosidl_generator_py.dir/rosidl_generator_py/my_robot_pkg/msg/_robot_feedback_s.c.s
 .PHONY : rosidl_generator_py/my_robot_pkg/msg/_robot_feedback_s.c.s
 
-rosidl_typesupport_c/my_robot_pkg/msg/joint_torques__type_support.o: rosidl_typesupport_c/my_robot_pkg/msg/joint_torques__type_support.cpp.o
-.PHONY : rosidl_typesupport_c/my_robot_pkg/msg/joint_torques__type_support.o
+rosidl_typesupport_c/my_robot_pkg/msg/imu__type_support.o: rosidl_typesupport_c/my_robot_pkg/msg/imu__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/my_robot_pkg/msg/imu__type_support.o
 
 # target to build an object file
-rosidl_typesupport_c/my_robot_pkg/msg/joint_torques__type_support.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_c.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_c.dir/rosidl_typesupport_c/my_robot_pkg/msg/joint_torques__type_support.cpp.o
-.PHONY : rosidl_typesupport_c/my_robot_pkg/msg/joint_torques__type_support.cpp.o
+rosidl_typesupport_c/my_robot_pkg/msg/imu__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_c.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_c.dir/rosidl_typesupport_c/my_robot_pkg/msg/imu__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/my_robot_pkg/msg/imu__type_support.cpp.o
 
-rosidl_typesupport_c/my_robot_pkg/msg/joint_torques__type_support.i: rosidl_typesupport_c/my_robot_pkg/msg/joint_torques__type_support.cpp.i
-.PHONY : rosidl_typesupport_c/my_robot_pkg/msg/joint_torques__type_support.i
+rosidl_typesupport_c/my_robot_pkg/msg/imu__type_support.i: rosidl_typesupport_c/my_robot_pkg/msg/imu__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/my_robot_pkg/msg/imu__type_support.i
 
 # target to preprocess a source file
-rosidl_typesupport_c/my_robot_pkg/msg/joint_torques__type_support.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_c.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_c.dir/rosidl_typesupport_c/my_robot_pkg/msg/joint_torques__type_support.cpp.i
-.PHONY : rosidl_typesupport_c/my_robot_pkg/msg/joint_torques__type_support.cpp.i
+rosidl_typesupport_c/my_robot_pkg/msg/imu__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_c.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_c.dir/rosidl_typesupport_c/my_robot_pkg/msg/imu__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/my_robot_pkg/msg/imu__type_support.cpp.i
 
-rosidl_typesupport_c/my_robot_pkg/msg/joint_torques__type_support.s: rosidl_typesupport_c/my_robot_pkg/msg/joint_torques__type_support.cpp.s
-.PHONY : rosidl_typesupport_c/my_robot_pkg/msg/joint_torques__type_support.s
+rosidl_typesupport_c/my_robot_pkg/msg/imu__type_support.s: rosidl_typesupport_c/my_robot_pkg/msg/imu__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/my_robot_pkg/msg/imu__type_support.s
 
 # target to generate assembly for a file
-rosidl_typesupport_c/my_robot_pkg/msg/joint_torques__type_support.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_c.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_c.dir/rosidl_typesupport_c/my_robot_pkg/msg/joint_torques__type_support.cpp.s
-.PHONY : rosidl_typesupport_c/my_robot_pkg/msg/joint_torques__type_support.cpp.s
+rosidl_typesupport_c/my_robot_pkg/msg/imu__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_c.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_c.dir/rosidl_typesupport_c/my_robot_pkg/msg/imu__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/my_robot_pkg/msg/imu__type_support.cpp.s
 
 rosidl_typesupport_c/my_robot_pkg/msg/motor_feedback__type_support.o: rosidl_typesupport_c/my_robot_pkg/msg/motor_feedback__type_support.cpp.o
 .PHONY : rosidl_typesupport_c/my_robot_pkg/msg/motor_feedback__type_support.o
@@ -758,29 +745,29 @@ rosidl_typesupport_c/my_robot_pkg/msg/robot_feedback__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_c.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_c.dir/rosidl_typesupport_c/my_robot_pkg/msg/robot_feedback__type_support.cpp.s
 .PHONY : rosidl_typesupport_c/my_robot_pkg/msg/robot_feedback__type_support.cpp.s
 
-rosidl_typesupport_cpp/my_robot_pkg/msg/joint_torques__type_support.o: rosidl_typesupport_cpp/my_robot_pkg/msg/joint_torques__type_support.cpp.o
-.PHONY : rosidl_typesupport_cpp/my_robot_pkg/msg/joint_torques__type_support.o
+rosidl_typesupport_cpp/my_robot_pkg/msg/imu__type_support.o: rosidl_typesupport_cpp/my_robot_pkg/msg/imu__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/my_robot_pkg/msg/imu__type_support.o
 
 # target to build an object file
-rosidl_typesupport_cpp/my_robot_pkg/msg/joint_torques__type_support.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_cpp.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_robot_pkg/msg/joint_torques__type_support.cpp.o
-.PHONY : rosidl_typesupport_cpp/my_robot_pkg/msg/joint_torques__type_support.cpp.o
+rosidl_typesupport_cpp/my_robot_pkg/msg/imu__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_cpp.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_robot_pkg/msg/imu__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/my_robot_pkg/msg/imu__type_support.cpp.o
 
-rosidl_typesupport_cpp/my_robot_pkg/msg/joint_torques__type_support.i: rosidl_typesupport_cpp/my_robot_pkg/msg/joint_torques__type_support.cpp.i
-.PHONY : rosidl_typesupport_cpp/my_robot_pkg/msg/joint_torques__type_support.i
+rosidl_typesupport_cpp/my_robot_pkg/msg/imu__type_support.i: rosidl_typesupport_cpp/my_robot_pkg/msg/imu__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/my_robot_pkg/msg/imu__type_support.i
 
 # target to preprocess a source file
-rosidl_typesupport_cpp/my_robot_pkg/msg/joint_torques__type_support.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_cpp.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_robot_pkg/msg/joint_torques__type_support.cpp.i
-.PHONY : rosidl_typesupport_cpp/my_robot_pkg/msg/joint_torques__type_support.cpp.i
+rosidl_typesupport_cpp/my_robot_pkg/msg/imu__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_cpp.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_robot_pkg/msg/imu__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/my_robot_pkg/msg/imu__type_support.cpp.i
 
-rosidl_typesupport_cpp/my_robot_pkg/msg/joint_torques__type_support.s: rosidl_typesupport_cpp/my_robot_pkg/msg/joint_torques__type_support.cpp.s
-.PHONY : rosidl_typesupport_cpp/my_robot_pkg/msg/joint_torques__type_support.s
+rosidl_typesupport_cpp/my_robot_pkg/msg/imu__type_support.s: rosidl_typesupport_cpp/my_robot_pkg/msg/imu__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/my_robot_pkg/msg/imu__type_support.s
 
 # target to generate assembly for a file
-rosidl_typesupport_cpp/my_robot_pkg/msg/joint_torques__type_support.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_cpp.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_robot_pkg/msg/joint_torques__type_support.cpp.s
-.PHONY : rosidl_typesupport_cpp/my_robot_pkg/msg/joint_torques__type_support.cpp.s
+rosidl_typesupport_cpp/my_robot_pkg/msg/imu__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_cpp.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_robot_pkg/msg/imu__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/my_robot_pkg/msg/imu__type_support.cpp.s
 
 rosidl_typesupport_cpp/my_robot_pkg/msg/motor_feedback__type_support.o: rosidl_typesupport_cpp/my_robot_pkg/msg/motor_feedback__type_support.cpp.o
 .PHONY : rosidl_typesupport_cpp/my_robot_pkg/msg/motor_feedback__type_support.o
@@ -830,29 +817,29 @@ rosidl_typesupport_cpp/my_robot_pkg/msg/robot_feedback__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_cpp.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_robot_pkg/msg/robot_feedback__type_support.cpp.s
 .PHONY : rosidl_typesupport_cpp/my_robot_pkg/msg/robot_feedback__type_support.cpp.s
 
-rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/joint_torques__type_support_c.o: rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/joint_torques__type_support_c.cpp.o
-.PHONY : rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/joint_torques__type_support_c.o
+rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/imu__type_support_c.o: rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/imu__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/imu__type_support_c.o
 
 # target to build an object file
-rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/joint_torques__type_support_c.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/joint_torques__type_support_c.cpp.o
-.PHONY : rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/joint_torques__type_support_c.cpp.o
+rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/imu__type_support_c.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/imu__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/imu__type_support_c.cpp.o
 
-rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/joint_torques__type_support_c.i: rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/joint_torques__type_support_c.cpp.i
-.PHONY : rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/joint_torques__type_support_c.i
+rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/imu__type_support_c.i: rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/imu__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/imu__type_support_c.i
 
 # target to preprocess a source file
-rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/joint_torques__type_support_c.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/joint_torques__type_support_c.cpp.i
-.PHONY : rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/joint_torques__type_support_c.cpp.i
+rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/imu__type_support_c.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/imu__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/imu__type_support_c.cpp.i
 
-rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/joint_torques__type_support_c.s: rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/joint_torques__type_support_c.cpp.s
-.PHONY : rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/joint_torques__type_support_c.s
+rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/imu__type_support_c.s: rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/imu__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/imu__type_support_c.s
 
 # target to generate assembly for a file
-rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/joint_torques__type_support_c.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/joint_torques__type_support_c.cpp.s
-.PHONY : rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/joint_torques__type_support_c.cpp.s
+rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/imu__type_support_c.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/imu__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/imu__type_support_c.cpp.s
 
 rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/motor_feedback__type_support_c.o: rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/motor_feedback__type_support_c.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/motor_feedback__type_support_c.o
@@ -902,29 +889,29 @@ rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/robot_feedback__type_suppo
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/robot_feedback__type_support_c.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/robot_feedback__type_support_c.cpp.s
 
-rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/joint_torques__type_support.o: rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/joint_torques__type_support.cpp.o
-.PHONY : rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/joint_torques__type_support.o
+rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/imu__type_support.o: rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/imu__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/imu__type_support.o
 
 # target to build an object file
-rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/joint_torques__type_support.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/joint_torques__type_support.cpp.o
-.PHONY : rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/joint_torques__type_support.cpp.o
+rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/imu__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/imu__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/imu__type_support.cpp.o
 
-rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/joint_torques__type_support.i: rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/joint_torques__type_support.cpp.i
-.PHONY : rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/joint_torques__type_support.i
+rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/imu__type_support.i: rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/imu__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/imu__type_support.i
 
 # target to preprocess a source file
-rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/joint_torques__type_support.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/joint_torques__type_support.cpp.i
-.PHONY : rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/joint_torques__type_support.cpp.i
+rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/imu__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/imu__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/imu__type_support.cpp.i
 
-rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/joint_torques__type_support.s: rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/joint_torques__type_support.cpp.s
-.PHONY : rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/joint_torques__type_support.s
+rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/imu__type_support.s: rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/imu__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/imu__type_support.s
 
 # target to generate assembly for a file
-rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/joint_torques__type_support.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/joint_torques__type_support.cpp.s
-.PHONY : rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/joint_torques__type_support.cpp.s
+rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/imu__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/imu__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/imu__type_support.cpp.s
 
 rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/motor_feedback__type_support.o: rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/motor_feedback__type_support.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/motor_feedback__type_support.o
@@ -974,29 +961,29 @@ rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/robot_feedb
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/robot_feedback__type_support.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/robot_feedback__type_support.cpp.s
 
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.o: rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c.o
-.PHONY : rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.o
+rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.o: rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.o
 
 # target to build an object file
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c.o
-.PHONY : rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c.o
+rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c.o
 
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.i: rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c.i
-.PHONY : rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.i
+rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.i: rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.i
 
 # target to preprocess a source file
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c.i
-.PHONY : rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c.i
+rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c.i
 
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.s: rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c.s
-.PHONY : rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.s
+rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.s: rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.s
 
 # target to generate assembly for a file
-rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c.s
-.PHONY : rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.c.s
+rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.c.s
 
 rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__type_support.o: rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__type_support.c.o
 .PHONY : rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__type_support.o
@@ -1046,29 +1033,29 @@ rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/robot_feedback__type_
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/robot_feedback__type_support.c.s
 .PHONY : rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/robot_feedback__type_support.c.s
 
-rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/joint_torques__type_support.o: rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/joint_torques__type_support.cpp.o
-.PHONY : rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/joint_torques__type_support.o
+rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/imu__type_support.o: rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/imu__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/imu__type_support.o
 
 # target to build an object file
-rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/joint_torques__type_support.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/joint_torques__type_support.cpp.o
-.PHONY : rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/joint_torques__type_support.cpp.o
+rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/imu__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/imu__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/imu__type_support.cpp.o
 
-rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/joint_torques__type_support.i: rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/joint_torques__type_support.cpp.i
-.PHONY : rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/joint_torques__type_support.i
+rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/imu__type_support.i: rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/imu__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/imu__type_support.i
 
 # target to preprocess a source file
-rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/joint_torques__type_support.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/joint_torques__type_support.cpp.i
-.PHONY : rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/joint_torques__type_support.cpp.i
+rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/imu__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/imu__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/imu__type_support.cpp.i
 
-rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/joint_torques__type_support.s: rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/joint_torques__type_support.cpp.s
-.PHONY : rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/joint_torques__type_support.s
+rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/imu__type_support.s: rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/imu__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/imu__type_support.s
 
 # target to generate assembly for a file
-rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/joint_torques__type_support.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/joint_torques__type_support.cpp.s
-.PHONY : rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/joint_torques__type_support.cpp.s
+rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/imu__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/my_robot_pkg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/imu__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/imu__type_support.cpp.s
 
 rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/motor_feedback__type_support.o: rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/motor_feedback__type_support.cpp.o
 .PHONY : rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/motor_feedback__type_support.o
@@ -1171,7 +1158,7 @@ src/simple_feedback_collector.o: src/simple_feedback_collector.cpp.o
 
 # target to build an object file
 src/simple_feedback_collector.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_feedback_main.dir/build.make CMakeFiles/simple_feedback_main.dir/src/simple_feedback_collector.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_feedback_collector.dir/build.make CMakeFiles/simple_feedback_collector.dir/src/simple_feedback_collector.cpp.o
 .PHONY : src/simple_feedback_collector.cpp.o
 
 src/simple_feedback_collector.i: src/simple_feedback_collector.cpp.i
@@ -1179,7 +1166,7 @@ src/simple_feedback_collector.i: src/simple_feedback_collector.cpp.i
 
 # target to preprocess a source file
 src/simple_feedback_collector.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_feedback_main.dir/build.make CMakeFiles/simple_feedback_main.dir/src/simple_feedback_collector.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_feedback_collector.dir/build.make CMakeFiles/simple_feedback_collector.dir/src/simple_feedback_collector.cpp.i
 .PHONY : src/simple_feedback_collector.cpp.i
 
 src/simple_feedback_collector.s: src/simple_feedback_collector.cpp.s
@@ -1187,80 +1174,8 @@ src/simple_feedback_collector.s: src/simple_feedback_collector.cpp.s
 
 # target to generate assembly for a file
 src/simple_feedback_collector.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_feedback_main.dir/build.make CMakeFiles/simple_feedback_main.dir/src/simple_feedback_collector.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_feedback_collector.dir/build.make CMakeFiles/simple_feedback_collector.dir/src/simple_feedback_collector.cpp.s
 .PHONY : src/simple_feedback_collector.cpp.s
-
-src/simple_feedback_main.o: src/simple_feedback_main.cpp.o
-.PHONY : src/simple_feedback_main.o
-
-# target to build an object file
-src/simple_feedback_main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_feedback_main.dir/build.make CMakeFiles/simple_feedback_main.dir/src/simple_feedback_main.cpp.o
-.PHONY : src/simple_feedback_main.cpp.o
-
-src/simple_feedback_main.i: src/simple_feedback_main.cpp.i
-.PHONY : src/simple_feedback_main.i
-
-# target to preprocess a source file
-src/simple_feedback_main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_feedback_main.dir/build.make CMakeFiles/simple_feedback_main.dir/src/simple_feedback_main.cpp.i
-.PHONY : src/simple_feedback_main.cpp.i
-
-src/simple_feedback_main.s: src/simple_feedback_main.cpp.s
-.PHONY : src/simple_feedback_main.s
-
-# target to generate assembly for a file
-src/simple_feedback_main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_feedback_main.dir/build.make CMakeFiles/simple_feedback_main.dir/src/simple_feedback_main.cpp.s
-.PHONY : src/simple_feedback_main.cpp.s
-
-src/simple_torque_commander.o: src/simple_torque_commander.cpp.o
-.PHONY : src/simple_torque_commander.o
-
-# target to build an object file
-src/simple_torque_commander.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_torque_main.dir/build.make CMakeFiles/simple_torque_main.dir/src/simple_torque_commander.cpp.o
-.PHONY : src/simple_torque_commander.cpp.o
-
-src/simple_torque_commander.i: src/simple_torque_commander.cpp.i
-.PHONY : src/simple_torque_commander.i
-
-# target to preprocess a source file
-src/simple_torque_commander.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_torque_main.dir/build.make CMakeFiles/simple_torque_main.dir/src/simple_torque_commander.cpp.i
-.PHONY : src/simple_torque_commander.cpp.i
-
-src/simple_torque_commander.s: src/simple_torque_commander.cpp.s
-.PHONY : src/simple_torque_commander.s
-
-# target to generate assembly for a file
-src/simple_torque_commander.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_torque_main.dir/build.make CMakeFiles/simple_torque_main.dir/src/simple_torque_commander.cpp.s
-.PHONY : src/simple_torque_commander.cpp.s
-
-src/simple_torque_main.o: src/simple_torque_main.cpp.o
-.PHONY : src/simple_torque_main.o
-
-# target to build an object file
-src/simple_torque_main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_torque_main.dir/build.make CMakeFiles/simple_torque_main.dir/src/simple_torque_main.cpp.o
-.PHONY : src/simple_torque_main.cpp.o
-
-src/simple_torque_main.i: src/simple_torque_main.cpp.i
-.PHONY : src/simple_torque_main.i
-
-# target to preprocess a source file
-src/simple_torque_main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_torque_main.dir/build.make CMakeFiles/simple_torque_main.dir/src/simple_torque_main.cpp.i
-.PHONY : src/simple_torque_main.cpp.i
-
-src/simple_torque_main.s: src/simple_torque_main.cpp.s
-.PHONY : src/simple_torque_main.s
-
-# target to generate assembly for a file
-src/simple_torque_main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_torque_main.dir/build.make CMakeFiles/simple_torque_main.dir/src/simple_torque_main.cpp.s
-.PHONY : src/simple_torque_main.cpp.s
 
 src/talker.o: src/talker.cpp.o
 .PHONY : src/talker.o
@@ -1319,12 +1234,11 @@ help:
 	@echo "... my_robot_pkg__rosidl_typesupport_introspection_c"
 	@echo "... my_robot_pkg__rosidl_typesupport_introspection_c__pyext"
 	@echo "... my_robot_pkg__rosidl_typesupport_introspection_cpp"
-	@echo "... simple_feedback_main"
-	@echo "... simple_torque_main"
+	@echo "... simple_feedback_collector"
 	@echo "... talker"
-	@echo "... rosidl_generator_c/my_robot_pkg/msg/detail/joint_torques__functions.o"
-	@echo "... rosidl_generator_c/my_robot_pkg/msg/detail/joint_torques__functions.i"
-	@echo "... rosidl_generator_c/my_robot_pkg/msg/detail/joint_torques__functions.s"
+	@echo "... rosidl_generator_c/my_robot_pkg/msg/detail/imu__functions.o"
+	@echo "... rosidl_generator_c/my_robot_pkg/msg/detail/imu__functions.i"
+	@echo "... rosidl_generator_c/my_robot_pkg/msg/detail/imu__functions.s"
 	@echo "... rosidl_generator_c/my_robot_pkg/msg/detail/motor_feedback__functions.o"
 	@echo "... rosidl_generator_c/my_robot_pkg/msg/detail/motor_feedback__functions.i"
 	@echo "... rosidl_generator_c/my_robot_pkg/msg/detail/motor_feedback__functions.s"
@@ -1340,63 +1254,63 @@ help:
 	@echo "... rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_introspection_c.o"
 	@echo "... rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_introspection_c.i"
 	@echo "... rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_introspection_c.s"
-	@echo "... rosidl_generator_py/my_robot_pkg/msg/_joint_torques_s.o"
-	@echo "... rosidl_generator_py/my_robot_pkg/msg/_joint_torques_s.i"
-	@echo "... rosidl_generator_py/my_robot_pkg/msg/_joint_torques_s.s"
+	@echo "... rosidl_generator_py/my_robot_pkg/msg/_imu_s.o"
+	@echo "... rosidl_generator_py/my_robot_pkg/msg/_imu_s.i"
+	@echo "... rosidl_generator_py/my_robot_pkg/msg/_imu_s.s"
 	@echo "... rosidl_generator_py/my_robot_pkg/msg/_motor_feedback_s.o"
 	@echo "... rosidl_generator_py/my_robot_pkg/msg/_motor_feedback_s.i"
 	@echo "... rosidl_generator_py/my_robot_pkg/msg/_motor_feedback_s.s"
 	@echo "... rosidl_generator_py/my_robot_pkg/msg/_robot_feedback_s.o"
 	@echo "... rosidl_generator_py/my_robot_pkg/msg/_robot_feedback_s.i"
 	@echo "... rosidl_generator_py/my_robot_pkg/msg/_robot_feedback_s.s"
-	@echo "... rosidl_typesupport_c/my_robot_pkg/msg/joint_torques__type_support.o"
-	@echo "... rosidl_typesupport_c/my_robot_pkg/msg/joint_torques__type_support.i"
-	@echo "... rosidl_typesupport_c/my_robot_pkg/msg/joint_torques__type_support.s"
+	@echo "... rosidl_typesupport_c/my_robot_pkg/msg/imu__type_support.o"
+	@echo "... rosidl_typesupport_c/my_robot_pkg/msg/imu__type_support.i"
+	@echo "... rosidl_typesupport_c/my_robot_pkg/msg/imu__type_support.s"
 	@echo "... rosidl_typesupport_c/my_robot_pkg/msg/motor_feedback__type_support.o"
 	@echo "... rosidl_typesupport_c/my_robot_pkg/msg/motor_feedback__type_support.i"
 	@echo "... rosidl_typesupport_c/my_robot_pkg/msg/motor_feedback__type_support.s"
 	@echo "... rosidl_typesupport_c/my_robot_pkg/msg/robot_feedback__type_support.o"
 	@echo "... rosidl_typesupport_c/my_robot_pkg/msg/robot_feedback__type_support.i"
 	@echo "... rosidl_typesupport_c/my_robot_pkg/msg/robot_feedback__type_support.s"
-	@echo "... rosidl_typesupport_cpp/my_robot_pkg/msg/joint_torques__type_support.o"
-	@echo "... rosidl_typesupport_cpp/my_robot_pkg/msg/joint_torques__type_support.i"
-	@echo "... rosidl_typesupport_cpp/my_robot_pkg/msg/joint_torques__type_support.s"
+	@echo "... rosidl_typesupport_cpp/my_robot_pkg/msg/imu__type_support.o"
+	@echo "... rosidl_typesupport_cpp/my_robot_pkg/msg/imu__type_support.i"
+	@echo "... rosidl_typesupport_cpp/my_robot_pkg/msg/imu__type_support.s"
 	@echo "... rosidl_typesupport_cpp/my_robot_pkg/msg/motor_feedback__type_support.o"
 	@echo "... rosidl_typesupport_cpp/my_robot_pkg/msg/motor_feedback__type_support.i"
 	@echo "... rosidl_typesupport_cpp/my_robot_pkg/msg/motor_feedback__type_support.s"
 	@echo "... rosidl_typesupport_cpp/my_robot_pkg/msg/robot_feedback__type_support.o"
 	@echo "... rosidl_typesupport_cpp/my_robot_pkg/msg/robot_feedback__type_support.i"
 	@echo "... rosidl_typesupport_cpp/my_robot_pkg/msg/robot_feedback__type_support.s"
-	@echo "... rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/joint_torques__type_support_c.o"
-	@echo "... rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/joint_torques__type_support_c.i"
-	@echo "... rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/joint_torques__type_support_c.s"
+	@echo "... rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/imu__type_support_c.o"
+	@echo "... rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/imu__type_support_c.i"
+	@echo "... rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/imu__type_support_c.s"
 	@echo "... rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/motor_feedback__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/motor_feedback__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/motor_feedback__type_support_c.s"
 	@echo "... rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/robot_feedback__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/robot_feedback__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/my_robot_pkg/msg/detail/robot_feedback__type_support_c.s"
-	@echo "... rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/joint_torques__type_support.o"
-	@echo "... rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/joint_torques__type_support.i"
-	@echo "... rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/joint_torques__type_support.s"
+	@echo "... rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/imu__type_support.o"
+	@echo "... rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/imu__type_support.i"
+	@echo "... rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/imu__type_support.s"
 	@echo "... rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/motor_feedback__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/motor_feedback__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/motor_feedback__type_support.s"
 	@echo "... rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/robot_feedback__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/robot_feedback__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/my_robot_pkg/msg/detail/dds_fastrtps/robot_feedback__type_support.s"
-	@echo "... rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.o"
-	@echo "... rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.i"
-	@echo "... rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/joint_torques__type_support.s"
+	@echo "... rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.o"
+	@echo "... rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.i"
+	@echo "... rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/imu__type_support.s"
 	@echo "... rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/motor_feedback__type_support.s"
 	@echo "... rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/robot_feedback__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/robot_feedback__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/my_robot_pkg/msg/detail/robot_feedback__type_support.s"
-	@echo "... rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/joint_torques__type_support.o"
-	@echo "... rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/joint_torques__type_support.i"
-	@echo "... rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/joint_torques__type_support.s"
+	@echo "... rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/imu__type_support.o"
+	@echo "... rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/imu__type_support.i"
+	@echo "... rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/imu__type_support.s"
 	@echo "... rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/motor_feedback__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/motor_feedback__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/my_robot_pkg/msg/detail/motor_feedback__type_support.s"
@@ -1412,15 +1326,6 @@ help:
 	@echo "... src/simple_feedback_collector.o"
 	@echo "... src/simple_feedback_collector.i"
 	@echo "... src/simple_feedback_collector.s"
-	@echo "... src/simple_feedback_main.o"
-	@echo "... src/simple_feedback_main.i"
-	@echo "... src/simple_feedback_main.s"
-	@echo "... src/simple_torque_commander.o"
-	@echo "... src/simple_torque_commander.i"
-	@echo "... src/simple_torque_commander.s"
-	@echo "... src/simple_torque_main.o"
-	@echo "... src/simple_torque_main.i"
-	@echo "... src/simple_torque_main.s"
 	@echo "... src/talker.o"
 	@echo "... src/talker.i"
 	@echo "... src/talker.s"

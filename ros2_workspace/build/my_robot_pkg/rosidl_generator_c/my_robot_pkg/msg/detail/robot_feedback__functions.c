@@ -12,13 +12,15 @@
 
 
 // Include directives for member types
-// Member `header`
-#include "std_msgs/msg/detail/header__functions.h"
-// Member `motors`
+// Member `l_big`
+// Member `l_small`
+// Member `r_big`
+// Member `r_small`
+// Member `l_wheel`
+// Member `r_wheel`
 #include "my_robot_pkg/msg/detail/motor_feedback__functions.h"
-// Member `angular_velocity`
-// Member `linear_acceleration`
-#include "geometry_msgs/msg/detail/vector3__functions.h"
+// Member `imu`
+#include "my_robot_pkg/msg/detail/imu__functions.h"
 
 bool
 my_robot_pkg__msg__RobotFeedback__init(my_robot_pkg__msg__RobotFeedback * msg)
@@ -26,23 +28,38 @@ my_robot_pkg__msg__RobotFeedback__init(my_robot_pkg__msg__RobotFeedback * msg)
   if (!msg) {
     return false;
   }
-  // header
-  if (!std_msgs__msg__Header__init(&msg->header)) {
+  // l_big
+  if (!my_robot_pkg__msg__MotorFeedback__init(&msg->l_big)) {
     my_robot_pkg__msg__RobotFeedback__fini(msg);
     return false;
   }
-  // motors
-  if (!my_robot_pkg__msg__MotorFeedback__Sequence__init(&msg->motors, 0)) {
+  // l_small
+  if (!my_robot_pkg__msg__MotorFeedback__init(&msg->l_small)) {
     my_robot_pkg__msg__RobotFeedback__fini(msg);
     return false;
   }
-  // angular_velocity
-  if (!geometry_msgs__msg__Vector3__init(&msg->angular_velocity)) {
+  // r_big
+  if (!my_robot_pkg__msg__MotorFeedback__init(&msg->r_big)) {
     my_robot_pkg__msg__RobotFeedback__fini(msg);
     return false;
   }
-  // linear_acceleration
-  if (!geometry_msgs__msg__Vector3__init(&msg->linear_acceleration)) {
+  // r_small
+  if (!my_robot_pkg__msg__MotorFeedback__init(&msg->r_small)) {
+    my_robot_pkg__msg__RobotFeedback__fini(msg);
+    return false;
+  }
+  // l_wheel
+  if (!my_robot_pkg__msg__MotorFeedback__init(&msg->l_wheel)) {
+    my_robot_pkg__msg__RobotFeedback__fini(msg);
+    return false;
+  }
+  // r_wheel
+  if (!my_robot_pkg__msg__MotorFeedback__init(&msg->r_wheel)) {
+    my_robot_pkg__msg__RobotFeedback__fini(msg);
+    return false;
+  }
+  // imu
+  if (!my_robot_pkg__msg__Imu__init(&msg->imu)) {
     my_robot_pkg__msg__RobotFeedback__fini(msg);
     return false;
   }
@@ -55,14 +72,20 @@ my_robot_pkg__msg__RobotFeedback__fini(my_robot_pkg__msg__RobotFeedback * msg)
   if (!msg) {
     return;
   }
-  // header
-  std_msgs__msg__Header__fini(&msg->header);
-  // motors
-  my_robot_pkg__msg__MotorFeedback__Sequence__fini(&msg->motors);
-  // angular_velocity
-  geometry_msgs__msg__Vector3__fini(&msg->angular_velocity);
-  // linear_acceleration
-  geometry_msgs__msg__Vector3__fini(&msg->linear_acceleration);
+  // l_big
+  my_robot_pkg__msg__MotorFeedback__fini(&msg->l_big);
+  // l_small
+  my_robot_pkg__msg__MotorFeedback__fini(&msg->l_small);
+  // r_big
+  my_robot_pkg__msg__MotorFeedback__fini(&msg->r_big);
+  // r_small
+  my_robot_pkg__msg__MotorFeedback__fini(&msg->r_small);
+  // l_wheel
+  my_robot_pkg__msg__MotorFeedback__fini(&msg->l_wheel);
+  // r_wheel
+  my_robot_pkg__msg__MotorFeedback__fini(&msg->r_wheel);
+  // imu
+  my_robot_pkg__msg__Imu__fini(&msg->imu);
 }
 
 bool
@@ -71,27 +94,45 @@ my_robot_pkg__msg__RobotFeedback__are_equal(const my_robot_pkg__msg__RobotFeedba
   if (!lhs || !rhs) {
     return false;
   }
-  // header
-  if (!std_msgs__msg__Header__are_equal(
-      &(lhs->header), &(rhs->header)))
+  // l_big
+  if (!my_robot_pkg__msg__MotorFeedback__are_equal(
+      &(lhs->l_big), &(rhs->l_big)))
   {
     return false;
   }
-  // motors
-  if (!my_robot_pkg__msg__MotorFeedback__Sequence__are_equal(
-      &(lhs->motors), &(rhs->motors)))
+  // l_small
+  if (!my_robot_pkg__msg__MotorFeedback__are_equal(
+      &(lhs->l_small), &(rhs->l_small)))
   {
     return false;
   }
-  // angular_velocity
-  if (!geometry_msgs__msg__Vector3__are_equal(
-      &(lhs->angular_velocity), &(rhs->angular_velocity)))
+  // r_big
+  if (!my_robot_pkg__msg__MotorFeedback__are_equal(
+      &(lhs->r_big), &(rhs->r_big)))
   {
     return false;
   }
-  // linear_acceleration
-  if (!geometry_msgs__msg__Vector3__are_equal(
-      &(lhs->linear_acceleration), &(rhs->linear_acceleration)))
+  // r_small
+  if (!my_robot_pkg__msg__MotorFeedback__are_equal(
+      &(lhs->r_small), &(rhs->r_small)))
+  {
+    return false;
+  }
+  // l_wheel
+  if (!my_robot_pkg__msg__MotorFeedback__are_equal(
+      &(lhs->l_wheel), &(rhs->l_wheel)))
+  {
+    return false;
+  }
+  // r_wheel
+  if (!my_robot_pkg__msg__MotorFeedback__are_equal(
+      &(lhs->r_wheel), &(rhs->r_wheel)))
+  {
+    return false;
+  }
+  // imu
+  if (!my_robot_pkg__msg__Imu__are_equal(
+      &(lhs->imu), &(rhs->imu)))
   {
     return false;
   }
@@ -106,27 +147,45 @@ my_robot_pkg__msg__RobotFeedback__copy(
   if (!input || !output) {
     return false;
   }
-  // header
-  if (!std_msgs__msg__Header__copy(
-      &(input->header), &(output->header)))
+  // l_big
+  if (!my_robot_pkg__msg__MotorFeedback__copy(
+      &(input->l_big), &(output->l_big)))
   {
     return false;
   }
-  // motors
-  if (!my_robot_pkg__msg__MotorFeedback__Sequence__copy(
-      &(input->motors), &(output->motors)))
+  // l_small
+  if (!my_robot_pkg__msg__MotorFeedback__copy(
+      &(input->l_small), &(output->l_small)))
   {
     return false;
   }
-  // angular_velocity
-  if (!geometry_msgs__msg__Vector3__copy(
-      &(input->angular_velocity), &(output->angular_velocity)))
+  // r_big
+  if (!my_robot_pkg__msg__MotorFeedback__copy(
+      &(input->r_big), &(output->r_big)))
   {
     return false;
   }
-  // linear_acceleration
-  if (!geometry_msgs__msg__Vector3__copy(
-      &(input->linear_acceleration), &(output->linear_acceleration)))
+  // r_small
+  if (!my_robot_pkg__msg__MotorFeedback__copy(
+      &(input->r_small), &(output->r_small)))
+  {
+    return false;
+  }
+  // l_wheel
+  if (!my_robot_pkg__msg__MotorFeedback__copy(
+      &(input->l_wheel), &(output->l_wheel)))
+  {
+    return false;
+  }
+  // r_wheel
+  if (!my_robot_pkg__msg__MotorFeedback__copy(
+      &(input->r_wheel), &(output->r_wheel)))
+  {
+    return false;
+  }
+  // imu
+  if (!my_robot_pkg__msg__Imu__copy(
+      &(input->imu), &(output->imu)))
   {
     return false;
   }

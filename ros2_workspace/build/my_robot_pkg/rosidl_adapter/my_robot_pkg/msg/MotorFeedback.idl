@@ -6,19 +6,19 @@
 module my_robot_pkg {
   module msg {
     @verbatim (language="comment", text=
-      "单个电机的反馈信息")
+      "电机反馈消息")
     struct MotorFeedback {
       @verbatim (language="comment", text=
-        "位置 (弧度)")
-      double position;
+        "电机位置反馈")
+      double pos_fdb;
 
       @verbatim (language="comment", text=
-        "速度 (弧度/秒)")
-      double velocity;
+        "电机速度反馈")
+      double sbd_fdb;
 
       @verbatim (language="comment", text=
-        "力矩 (Nm)")
-      double torque;
+        "电机力矩反馈")
+      double tor_fdb;
     };
   };
 };

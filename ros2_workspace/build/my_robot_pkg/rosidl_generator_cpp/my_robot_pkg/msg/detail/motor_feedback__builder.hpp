@@ -21,15 +21,15 @@ namespace msg
 namespace builder
 {
 
-class Init_MotorFeedback_torque
+class Init_MotorFeedback_tor_fdb
 {
 public:
-  explicit Init_MotorFeedback_torque(::my_robot_pkg::msg::MotorFeedback & msg)
+  explicit Init_MotorFeedback_tor_fdb(::my_robot_pkg::msg::MotorFeedback & msg)
   : msg_(msg)
   {}
-  ::my_robot_pkg::msg::MotorFeedback torque(::my_robot_pkg::msg::MotorFeedback::_torque_type arg)
+  ::my_robot_pkg::msg::MotorFeedback tor_fdb(::my_robot_pkg::msg::MotorFeedback::_tor_fdb_type arg)
   {
-    msg_.torque = std::move(arg);
+    msg_.tor_fdb = std::move(arg);
     return std::move(msg_);
   }
 
@@ -37,32 +37,32 @@ private:
   ::my_robot_pkg::msg::MotorFeedback msg_;
 };
 
-class Init_MotorFeedback_velocity
+class Init_MotorFeedback_sbd_fdb
 {
 public:
-  explicit Init_MotorFeedback_velocity(::my_robot_pkg::msg::MotorFeedback & msg)
+  explicit Init_MotorFeedback_sbd_fdb(::my_robot_pkg::msg::MotorFeedback & msg)
   : msg_(msg)
   {}
-  Init_MotorFeedback_torque velocity(::my_robot_pkg::msg::MotorFeedback::_velocity_type arg)
+  Init_MotorFeedback_tor_fdb sbd_fdb(::my_robot_pkg::msg::MotorFeedback::_sbd_fdb_type arg)
   {
-    msg_.velocity = std::move(arg);
-    return Init_MotorFeedback_torque(msg_);
+    msg_.sbd_fdb = std::move(arg);
+    return Init_MotorFeedback_tor_fdb(msg_);
   }
 
 private:
   ::my_robot_pkg::msg::MotorFeedback msg_;
 };
 
-class Init_MotorFeedback_position
+class Init_MotorFeedback_pos_fdb
 {
 public:
-  Init_MotorFeedback_position()
+  Init_MotorFeedback_pos_fdb()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_MotorFeedback_velocity position(::my_robot_pkg::msg::MotorFeedback::_position_type arg)
+  Init_MotorFeedback_sbd_fdb pos_fdb(::my_robot_pkg::msg::MotorFeedback::_pos_fdb_type arg)
   {
-    msg_.position = std::move(arg);
-    return Init_MotorFeedback_velocity(msg_);
+    msg_.pos_fdb = std::move(arg);
+    return Init_MotorFeedback_sbd_fdb(msg_);
   }
 
 private:
@@ -80,7 +80,7 @@ template<>
 inline
 auto build<::my_robot_pkg::msg::MotorFeedback>()
 {
-  return my_robot_pkg::msg::builder::Init_MotorFeedback_position();
+  return my_robot_pkg::msg::builder::Init_MotorFeedback_pos_fdb();
 }
 
 }  // namespace my_robot_pkg

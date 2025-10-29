@@ -4,7 +4,6 @@
 CMakeFiles/simple_feedback_collector.dir/src/simple_feedback_collector.cpp.o
  /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/src/my_robot_pkg/src/simple_feedback_collector.cpp
  /usr/include/stdc-predef.h
- /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/src/my_robot_pkg/include/my_robot_pkg/simple_feedback_collector.hpp
  /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp
  /usr/include/c++/11/csignal
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h
@@ -53,7 +52,6 @@ CMakeFiles/simple_feedback_collector.dir/src/simple_feedback_collector.cpp.o
  /usr/include/x86_64-linux-gnu/bits/confname.h
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h
- /usr/include/x86_64-linux-gnu/bits/unistd.h
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h
  /usr/include/linux/close_range.h
  /usr/include/x86_64-linux-gnu/bits/ss_flags.h
@@ -133,7 +131,6 @@ CMakeFiles/simple_feedback_collector.dir/src/simple_feedback_collector.cpp.o
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h
- /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/c++/11/bits/shared_ptr_base.h
  /usr/include/c++/11/typeinfo
  /usr/include/c++/11/bits/allocated_ptr.h
@@ -217,11 +214,8 @@ CMakeFiles/simple_feedback_collector.dir/src/simple_feedback_collector.cpp.o
  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h
  /usr/include/x86_64-linux-gnu/sys/select.h
  /usr/include/x86_64-linux-gnu/bits/select.h
- /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/alloca.h
- /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
- /usr/include/x86_64-linux-gnu/bits/stdlib.h
  /usr/include/c++/11/bits/std_abs.h
  /usr/include/c++/11/cstdio
  /usr/include/stdio.h
@@ -230,8 +224,6 @@ CMakeFiles/simple_feedback_collector.dir/src/simple_feedback_collector.cpp.o
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
- /usr/include/x86_64-linux-gnu/bits/stdio.h
- /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/c++/11/bits/charconv.h
  /usr/include/c++/11/bits/basic_string.tcc
  /usr/include/c++/11/bits/std_mutex.h
@@ -324,8 +316,6 @@ CMakeFiles/simple_feedback_collector.dir/src/simple_feedback_collector.cpp.o
  /usr/include/c++/11/stdlib.h
  /usr/include/string.h
  /usr/include/strings.h
- /usr/include/x86_64-linux-gnu/bits/strings_fortified.h
- /usr/include/x86_64-linux-gnu/bits/string_fortified.h
  /opt/ros/humble/include/rcutils/rcutils/snprintf.h
  /opt/ros/humble/include/rcutils/rcutils/time.h
  /opt/ros/humble/include/rcutils/rcutils/types.h
@@ -695,38 +685,35 @@ CMakeFiles/simple_feedback_collector.dir/src/simple_feedback_collector.cpp.o
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/write_preferring_read_write_lock.hpp
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_template.hpp
- /opt/ros/humble/include/std_msgs/std_msgs/msg/float64.hpp
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__struct.hpp
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__builder.hpp
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__traits.hpp
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__type_support.hpp
- /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/vector3.hpp
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__builder.hpp
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__type_support.hpp
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
- /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/joint_state.hpp
- /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__struct.hpp
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp
- /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__builder.hpp
- /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__traits.hpp
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp
- /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__type_support.hpp
- /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/imu.hpp
  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/imu__struct.hpp
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.hpp
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp
  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/imu__builder.hpp
  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/imu__traits.hpp
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__traits.hpp
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp
  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/imu__type_support.hpp
- /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_cpp/my_robot_pkg/msg/joint_torques.hpp
- /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_cpp/my_robot_pkg/msg/detail/joint_torques__struct.hpp
- /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_cpp/my_robot_pkg/msg/detail/joint_torques__builder.hpp
- /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_cpp/my_robot_pkg/msg/detail/joint_torques__traits.hpp
- /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_cpp/my_robot_pkg/msg/detail/joint_torques__type_support.hpp
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/joint_state.hpp
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__struct.hpp
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__builder.hpp
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__traits.hpp
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__type_support.hpp
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/string.hpp
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__struct.hpp
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__builder.hpp
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__traits.hpp
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__type_support.hpp
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+ /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/src/my_robot_pkg/include/my_robot_pkg/simple_feedback_collector.hpp
+ /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_cpp/my_robot_pkg/msg/imu.hpp
+ /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_cpp/my_robot_pkg/msg/detail/imu__struct.hpp
+ /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_cpp/my_robot_pkg/msg/detail/imu__builder.hpp
+ /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_cpp/my_robot_pkg/msg/detail/imu__traits.hpp
+ /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_cpp/my_robot_pkg/msg/detail/imu__type_support.hpp
  /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_cpp/my_robot_pkg/msg/rosidl_generator_cpp__visibility_control.hpp
  /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_cpp/my_robot_pkg/msg/robot_feedback.hpp
  /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_cpp/my_robot_pkg/msg/detail/robot_feedback__struct.hpp
@@ -735,4 +722,7 @@ CMakeFiles/simple_feedback_collector.dir/src/simple_feedback_collector.cpp.o
  /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_cpp/my_robot_pkg/msg/detail/robot_feedback__traits.hpp
  /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_cpp/my_robot_pkg/msg/detail/motor_feedback__traits.hpp
  /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_cpp/my_robot_pkg/msg/detail/robot_feedback__type_support.hpp
+ /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp
+ /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_cpp/my_robot_pkg/msg/detail/motor_feedback__builder.hpp
+ /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_cpp/my_robot_pkg/msg/detail/motor_feedback__type_support.hpp
 

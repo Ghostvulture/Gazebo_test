@@ -71,16 +71,16 @@ CMakeFiles/my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/motor
 CMakeFiles/my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/motor_feedback__struct.hpp
 CMakeFiles/my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/motor_feedback__traits.hpp
 CMakeFiles/my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/motor_feedback__type_support.hpp
-CMakeFiles/my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/joint_torques.hpp
-CMakeFiles/my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/joint_torques__builder.hpp
-CMakeFiles/my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/joint_torques__struct.hpp
-CMakeFiles/my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/joint_torques__traits.hpp
-CMakeFiles/my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/joint_torques__type_support.hpp
 CMakeFiles/my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/robot_feedback.hpp
 CMakeFiles/my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/robot_feedback__builder.hpp
 CMakeFiles/my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/robot_feedback__struct.hpp
 CMakeFiles/my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/robot_feedback__traits.hpp
 CMakeFiles/my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/robot_feedback__type_support.hpp
+CMakeFiles/my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/imu.hpp
+CMakeFiles/my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/imu__builder.hpp
+CMakeFiles/my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/imu__struct.hpp
+CMakeFiles/my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/imu__traits.hpp
+CMakeFiles/my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/imu__type_support.hpp
 CMakeFiles/my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/rosidl_generator_cpp__visibility_control.hpp
 
 rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
@@ -99,8 +99,8 @@ rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/
 rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__struct.hpp.em
 rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: rosidl_adapter/my_robot_pkg/msg/MotorFeedback.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: rosidl_adapter/my_robot_pkg/msg/JointTorques.idl
 rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: rosidl_adapter/my_robot_pkg/msg/RobotFeedback.idl
+rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: rosidl_adapter/my_robot_pkg/msg/Imu.idl
 rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
@@ -133,38 +133,6 @@ rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/
 rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
 rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovarianceStamped.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/Inertia.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/InertiaStamped.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/Point.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/Point32.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/PointStamped.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/Polygon.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/PolygonInstance.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/PolygonInstanceStamped.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/PolygonStamped.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/Pose.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/Pose2D.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/PoseArray.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/PoseStamped.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/PoseWithCovariance.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/PoseWithCovarianceStamped.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/Quaternion.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/QuaternionStamped.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/Transform.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/TransformStamped.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/Twist.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/TwistStamped.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/TwistWithCovariance.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/TwistWithCovarianceStamped.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/Vector3.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/Vector3Stamped.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/VelocityStamped.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/Wrench.idl
-rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp: /opt/ros/humble/share/geometry_msgs/msg/WrenchStamped.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
 	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_cpp__arguments.json
 
@@ -179,21 +147,6 @@ rosidl_generator_cpp/my_robot_pkg/msg/detail/motor_feedback__traits.hpp: rosidl_
 
 rosidl_generator_cpp/my_robot_pkg/msg/detail/motor_feedback__type_support.hpp: rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/my_robot_pkg/msg/detail/motor_feedback__type_support.hpp
-
-rosidl_generator_cpp/my_robot_pkg/msg/joint_torques.hpp: rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/my_robot_pkg/msg/joint_torques.hpp
-
-rosidl_generator_cpp/my_robot_pkg/msg/detail/joint_torques__builder.hpp: rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/my_robot_pkg/msg/detail/joint_torques__builder.hpp
-
-rosidl_generator_cpp/my_robot_pkg/msg/detail/joint_torques__struct.hpp: rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/my_robot_pkg/msg/detail/joint_torques__struct.hpp
-
-rosidl_generator_cpp/my_robot_pkg/msg/detail/joint_torques__traits.hpp: rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/my_robot_pkg/msg/detail/joint_torques__traits.hpp
-
-rosidl_generator_cpp/my_robot_pkg/msg/detail/joint_torques__type_support.hpp: rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/my_robot_pkg/msg/detail/joint_torques__type_support.hpp
 
 rosidl_generator_cpp/my_robot_pkg/msg/robot_feedback.hpp: rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/my_robot_pkg/msg/robot_feedback.hpp
@@ -210,11 +163,26 @@ rosidl_generator_cpp/my_robot_pkg/msg/detail/robot_feedback__traits.hpp: rosidl_
 rosidl_generator_cpp/my_robot_pkg/msg/detail/robot_feedback__type_support.hpp: rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/my_robot_pkg/msg/detail/robot_feedback__type_support.hpp
 
+rosidl_generator_cpp/my_robot_pkg/msg/imu.hpp: rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/my_robot_pkg/msg/imu.hpp
+
+rosidl_generator_cpp/my_robot_pkg/msg/detail/imu__builder.hpp: rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/my_robot_pkg/msg/detail/imu__builder.hpp
+
+rosidl_generator_cpp/my_robot_pkg/msg/detail/imu__struct.hpp: rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/my_robot_pkg/msg/detail/imu__struct.hpp
+
+rosidl_generator_cpp/my_robot_pkg/msg/detail/imu__traits.hpp: rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/my_robot_pkg/msg/detail/imu__traits.hpp
+
+rosidl_generator_cpp/my_robot_pkg/msg/detail/imu__type_support.hpp: rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/my_robot_pkg/msg/detail/imu__type_support.hpp
+
 my_robot_pkg__cpp: CMakeFiles/my_robot_pkg__cpp
-my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/joint_torques__builder.hpp
-my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/joint_torques__struct.hpp
-my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/joint_torques__traits.hpp
-my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/joint_torques__type_support.hpp
+my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/imu__builder.hpp
+my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/imu__struct.hpp
+my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/imu__traits.hpp
+my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/imu__type_support.hpp
 my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/motor_feedback__builder.hpp
 my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/motor_feedback__struct.hpp
 my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/motor_feedback__traits.hpp
@@ -223,7 +191,7 @@ my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/robot_feedback__
 my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/robot_feedback__struct.hpp
 my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/robot_feedback__traits.hpp
 my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/detail/robot_feedback__type_support.hpp
-my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/joint_torques.hpp
+my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/imu.hpp
 my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/motor_feedback.hpp
 my_robot_pkg__cpp: rosidl_generator_cpp/my_robot_pkg/msg/robot_feedback.hpp
 my_robot_pkg__cpp: CMakeFiles/my_robot_pkg__cpp.dir/build.make

@@ -16,13 +16,15 @@
 
 
 // Include directives for member types
-// Member 'header'
-#include "std_msgs/msg/detail/header__struct.hpp"
-// Member 'motors'
+// Member 'l_big'
+// Member 'l_small'
+// Member 'r_big'
+// Member 'r_small'
+// Member 'l_wheel'
+// Member 'r_wheel'
 #include "my_robot_pkg/msg/detail/motor_feedback__struct.hpp"
-// Member 'angular_velocity'
-// Member 'linear_acceleration'
-#include "geometry_msgs/msg/detail/vector3__struct.hpp"
+// Member 'imu'
+#include "my_robot_pkg/msg/detail/imu__struct.hpp"
 
 #ifndef _WIN32
 # define DEPRECATED__my_robot_pkg__msg__RobotFeedback __attribute__((deprecated))
@@ -43,58 +45,93 @@ struct RobotFeedback_
   using Type = RobotFeedback_<ContainerAllocator>;
 
   explicit RobotFeedback_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : header(_init),
-    angular_velocity(_init),
-    linear_acceleration(_init)
+  : l_big(_init),
+    l_small(_init),
+    r_big(_init),
+    r_small(_init),
+    l_wheel(_init),
+    r_wheel(_init),
+    imu(_init)
   {
     (void)_init;
   }
 
   explicit RobotFeedback_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : header(_alloc, _init),
-    angular_velocity(_alloc, _init),
-    linear_acceleration(_alloc, _init)
+  : l_big(_alloc, _init),
+    l_small(_alloc, _init),
+    r_big(_alloc, _init),
+    r_small(_alloc, _init),
+    l_wheel(_alloc, _init),
+    r_wheel(_alloc, _init),
+    imu(_alloc, _init)
   {
     (void)_init;
   }
 
   // field types and members
-  using _header_type =
-    std_msgs::msg::Header_<ContainerAllocator>;
-  _header_type header;
-  using _motors_type =
-    std::vector<my_robot_pkg::msg::MotorFeedback_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<my_robot_pkg::msg::MotorFeedback_<ContainerAllocator>>>;
-  _motors_type motors;
-  using _angular_velocity_type =
-    geometry_msgs::msg::Vector3_<ContainerAllocator>;
-  _angular_velocity_type angular_velocity;
-  using _linear_acceleration_type =
-    geometry_msgs::msg::Vector3_<ContainerAllocator>;
-  _linear_acceleration_type linear_acceleration;
+  using _l_big_type =
+    my_robot_pkg::msg::MotorFeedback_<ContainerAllocator>;
+  _l_big_type l_big;
+  using _l_small_type =
+    my_robot_pkg::msg::MotorFeedback_<ContainerAllocator>;
+  _l_small_type l_small;
+  using _r_big_type =
+    my_robot_pkg::msg::MotorFeedback_<ContainerAllocator>;
+  _r_big_type r_big;
+  using _r_small_type =
+    my_robot_pkg::msg::MotorFeedback_<ContainerAllocator>;
+  _r_small_type r_small;
+  using _l_wheel_type =
+    my_robot_pkg::msg::MotorFeedback_<ContainerAllocator>;
+  _l_wheel_type l_wheel;
+  using _r_wheel_type =
+    my_robot_pkg::msg::MotorFeedback_<ContainerAllocator>;
+  _r_wheel_type r_wheel;
+  using _imu_type =
+    my_robot_pkg::msg::Imu_<ContainerAllocator>;
+  _imu_type imu;
 
   // setters for named parameter idiom
-  Type & set__header(
-    const std_msgs::msg::Header_<ContainerAllocator> & _arg)
+  Type & set__l_big(
+    const my_robot_pkg::msg::MotorFeedback_<ContainerAllocator> & _arg)
   {
-    this->header = _arg;
+    this->l_big = _arg;
     return *this;
   }
-  Type & set__motors(
-    const std::vector<my_robot_pkg::msg::MotorFeedback_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<my_robot_pkg::msg::MotorFeedback_<ContainerAllocator>>> & _arg)
+  Type & set__l_small(
+    const my_robot_pkg::msg::MotorFeedback_<ContainerAllocator> & _arg)
   {
-    this->motors = _arg;
+    this->l_small = _arg;
     return *this;
   }
-  Type & set__angular_velocity(
-    const geometry_msgs::msg::Vector3_<ContainerAllocator> & _arg)
+  Type & set__r_big(
+    const my_robot_pkg::msg::MotorFeedback_<ContainerAllocator> & _arg)
   {
-    this->angular_velocity = _arg;
+    this->r_big = _arg;
     return *this;
   }
-  Type & set__linear_acceleration(
-    const geometry_msgs::msg::Vector3_<ContainerAllocator> & _arg)
+  Type & set__r_small(
+    const my_robot_pkg::msg::MotorFeedback_<ContainerAllocator> & _arg)
   {
-    this->linear_acceleration = _arg;
+    this->r_small = _arg;
+    return *this;
+  }
+  Type & set__l_wheel(
+    const my_robot_pkg::msg::MotorFeedback_<ContainerAllocator> & _arg)
+  {
+    this->l_wheel = _arg;
+    return *this;
+  }
+  Type & set__r_wheel(
+    const my_robot_pkg::msg::MotorFeedback_<ContainerAllocator> & _arg)
+  {
+    this->r_wheel = _arg;
+    return *this;
+  }
+  Type & set__imu(
+    const my_robot_pkg::msg::Imu_<ContainerAllocator> & _arg)
+  {
+    this->imu = _arg;
     return *this;
   }
 
@@ -140,16 +177,25 @@ struct RobotFeedback_
   // comparison operators
   bool operator==(const RobotFeedback_ & other) const
   {
-    if (this->header != other.header) {
+    if (this->l_big != other.l_big) {
       return false;
     }
-    if (this->motors != other.motors) {
+    if (this->l_small != other.l_small) {
       return false;
     }
-    if (this->angular_velocity != other.angular_velocity) {
+    if (this->r_big != other.r_big) {
       return false;
     }
-    if (this->linear_acceleration != other.linear_acceleration) {
+    if (this->r_small != other.r_small) {
+      return false;
+    }
+    if (this->l_wheel != other.l_wheel) {
+      return false;
+    }
+    if (this->r_wheel != other.r_wheel) {
+      return false;
+    }
+    if (this->imu != other.imu) {
       return false;
     }
     return true;

@@ -2,7 +2,7 @@
   "package_name": "my_robot_pkg",
   "non_idl_tuples": [
     "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/src/my_robot_pkg:msg/MotorFeedback.msg",
-    "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/src/my_robot_pkg:msg/JointTorques.msg",
-    "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/src/my_robot_pkg:msg/RobotFeedback.msg"
+    "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/src/my_robot_pkg:msg/RobotFeedback.msg",
+    "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/src/my_robot_pkg:msg/Imu.msg"
   ]
 }

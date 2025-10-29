@@ -25,24 +25,24 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: position
+  // member: pos_fdb
   {
-    out << "position: ";
-    rosidl_generator_traits::value_to_yaml(msg.position, out);
+    out << "pos_fdb: ";
+    rosidl_generator_traits::value_to_yaml(msg.pos_fdb, out);
     out << ", ";
   }
 
-  // member: velocity
+  // member: sbd_fdb
   {
-    out << "velocity: ";
-    rosidl_generator_traits::value_to_yaml(msg.velocity, out);
+    out << "sbd_fdb: ";
+    rosidl_generator_traits::value_to_yaml(msg.sbd_fdb, out);
     out << ", ";
   }
 
-  // member: torque
+  // member: tor_fdb
   {
-    out << "torque: ";
-    rosidl_generator_traits::value_to_yaml(msg.torque, out);
+    out << "tor_fdb: ";
+    rosidl_generator_traits::value_to_yaml(msg.tor_fdb, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -51,33 +51,33 @@ inline void to_block_style_yaml(
   const MotorFeedback & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: position
+  // member: pos_fdb
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "position: ";
-    rosidl_generator_traits::value_to_yaml(msg.position, out);
+    out << "pos_fdb: ";
+    rosidl_generator_traits::value_to_yaml(msg.pos_fdb, out);
     out << "\n";
   }
 
-  // member: velocity
+  // member: sbd_fdb
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "velocity: ";
-    rosidl_generator_traits::value_to_yaml(msg.velocity, out);
+    out << "sbd_fdb: ";
+    rosidl_generator_traits::value_to_yaml(msg.sbd_fdb, out);
     out << "\n";
   }
 
-  // member: torque
+  // member: tor_fdb
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "torque: ";
-    rosidl_generator_traits::value_to_yaml(msg.torque, out);
+    out << "tor_fdb: ";
+    rosidl_generator_traits::value_to_yaml(msg.tor_fdb, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)

@@ -15,13 +15,15 @@
 #include "rosidl_runtime_cpp/traits.hpp"
 
 // Include directives for member types
-// Member 'header'
-#include "std_msgs/msg/detail/header__traits.hpp"
-// Member 'motors'
+// Member 'l_big'
+// Member 'l_small'
+// Member 'r_big'
+// Member 'r_small'
+// Member 'l_wheel'
+// Member 'r_wheel'
 #include "my_robot_pkg/msg/detail/motor_feedback__traits.hpp"
-// Member 'angular_velocity'
-// Member 'linear_acceleration'
-#include "geometry_msgs/msg/detail/vector3__traits.hpp"
+// Member 'imu'
+#include "my_robot_pkg/msg/detail/imu__traits.hpp"
 
 namespace my_robot_pkg
 {
@@ -34,42 +36,52 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: header
+  // member: l_big
   {
-    out << "header: ";
-    to_flow_style_yaml(msg.header, out);
+    out << "l_big: ";
+    to_flow_style_yaml(msg.l_big, out);
     out << ", ";
   }
 
-  // member: motors
+  // member: l_small
   {
-    if (msg.motors.size() == 0) {
-      out << "motors: []";
-    } else {
-      out << "motors: [";
-      size_t pending_items = msg.motors.size();
-      for (auto item : msg.motors) {
-        to_flow_style_yaml(item, out);
-        if (--pending_items > 0) {
-          out << ", ";
-        }
-      }
-      out << "]";
-    }
+    out << "l_small: ";
+    to_flow_style_yaml(msg.l_small, out);
     out << ", ";
   }
 
-  // member: angular_velocity
+  // member: r_big
   {
-    out << "angular_velocity: ";
-    to_flow_style_yaml(msg.angular_velocity, out);
+    out << "r_big: ";
+    to_flow_style_yaml(msg.r_big, out);
     out << ", ";
   }
 
-  // member: linear_acceleration
+  // member: r_small
   {
-    out << "linear_acceleration: ";
-    to_flow_style_yaml(msg.linear_acceleration, out);
+    out << "r_small: ";
+    to_flow_style_yaml(msg.r_small, out);
+    out << ", ";
+  }
+
+  // member: l_wheel
+  {
+    out << "l_wheel: ";
+    to_flow_style_yaml(msg.l_wheel, out);
+    out << ", ";
+  }
+
+  // member: r_wheel
+  {
+    out << "r_wheel: ";
+    to_flow_style_yaml(msg.r_wheel, out);
+    out << ", ";
+  }
+
+  // member: imu
+  {
+    out << "imu: ";
+    to_flow_style_yaml(msg.imu, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -78,50 +90,67 @@ inline void to_block_style_yaml(
   const RobotFeedback & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: header
+  // member: l_big
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "header:\n";
-    to_block_style_yaml(msg.header, out, indentation + 2);
+    out << "l_big:\n";
+    to_block_style_yaml(msg.l_big, out, indentation + 2);
   }
 
-  // member: motors
+  // member: l_small
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    if (msg.motors.size() == 0) {
-      out << "motors: []\n";
-    } else {
-      out << "motors:\n";
-      for (auto item : msg.motors) {
-        if (indentation > 0) {
-          out << std::string(indentation, ' ');
-        }
-        out << "-\n";
-        to_block_style_yaml(item, out, indentation + 2);
-      }
-    }
+    out << "l_small:\n";
+    to_block_style_yaml(msg.l_small, out, indentation + 2);
   }
 
-  // member: angular_velocity
+  // member: r_big
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "angular_velocity:\n";
-    to_block_style_yaml(msg.angular_velocity, out, indentation + 2);
+    out << "r_big:\n";
+    to_block_style_yaml(msg.r_big, out, indentation + 2);
   }
 
-  // member: linear_acceleration
+  // member: r_small
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "linear_acceleration:\n";
-    to_block_style_yaml(msg.linear_acceleration, out, indentation + 2);
+    out << "r_small:\n";
+    to_block_style_yaml(msg.r_small, out, indentation + 2);
+  }
+
+  // member: l_wheel
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "l_wheel:\n";
+    to_block_style_yaml(msg.l_wheel, out, indentation + 2);
+  }
+
+  // member: r_wheel
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "r_wheel:\n";
+    to_block_style_yaml(msg.r_wheel, out, indentation + 2);
+  }
+
+  // member: imu
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "imu:\n";
+    to_block_style_yaml(msg.imu, out, indentation + 2);
   }
 }  // NOLINT(readability/fn_size)
 
@@ -171,11 +200,11 @@ inline const char * name<my_robot_pkg::msg::RobotFeedback>()
 
 template<>
 struct has_fixed_size<my_robot_pkg::msg::RobotFeedback>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, has_fixed_size<my_robot_pkg::msg::Imu>::value && has_fixed_size<my_robot_pkg::msg::MotorFeedback>::value> {};
 
 template<>
 struct has_bounded_size<my_robot_pkg::msg::RobotFeedback>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, has_bounded_size<my_robot_pkg::msg::Imu>::value && has_bounded_size<my_robot_pkg::msg::MotorFeedback>::value> {};
 
 template<>
 struct is_message<my_robot_pkg::msg::RobotFeedback>

@@ -38,9 +38,9 @@ struct MotorFeedback_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->position = 0.0;
-      this->velocity = 0.0;
-      this->torque = 0.0;
+      this->pos_fdb = 0.0;
+      this->sbd_fdb = 0.0;
+      this->tor_fdb = 0.0;
     }
   }
 
@@ -50,40 +50,40 @@ struct MotorFeedback_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->position = 0.0;
-      this->velocity = 0.0;
-      this->torque = 0.0;
+      this->pos_fdb = 0.0;
+      this->sbd_fdb = 0.0;
+      this->tor_fdb = 0.0;
     }
   }
 
   // field types and members
-  using _position_type =
+  using _pos_fdb_type =
     double;
-  _position_type position;
-  using _velocity_type =
+  _pos_fdb_type pos_fdb;
+  using _sbd_fdb_type =
     double;
-  _velocity_type velocity;
-  using _torque_type =
+  _sbd_fdb_type sbd_fdb;
+  using _tor_fdb_type =
     double;
-  _torque_type torque;
+  _tor_fdb_type tor_fdb;
 
   // setters for named parameter idiom
-  Type & set__position(
+  Type & set__pos_fdb(
     const double & _arg)
   {
-    this->position = _arg;
+    this->pos_fdb = _arg;
     return *this;
   }
-  Type & set__velocity(
+  Type & set__sbd_fdb(
     const double & _arg)
   {
-    this->velocity = _arg;
+    this->sbd_fdb = _arg;
     return *this;
   }
-  Type & set__torque(
+  Type & set__tor_fdb(
     const double & _arg)
   {
-    this->torque = _arg;
+    this->tor_fdb = _arg;
     return *this;
   }
 
@@ -129,13 +129,13 @@ struct MotorFeedback_
   // comparison operators
   bool operator==(const MotorFeedback_ & other) const
   {
-    if (this->position != other.position) {
+    if (this->pos_fdb != other.pos_fdb) {
       return false;
     }
-    if (this->velocity != other.velocity) {
+    if (this->sbd_fdb != other.sbd_fdb) {
       return false;
     }
-    if (this->torque != other.torque) {
+    if (this->tor_fdb != other.tor_fdb) {
       return false;
     }
     return true;

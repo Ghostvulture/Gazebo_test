@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -360,11 +360,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/msg" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_adapter/my_robot_pkg/msg/JointTorques.idl")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/msg" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_adapter/my_robot_pkg/msg/RobotFeedback.idl")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/msg" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_adapter/my_robot_pkg/msg/RobotFeedback.idl")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/msg" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_adapter/my_robot_pkg/msg/Imu.idl")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -372,11 +372,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/msg" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/src/my_robot_pkg/msg/JointTorques.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/msg" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/src/my_robot_pkg/msg/RobotFeedback.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/msg" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/src/my_robot_pkg/msg/RobotFeedback.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/msg" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/src/my_robot_pkg/msg/Imu.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -440,41 +440,21 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/my_robot_pkg/simple_feedback_main" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/my_robot_pkg/simple_feedback_main")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/my_robot_pkg/simple_feedback_collector" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/my_robot_pkg/simple_feedback_collector")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/my_robot_pkg/simple_feedback_main"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/my_robot_pkg/simple_feedback_collector"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/my_robot_pkg" TYPE EXECUTABLE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/simple_feedback_main")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/my_robot_pkg/simple_feedback_main" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/my_robot_pkg/simple_feedback_main")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/my_robot_pkg" TYPE EXECUTABLE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/simple_feedback_collector")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/my_robot_pkg/simple_feedback_collector" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/my_robot_pkg/simple_feedback_collector")
     file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/my_robot_pkg/simple_feedback_main"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/my_robot_pkg/simple_feedback_collector"
          OLD_RPATH "/opt/ros/humble/lib:/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/my_robot_pkg/simple_feedback_main")
-    endif()
-  endif()
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/my_robot_pkg/simple_torque_main" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/my_robot_pkg/simple_torque_main")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/my_robot_pkg/simple_torque_main"
-         RPATH "")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/my_robot_pkg" TYPE EXECUTABLE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/simple_torque_main")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/my_robot_pkg/simple_torque_main" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/my_robot_pkg/simple_torque_main")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/my_robot_pkg/simple_torque_main"
-         OLD_RPATH "/opt/ros/humble/lib:/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg:"
-         NEW_RPATH "")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/my_robot_pkg/simple_torque_main")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/my_robot_pkg/simple_feedback_collector")
     endif()
   endif()
 endif()
@@ -545,8 +525,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     endif()
   endif()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/cmake" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles/Export/share/my_robot_pkg/cmake/export_my_robot_pkg__rosidl_generator_cExport.cmake")
-  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/cmake" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles/Export/share/my_robot_pkg/cmake/export_my_robot_pkg__rosidl_generator_cExport-release.cmake")
+  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/cmake" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles/Export/share/my_robot_pkg/cmake/export_my_robot_pkg__rosidl_generator_cExport-noconfig.cmake")
   endif()
 endif()
 
@@ -564,8 +544,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     endif()
   endif()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/cmake" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles/Export/share/my_robot_pkg/cmake/export_my_robot_pkg__rosidl_typesupport_fastrtps_cExport.cmake")
-  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/cmake" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles/Export/share/my_robot_pkg/cmake/export_my_robot_pkg__rosidl_typesupport_fastrtps_cExport-release.cmake")
+  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/cmake" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles/Export/share/my_robot_pkg/cmake/export_my_robot_pkg__rosidl_typesupport_fastrtps_cExport-noconfig.cmake")
   endif()
 endif()
 
@@ -599,8 +579,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     endif()
   endif()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/cmake" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles/Export/share/my_robot_pkg/cmake/export_my_robot_pkg__rosidl_typesupport_fastrtps_cppExport.cmake")
-  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/cmake" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles/Export/share/my_robot_pkg/cmake/export_my_robot_pkg__rosidl_typesupport_fastrtps_cppExport-release.cmake")
+  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/cmake" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles/Export/share/my_robot_pkg/cmake/export_my_robot_pkg__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake")
   endif()
 endif()
 
@@ -618,8 +598,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     endif()
   endif()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/cmake" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles/Export/share/my_robot_pkg/cmake/my_robot_pkg__rosidl_typesupport_introspection_cExport.cmake")
-  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/cmake" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles/Export/share/my_robot_pkg/cmake/my_robot_pkg__rosidl_typesupport_introspection_cExport-release.cmake")
+  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/cmake" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles/Export/share/my_robot_pkg/cmake/my_robot_pkg__rosidl_typesupport_introspection_cExport-noconfig.cmake")
   endif()
 endif()
 
@@ -637,8 +617,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     endif()
   endif()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/cmake" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles/Export/share/my_robot_pkg/cmake/my_robot_pkg__rosidl_typesupport_cExport.cmake")
-  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/cmake" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles/Export/share/my_robot_pkg/cmake/my_robot_pkg__rosidl_typesupport_cExport-release.cmake")
+  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/cmake" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles/Export/share/my_robot_pkg/cmake/my_robot_pkg__rosidl_typesupport_cExport-noconfig.cmake")
   endif()
 endif()
 
@@ -656,8 +636,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     endif()
   endif()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/cmake" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles/Export/share/my_robot_pkg/cmake/my_robot_pkg__rosidl_typesupport_introspection_cppExport.cmake")
-  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/cmake" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles/Export/share/my_robot_pkg/cmake/my_robot_pkg__rosidl_typesupport_introspection_cppExport-release.cmake")
+  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/cmake" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles/Export/share/my_robot_pkg/cmake/my_robot_pkg__rosidl_typesupport_introspection_cppExport-noconfig.cmake")
   endif()
 endif()
 
@@ -675,8 +655,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     endif()
   endif()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/cmake" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles/Export/share/my_robot_pkg/cmake/my_robot_pkg__rosidl_typesupport_cppExport.cmake")
-  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/cmake" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles/Export/share/my_robot_pkg/cmake/my_robot_pkg__rosidl_typesupport_cppExport-release.cmake")
+  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/cmake" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles/Export/share/my_robot_pkg/cmake/my_robot_pkg__rosidl_typesupport_cppExport-noconfig.cmake")
   endif()
 endif()
 
@@ -694,8 +674,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     endif()
   endif()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/cmake" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles/Export/share/my_robot_pkg/cmake/export_my_robot_pkg__rosidl_generator_pyExport.cmake")
-  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/cmake" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles/Export/share/my_robot_pkg/cmake/export_my_robot_pkg__rosidl_generator_pyExport-release.cmake")
+  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/cmake" TYPE FILE FILES "/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles/Export/share/my_robot_pkg/cmake/export_my_robot_pkg__rosidl_generator_pyExport-noconfig.cmake")
   endif()
 endif()
 

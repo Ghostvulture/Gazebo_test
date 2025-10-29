@@ -20,16 +20,16 @@ extern "C"
 
 /// Struct defined in msg/MotorFeedback in the package my_robot_pkg.
 /**
-  * 单个电机的反馈信息
+  * 电机反馈消息
  */
 typedef struct my_robot_pkg__msg__MotorFeedback
 {
-  /// 位置 (弧度)
-  double position;
-  /// 速度 (弧度/秒)
-  double velocity;
-  /// 力矩 (Nm)
-  double torque;
+  /// 电机位置反馈
+  double pos_fdb;
+  /// 电机速度反馈
+  double sbd_fdb;
+  /// 电机力矩反馈
+  double tor_fdb;
 } my_robot_pkg__msg__MotorFeedback;
 
 // Struct for a sequence of my_robot_pkg__msg__MotorFeedback.

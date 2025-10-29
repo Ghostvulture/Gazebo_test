@@ -1,46 +1,52 @@
-#ifndef SIMPLE_FEEDBACK_COLLECTOR_HPP
-#define SIMPLE_FEEDBACK_COLLECTOR_HPP
+#ifndef FEEDBACK_RECEIVER_HPP
+#define FEEDBACK_RECEIVER_HPP
 
 #include <rclcpp/rclcpp.hpp>
-#include <std_msgs/msg/float64.hpp>
-#include <geometry_msgs/msg/vector3.hpp>
-#include <sensor_msgs/msg/joint_state.hpp>
-#include <sensor_msgs/msg/imu.hpp>
-#include "my_robot_pkg/msg/joint_torques.hpp"
-#include "my_robot_pkg/msg/robot_feedback.hpp"
 
-class SimpleFeedbackCollector : public rclcpp::Node
-{
-public:
-    SimpleFeedbackCollector();
-    ~SimpleFeedbackCollector();
-
-private:
-    void joint_state_callback(const sensor_msgs::msg::JointState::SharedPtr msg);
-    void imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg);
-    void torque_callback(const my_robot_pkg::msg::JointTorques::SharedPtr msg);
-    void publish_feedback();
-    void initialize_feedback();
-    int find_joint_index(const std::string& joint_name);
-    
-    // ROS2 通信
-    rclcpp::Publisher<my_robot_pkg::msg::RobotFeedback>::SharedPtr feedback_pub_;
-    rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr joint_state_sub_;
-    rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr imu_sub_;
-    rclcpp::Subscription<my_robot_pkg::msg::JointTorques>::SharedPtr torque_sub_;
-    rclcpp::TimerBase::SharedPtr publish_timer_;
-    
-    // 反馈数据
-    my_robot_pkg::msg::RobotFeedback current_feedback_;
-    my_robot_pkg::msg::JointTorques current_torques_;
-    
-    // 控制参数
-    double publish_rate_;
-    bool joint_data_received_;
-    bool imu_data_received_;
-    
-    // 关节配置
-    static const std::vector<std::string> joint_names_;
+struct MOTOR{
+    float pos_fdb;
+    float sbd_fdb;
+    float tor_fdb;
 };
 
-#endif // SIMPLE_FEEDBACK_COLLECTOR_HPP
+struct IMU{
+    float acc_x;
+    float acc_y;
+    float acc_z;
+    float gyro_x;
+    float gyro_y;
+    float gyro_z;
+};
+
+struct Received_Pkg{
+    MOTOR LBig;
+    MOTOR LSmall;
+    MOTOR RBig;
+    MOTOR RSmall;
+    MOTOR LWheel;
+    MOTOR RWheel;
+
+    IMU imu;
+};
+
+// class FeedbackReceiver : public rclcpp::Node
+// {
+// public:
+//     FeedbackReceiver();
+//     ~FeedbackReceiver();
+
+// private:
+//     void model_state_callback(const sensor_msgs::msg::JointState::SharedPtr msg);
+//     void imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg);
+//     void timer_callback();
+    
+//     // ROS2 通信
+//     rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr subscription_1;
+//     rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr subscription_2;
+//     rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
+//     // 定时器
+//     rclcpp::TimerBase::SharedPtr timer_;
+    
+// };
+
+#endif // FEEDBACK_RECEIVER_HPP

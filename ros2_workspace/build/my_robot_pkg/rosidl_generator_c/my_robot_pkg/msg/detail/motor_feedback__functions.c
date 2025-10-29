@@ -17,9 +17,9 @@ my_robot_pkg__msg__MotorFeedback__init(my_robot_pkg__msg__MotorFeedback * msg)
   if (!msg) {
     return false;
   }
-  // position
-  // velocity
-  // torque
+  // pos_fdb
+  // sbd_fdb
+  // tor_fdb
   return true;
 }
 
@@ -29,9 +29,9 @@ my_robot_pkg__msg__MotorFeedback__fini(my_robot_pkg__msg__MotorFeedback * msg)
   if (!msg) {
     return;
   }
-  // position
-  // velocity
-  // torque
+  // pos_fdb
+  // sbd_fdb
+  // tor_fdb
 }
 
 bool
@@ -40,16 +40,16 @@ my_robot_pkg__msg__MotorFeedback__are_equal(const my_robot_pkg__msg__MotorFeedba
   if (!lhs || !rhs) {
     return false;
   }
-  // position
-  if (lhs->position != rhs->position) {
+  // pos_fdb
+  if (lhs->pos_fdb != rhs->pos_fdb) {
     return false;
   }
-  // velocity
-  if (lhs->velocity != rhs->velocity) {
+  // sbd_fdb
+  if (lhs->sbd_fdb != rhs->sbd_fdb) {
     return false;
   }
-  // torque
-  if (lhs->torque != rhs->torque) {
+  // tor_fdb
+  if (lhs->tor_fdb != rhs->tor_fdb) {
     return false;
   }
   return true;
@@ -63,12 +63,12 @@ my_robot_pkg__msg__MotorFeedback__copy(
   if (!input || !output) {
     return false;
   }
-  // position
-  output->position = input->position;
-  // velocity
-  output->velocity = input->velocity;
-  // torque
-  output->torque = input->torque;
+  // pos_fdb
+  output->pos_fdb = input->pos_fdb;
+  // sbd_fdb
+  output->sbd_fdb = input->sbd_fdb;
+  // tor_fdb
+  output->tor_fdb = input->tor_fdb;
   return true;
 }
 

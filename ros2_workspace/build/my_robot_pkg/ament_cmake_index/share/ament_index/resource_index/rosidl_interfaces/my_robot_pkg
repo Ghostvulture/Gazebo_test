@@ -1,5 +1,5 @@
-msg/JointTorques.idl
-msg/JointTorques.msg
+msg/Imu.idl
+msg/Imu.msg
 msg/MotorFeedback.idl
 msg/MotorFeedback.msg
 msg/RobotFeedback.idl

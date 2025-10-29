@@ -70,12 +70,12 @@ my_robot_pkg__py/CMakeFiles/my_robot_pkg__py: rosidl_generator_py/my_robot_pkg/_
 my_robot_pkg__py/CMakeFiles/my_robot_pkg__py: rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_introspection_c.c
 my_robot_pkg__py/CMakeFiles/my_robot_pkg__py: rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_c.c
 my_robot_pkg__py/CMakeFiles/my_robot_pkg__py: rosidl_generator_py/my_robot_pkg/msg/_motor_feedback.py
-my_robot_pkg__py/CMakeFiles/my_robot_pkg__py: rosidl_generator_py/my_robot_pkg/msg/_joint_torques.py
 my_robot_pkg__py/CMakeFiles/my_robot_pkg__py: rosidl_generator_py/my_robot_pkg/msg/_robot_feedback.py
+my_robot_pkg__py/CMakeFiles/my_robot_pkg__py: rosidl_generator_py/my_robot_pkg/msg/_imu.py
 my_robot_pkg__py/CMakeFiles/my_robot_pkg__py: rosidl_generator_py/my_robot_pkg/msg/__init__.py
 my_robot_pkg__py/CMakeFiles/my_robot_pkg__py: rosidl_generator_py/my_robot_pkg/msg/_motor_feedback_s.c
-my_robot_pkg__py/CMakeFiles/my_robot_pkg__py: rosidl_generator_py/my_robot_pkg/msg/_joint_torques_s.c
 my_robot_pkg__py/CMakeFiles/my_robot_pkg__py: rosidl_generator_py/my_robot_pkg/msg/_robot_feedback_s.c
+my_robot_pkg__py/CMakeFiles/my_robot_pkg__py: rosidl_generator_py/my_robot_pkg/msg/_imu_s.c
 
 rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_py/__init__.py
@@ -91,8 +91,8 @@ rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_
 rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv_pkg_typesupport_entry_point.c.em
 rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/my_robot_pkg/msg/MotorFeedback.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/my_robot_pkg/msg/JointTorques.idl
 rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/my_robot_pkg/msg/RobotFeedback.idl
+rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/my_robot_pkg/msg/Imu.idl
 rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
@@ -125,38 +125,6 @@ rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_
 rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
 rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovarianceStamped.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/Inertia.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/InertiaStamped.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/Point.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/Point32.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/PointStamped.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/Polygon.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/PolygonInstance.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/PolygonInstanceStamped.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/PolygonStamped.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/Pose.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/Pose2D.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/PoseArray.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/PoseStamped.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/PoseWithCovariance.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/PoseWithCovarianceStamped.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/Quaternion.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/QuaternionStamped.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/Transform.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/TransformStamped.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/Twist.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/TwistStamped.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/TwistWithCovariance.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/TwistWithCovarianceStamped.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/Vector3.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/Vector3Stamped.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/VelocityStamped.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/Wrench.idl
-rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/WrenchStamped.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
 	cd /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/my_robot_pkg__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
@@ -169,11 +137,11 @@ rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_c.c: rosi
 rosidl_generator_py/my_robot_pkg/msg/_motor_feedback.py: rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/my_robot_pkg/msg/_motor_feedback.py
 
-rosidl_generator_py/my_robot_pkg/msg/_joint_torques.py: rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/my_robot_pkg/msg/_joint_torques.py
-
 rosidl_generator_py/my_robot_pkg/msg/_robot_feedback.py: rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/my_robot_pkg/msg/_robot_feedback.py
+
+rosidl_generator_py/my_robot_pkg/msg/_imu.py: rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/my_robot_pkg/msg/_imu.py
 
 rosidl_generator_py/my_robot_pkg/msg/__init__.py: rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/my_robot_pkg/msg/__init__.py
@@ -181,19 +149,19 @@ rosidl_generator_py/my_robot_pkg/msg/__init__.py: rosidl_generator_py/my_robot_p
 rosidl_generator_py/my_robot_pkg/msg/_motor_feedback_s.c: rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/my_robot_pkg/msg/_motor_feedback_s.c
 
-rosidl_generator_py/my_robot_pkg/msg/_joint_torques_s.c: rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/my_robot_pkg/msg/_joint_torques_s.c
-
 rosidl_generator_py/my_robot_pkg/msg/_robot_feedback_s.c: rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/my_robot_pkg/msg/_robot_feedback_s.c
+
+rosidl_generator_py/my_robot_pkg/msg/_imu_s.c: rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/my_robot_pkg/msg/_imu_s.c
 
 my_robot_pkg__py: my_robot_pkg__py/CMakeFiles/my_robot_pkg__py
 my_robot_pkg__py: rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_c.c
 my_robot_pkg__py: rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
 my_robot_pkg__py: rosidl_generator_py/my_robot_pkg/_my_robot_pkg_s.ep.rosidl_typesupport_introspection_c.c
 my_robot_pkg__py: rosidl_generator_py/my_robot_pkg/msg/__init__.py
-my_robot_pkg__py: rosidl_generator_py/my_robot_pkg/msg/_joint_torques.py
-my_robot_pkg__py: rosidl_generator_py/my_robot_pkg/msg/_joint_torques_s.c
+my_robot_pkg__py: rosidl_generator_py/my_robot_pkg/msg/_imu.py
+my_robot_pkg__py: rosidl_generator_py/my_robot_pkg/msg/_imu_s.c
 my_robot_pkg__py: rosidl_generator_py/my_robot_pkg/msg/_motor_feedback.py
 my_robot_pkg__py: rosidl_generator_py/my_robot_pkg/msg/_motor_feedback_s.c
 my_robot_pkg__py: rosidl_generator_py/my_robot_pkg/msg/_robot_feedback.py

@@ -49,19 +49,19 @@ static bool _MotorFeedback__cdr_serialize(
     return false;
   }
   const _MotorFeedback__ros_msg_type * ros_message = static_cast<const _MotorFeedback__ros_msg_type *>(untyped_ros_message);
-  // Field name: position
+  // Field name: pos_fdb
   {
-    cdr << ros_message->position;
+    cdr << ros_message->pos_fdb;
   }
 
-  // Field name: velocity
+  // Field name: sbd_fdb
   {
-    cdr << ros_message->velocity;
+    cdr << ros_message->sbd_fdb;
   }
 
-  // Field name: torque
+  // Field name: tor_fdb
   {
-    cdr << ros_message->torque;
+    cdr << ros_message->tor_fdb;
   }
 
   return true;
@@ -76,19 +76,19 @@ static bool _MotorFeedback__cdr_deserialize(
     return false;
   }
   _MotorFeedback__ros_msg_type * ros_message = static_cast<_MotorFeedback__ros_msg_type *>(untyped_ros_message);
-  // Field name: position
+  // Field name: pos_fdb
   {
-    cdr >> ros_message->position;
+    cdr >> ros_message->pos_fdb;
   }
 
-  // Field name: velocity
+  // Field name: sbd_fdb
   {
-    cdr >> ros_message->velocity;
+    cdr >> ros_message->sbd_fdb;
   }
 
-  // Field name: torque
+  // Field name: tor_fdb
   {
-    cdr >> ros_message->torque;
+    cdr >> ros_message->tor_fdb;
   }
 
   return true;
@@ -108,21 +108,21 @@ size_t get_serialized_size_my_robot_pkg__msg__MotorFeedback(
   (void)padding;
   (void)wchar_size;
 
-  // field.name position
+  // field.name pos_fdb
   {
-    size_t item_size = sizeof(ros_message->position);
+    size_t item_size = sizeof(ros_message->pos_fdb);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name velocity
+  // field.name sbd_fdb
   {
-    size_t item_size = sizeof(ros_message->velocity);
+    size_t item_size = sizeof(ros_message->sbd_fdb);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name torque
+  // field.name tor_fdb
   {
-    size_t item_size = sizeof(ros_message->torque);
+    size_t item_size = sizeof(ros_message->tor_fdb);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -155,7 +155,7 @@ size_t max_serialized_size_my_robot_pkg__msg__MotorFeedback(
   full_bounded = true;
   is_plain = true;
 
-  // member: position
+  // member: pos_fdb
   {
     size_t array_size = 1;
 
@@ -163,7 +163,7 @@ size_t max_serialized_size_my_robot_pkg__msg__MotorFeedback(
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
-  // member: velocity
+  // member: sbd_fdb
   {
     size_t array_size = 1;
 
@@ -171,7 +171,7 @@ size_t max_serialized_size_my_robot_pkg__msg__MotorFeedback(
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
-  // member: torque
+  // member: tor_fdb
   {
     size_t array_size = 1;
 
@@ -188,7 +188,7 @@ size_t max_serialized_size_my_robot_pkg__msg__MotorFeedback(
     using DataType = my_robot_pkg__msg__MotorFeedback;
     is_plain =
       (
-      offsetof(DataType, torque) +
+      offsetof(DataType, tor_fdb) +
       last_member_size
       ) == ret_val;
   }

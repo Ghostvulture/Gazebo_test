@@ -19,28 +19,36 @@ extern "C"
 // Constants defined in the message
 
 // Include directives for member types
-// Member 'header'
-#include "std_msgs/msg/detail/header__struct.h"
-// Member 'motors'
+// Member 'l_big'
+// Member 'l_small'
+// Member 'r_big'
+// Member 'r_small'
+// Member 'l_wheel'
+// Member 'r_wheel'
 #include "my_robot_pkg/msg/detail/motor_feedback__struct.h"
-// Member 'angular_velocity'
-// Member 'linear_acceleration'
-#include "geometry_msgs/msg/detail/vector3__struct.h"
+// Member 'imu'
+#include "my_robot_pkg/msg/detail/imu__struct.h"
 
 /// Struct defined in msg/RobotFeedback in the package my_robot_pkg.
 /**
-  * 完整的反馈包
+  * 机器人反馈消息
  */
 typedef struct my_robot_pkg__msg__RobotFeedback
 {
-  std_msgs__msg__Header header;
-  /// 六个电机的反馈 [Lwheel, Rwheel, Lbig, Lsmall, Rbig, Rsmall]
-  my_robot_pkg__msg__MotorFeedback__Sequence motors;
-  /// IMU数据
-  /// 角速度 (rad/s)
-  geometry_msgs__msg__Vector3 angular_velocity;
-  /// 线性加速度 (m/s²)
-  geometry_msgs__msg__Vector3 linear_acceleration;
+  /// 左大腿电机
+  my_robot_pkg__msg__MotorFeedback l_big;
+  /// 左小腿电机
+  my_robot_pkg__msg__MotorFeedback l_small;
+  /// 右大腿电机
+  my_robot_pkg__msg__MotorFeedback r_big;
+  /// 右小腿电机
+  my_robot_pkg__msg__MotorFeedback r_small;
+  /// 左轮子电机
+  my_robot_pkg__msg__MotorFeedback l_wheel;
+  /// 右轮子电机
+  my_robot_pkg__msg__MotorFeedback r_wheel;
+  /// IMU 传感器数据
+  my_robot_pkg__msg__Imu imu;
 } my_robot_pkg__msg__RobotFeedback;
 
 // Struct for a sequence of my_robot_pkg__msg__RobotFeedback.

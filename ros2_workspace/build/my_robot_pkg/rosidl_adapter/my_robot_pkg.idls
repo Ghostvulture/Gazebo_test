@@ -1,3 +1,3 @@
 /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_adapter/my_robot_pkg:msg/MotorFeedback.idl
-/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_adapter/my_robot_pkg:msg/JointTorques.idl
 /home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_adapter/my_robot_pkg:msg/RobotFeedback.idl
+/home/xyz/Desktop/xluo/Gazebo_test/ros2_workspace/build/my_robot_pkg/rosidl_adapter/my_robot_pkg:msg/Imu.idl

@@ -1,13 +1,13 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/my_robot_pkg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_robot_pkg/msg/joint_torques__type_support.cpp.o"
-  "CMakeFiles/my_robot_pkg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_robot_pkg/msg/joint_torques__type_support.cpp.o.d"
+  "CMakeFiles/my_robot_pkg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_robot_pkg/msg/imu__type_support.cpp.o"
+  "CMakeFiles/my_robot_pkg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_robot_pkg/msg/imu__type_support.cpp.o.d"
   "CMakeFiles/my_robot_pkg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_robot_pkg/msg/motor_feedback__type_support.cpp.o"
   "CMakeFiles/my_robot_pkg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_robot_pkg/msg/motor_feedback__type_support.cpp.o.d"
   "CMakeFiles/my_robot_pkg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_robot_pkg/msg/robot_feedback__type_support.cpp.o"
   "CMakeFiles/my_robot_pkg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_robot_pkg/msg/robot_feedback__type_support.cpp.o.d"
   "libmy_robot_pkg__rosidl_typesupport_cpp.pdb"
   "libmy_robot_pkg__rosidl_typesupport_cpp.so"
-  "rosidl_typesupport_cpp/my_robot_pkg/msg/joint_torques__type_support.cpp"
+  "rosidl_typesupport_cpp/my_robot_pkg/msg/imu__type_support.cpp"
   "rosidl_typesupport_cpp/my_robot_pkg/msg/motor_feedback__type_support.cpp"
   "rosidl_typesupport_cpp/my_robot_pkg/msg/robot_feedback__type_support.cpp"
 )

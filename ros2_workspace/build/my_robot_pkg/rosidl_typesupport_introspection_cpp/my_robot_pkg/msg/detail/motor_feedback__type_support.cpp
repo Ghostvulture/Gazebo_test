@@ -39,14 +39,14 @@ void MotorFeedback_fini_function(void * message_memory)
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMember MotorFeedback_message_member_array[3] = {
   {
-    "position",  // name
+    "pos_fdb",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(my_robot_pkg::msg::MotorFeedback, position),  // bytes offset in struct
+    offsetof(my_robot_pkg::msg::MotorFeedback, pos_fdb),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -56,14 +56,14 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember MotorFeedback
     nullptr  // resize(index) function pointer
   },
   {
-    "velocity",  // name
+    "sbd_fdb",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(my_robot_pkg::msg::MotorFeedback, velocity),  // bytes offset in struct
+    offsetof(my_robot_pkg::msg::MotorFeedback, sbd_fdb),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -73,14 +73,14 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember MotorFeedback
     nullptr  // resize(index) function pointer
   },
   {
-    "torque",  // name
+    "tor_fdb",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(my_robot_pkg::msg::MotorFeedback, torque),  // bytes offset in struct
+    offsetof(my_robot_pkg::msg::MotorFeedback, tor_fdb),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer

@@ -5,6 +5,6 @@ my_robot_pkg.egg-info/SOURCES.txt
 my_robot_pkg.egg-info/dependency_links.txt
 my_robot_pkg.egg-info/top_level.txt
 my_robot_pkg/msg/__init__.py
-my_robot_pkg/msg/_joint_torques.py
+my_robot_pkg/msg/_imu.py
 my_robot_pkg/msg/_motor_feedback.py
 my_robot_pkg/msg/_robot_feedback.py

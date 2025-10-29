@@ -16,30 +16,6 @@
 
 
 // forward declaration of message dependencies and their conversion functions
-namespace std_msgs
-{
-namespace msg
-{
-namespace typesupport_fastrtps_cpp
-{
-bool cdr_serialize(
-  const std_msgs::msg::Header &,
-  eprosima::fastcdr::Cdr &);
-bool cdr_deserialize(
-  eprosima::fastcdr::Cdr &,
-  std_msgs::msg::Header &);
-size_t get_serialized_size(
-  const std_msgs::msg::Header &,
-  size_t current_alignment);
-size_t
-max_serialized_size_Header(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-}  // namespace typesupport_fastrtps_cpp
-}  // namespace msg
-}  // namespace std_msgs
-
 namespace my_robot_pkg
 {
 namespace msg
@@ -64,31 +40,39 @@ max_serialized_size_MotorFeedback(
 }  // namespace msg
 }  // namespace my_robot_pkg
 
-namespace geometry_msgs
+// functions for my_robot_pkg::msg::MotorFeedback already declared above
+
+// functions for my_robot_pkg::msg::MotorFeedback already declared above
+
+// functions for my_robot_pkg::msg::MotorFeedback already declared above
+
+// functions for my_robot_pkg::msg::MotorFeedback already declared above
+
+// functions for my_robot_pkg::msg::MotorFeedback already declared above
+
+namespace my_robot_pkg
 {
 namespace msg
 {
 namespace typesupport_fastrtps_cpp
 {
 bool cdr_serialize(
-  const geometry_msgs::msg::Vector3 &,
+  const my_robot_pkg::msg::Imu &,
   eprosima::fastcdr::Cdr &);
 bool cdr_deserialize(
   eprosima::fastcdr::Cdr &,
-  geometry_msgs::msg::Vector3 &);
+  my_robot_pkg::msg::Imu &);
 size_t get_serialized_size(
-  const geometry_msgs::msg::Vector3 &,
+  const my_robot_pkg::msg::Imu &,
   size_t current_alignment);
 size_t
-max_serialized_size_Vector3(
+max_serialized_size_Imu(
   bool & full_bounded,
   bool & is_plain,
   size_t current_alignment);
 }  // namespace typesupport_fastrtps_cpp
 }  // namespace msg
-}  // namespace geometry_msgs
-
-// functions for geometry_msgs::msg::Vector3 already declared above
+}  // namespace my_robot_pkg
 
 
 namespace my_robot_pkg
@@ -106,27 +90,33 @@ cdr_serialize(
   const my_robot_pkg::msg::RobotFeedback & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: header
-  std_msgs::msg::typesupport_fastrtps_cpp::cdr_serialize(
-    ros_message.header,
+  // Member: l_big
+  my_robot_pkg::msg::typesupport_fastrtps_cpp::cdr_serialize(
+    ros_message.l_big,
     cdr);
-  // Member: motors
-  {
-    size_t size = ros_message.motors.size();
-    cdr << static_cast<uint32_t>(size);
-    for (size_t i = 0; i < size; i++) {
-      my_robot_pkg::msg::typesupport_fastrtps_cpp::cdr_serialize(
-        ros_message.motors[i],
-        cdr);
-    }
-  }
-  // Member: angular_velocity
-  geometry_msgs::msg::typesupport_fastrtps_cpp::cdr_serialize(
-    ros_message.angular_velocity,
+  // Member: l_small
+  my_robot_pkg::msg::typesupport_fastrtps_cpp::cdr_serialize(
+    ros_message.l_small,
     cdr);
-  // Member: linear_acceleration
-  geometry_msgs::msg::typesupport_fastrtps_cpp::cdr_serialize(
-    ros_message.linear_acceleration,
+  // Member: r_big
+  my_robot_pkg::msg::typesupport_fastrtps_cpp::cdr_serialize(
+    ros_message.r_big,
+    cdr);
+  // Member: r_small
+  my_robot_pkg::msg::typesupport_fastrtps_cpp::cdr_serialize(
+    ros_message.r_small,
+    cdr);
+  // Member: l_wheel
+  my_robot_pkg::msg::typesupport_fastrtps_cpp::cdr_serialize(
+    ros_message.l_wheel,
+    cdr);
+  // Member: r_wheel
+  my_robot_pkg::msg::typesupport_fastrtps_cpp::cdr_serialize(
+    ros_message.r_wheel,
+    cdr);
+  // Member: imu
+  my_robot_pkg::msg::typesupport_fastrtps_cpp::cdr_serialize(
+    ros_message.imu,
     cdr);
   return true;
 }
@@ -137,29 +127,33 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   my_robot_pkg::msg::RobotFeedback & ros_message)
 {
-  // Member: header
-  std_msgs::msg::typesupport_fastrtps_cpp::cdr_deserialize(
-    cdr, ros_message.header);
+  // Member: l_big
+  my_robot_pkg::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+    cdr, ros_message.l_big);
 
-  // Member: motors
-  {
-    uint32_t cdrSize;
-    cdr >> cdrSize;
-    size_t size = static_cast<size_t>(cdrSize);
-    ros_message.motors.resize(size);
-    for (size_t i = 0; i < size; i++) {
-      my_robot_pkg::msg::typesupport_fastrtps_cpp::cdr_deserialize(
-        cdr, ros_message.motors[i]);
-    }
-  }
+  // Member: l_small
+  my_robot_pkg::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+    cdr, ros_message.l_small);
 
-  // Member: angular_velocity
-  geometry_msgs::msg::typesupport_fastrtps_cpp::cdr_deserialize(
-    cdr, ros_message.angular_velocity);
+  // Member: r_big
+  my_robot_pkg::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+    cdr, ros_message.r_big);
 
-  // Member: linear_acceleration
-  geometry_msgs::msg::typesupport_fastrtps_cpp::cdr_deserialize(
-    cdr, ros_message.linear_acceleration);
+  // Member: r_small
+  my_robot_pkg::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+    cdr, ros_message.r_small);
+
+  // Member: l_wheel
+  my_robot_pkg::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+    cdr, ros_message.l_wheel);
+
+  // Member: r_wheel
+  my_robot_pkg::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+    cdr, ros_message.r_wheel);
+
+  // Member: imu
+  my_robot_pkg::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+    cdr, ros_message.imu);
 
   return true;
 }
@@ -177,34 +171,41 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: header
+  // Member: l_big
 
   current_alignment +=
-    std_msgs::msg::typesupport_fastrtps_cpp::get_serialized_size(
-    ros_message.header, current_alignment);
-  // Member: motors
-  {
-    size_t array_size = ros_message.motors.size();
-
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment +=
-        my_robot_pkg::msg::typesupport_fastrtps_cpp::get_serialized_size(
-        ros_message.motors[index], current_alignment);
-    }
-  }
-  // Member: angular_velocity
+    my_robot_pkg::msg::typesupport_fastrtps_cpp::get_serialized_size(
+    ros_message.l_big, current_alignment);
+  // Member: l_small
 
   current_alignment +=
-    geometry_msgs::msg::typesupport_fastrtps_cpp::get_serialized_size(
-    ros_message.angular_velocity, current_alignment);
-  // Member: linear_acceleration
+    my_robot_pkg::msg::typesupport_fastrtps_cpp::get_serialized_size(
+    ros_message.l_small, current_alignment);
+  // Member: r_big
 
   current_alignment +=
-    geometry_msgs::msg::typesupport_fastrtps_cpp::get_serialized_size(
-    ros_message.linear_acceleration, current_alignment);
+    my_robot_pkg::msg::typesupport_fastrtps_cpp::get_serialized_size(
+    ros_message.r_big, current_alignment);
+  // Member: r_small
+
+  current_alignment +=
+    my_robot_pkg::msg::typesupport_fastrtps_cpp::get_serialized_size(
+    ros_message.r_small, current_alignment);
+  // Member: l_wheel
+
+  current_alignment +=
+    my_robot_pkg::msg::typesupport_fastrtps_cpp::get_serialized_size(
+    ros_message.l_wheel, current_alignment);
+  // Member: r_wheel
+
+  current_alignment +=
+    my_robot_pkg::msg::typesupport_fastrtps_cpp::get_serialized_size(
+    ros_message.r_wheel, current_alignment);
+  // Member: imu
+
+  current_alignment +=
+    my_robot_pkg::msg::typesupport_fastrtps_cpp::get_serialized_size(
+    ros_message.imu, current_alignment);
 
   return current_alignment - initial_alignment;
 }
@@ -229,32 +230,9 @@ max_serialized_size_RobotFeedback(
   is_plain = true;
 
 
-  // Member: header
+  // Member: l_big
   {
     size_t array_size = 1;
-
-
-    last_member_size = 0;
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      size_t inner_size =
-        std_msgs::msg::typesupport_fastrtps_cpp::max_serialized_size_Header(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      last_member_size += inner_size;
-      current_alignment += inner_size;
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
-  }
-
-  // Member: motors
-  {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
 
 
     last_member_size = 0;
@@ -271,7 +249,7 @@ max_serialized_size_RobotFeedback(
     }
   }
 
-  // Member: angular_velocity
+  // Member: l_small
   {
     size_t array_size = 1;
 
@@ -281,7 +259,7 @@ max_serialized_size_RobotFeedback(
       bool inner_full_bounded;
       bool inner_is_plain;
       size_t inner_size =
-        geometry_msgs::msg::typesupport_fastrtps_cpp::max_serialized_size_Vector3(
+        my_robot_pkg::msg::typesupport_fastrtps_cpp::max_serialized_size_MotorFeedback(
         inner_full_bounded, inner_is_plain, current_alignment);
       last_member_size += inner_size;
       current_alignment += inner_size;
@@ -290,7 +268,7 @@ max_serialized_size_RobotFeedback(
     }
   }
 
-  // Member: linear_acceleration
+  // Member: r_big
   {
     size_t array_size = 1;
 
@@ -300,7 +278,83 @@ max_serialized_size_RobotFeedback(
       bool inner_full_bounded;
       bool inner_is_plain;
       size_t inner_size =
-        geometry_msgs::msg::typesupport_fastrtps_cpp::max_serialized_size_Vector3(
+        my_robot_pkg::msg::typesupport_fastrtps_cpp::max_serialized_size_MotorFeedback(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+
+  // Member: r_small
+  {
+    size_t array_size = 1;
+
+
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size =
+        my_robot_pkg::msg::typesupport_fastrtps_cpp::max_serialized_size_MotorFeedback(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+
+  // Member: l_wheel
+  {
+    size_t array_size = 1;
+
+
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size =
+        my_robot_pkg::msg::typesupport_fastrtps_cpp::max_serialized_size_MotorFeedback(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+
+  // Member: r_wheel
+  {
+    size_t array_size = 1;
+
+
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size =
+        my_robot_pkg::msg::typesupport_fastrtps_cpp::max_serialized_size_MotorFeedback(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+
+  // Member: imu
+  {
+    size_t array_size = 1;
+
+
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size =
+        my_robot_pkg::msg::typesupport_fastrtps_cpp::max_serialized_size_Imu(
         inner_full_bounded, inner_is_plain, current_alignment);
       last_member_size += inner_size;
       current_alignment += inner_size;
@@ -317,7 +371,7 @@ max_serialized_size_RobotFeedback(
     using DataType = my_robot_pkg::msg::RobotFeedback;
     is_plain =
       (
-      offsetof(DataType, linear_acceleration) +
+      offsetof(DataType, imu) +
       last_member_size
       ) == ret_val;
   }
